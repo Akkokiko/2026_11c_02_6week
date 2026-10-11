@@ -18,7 +18,7 @@ public class PlayerThrowingController : MonoBehaviour
     {
 
         Vector3 rotation = aimDirection();
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;    
         m_AimIndicator.localRotation = Quaternion.Euler(0f, 0f, rotZ);
     }
 
