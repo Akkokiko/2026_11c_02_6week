@@ -10,7 +10,7 @@ public class PlayerThrowingController : MonoBehaviour
     public Transform AimIndicator => m_AimIndicator;
     
     
-    
+    public InputAction m_fireInput;
 
 
 

@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -15,9 +17,16 @@ public class Player : MonoBehaviour
     
     
     [SerializeField] private PotionProjectile m_PotionProjectile;
-    
-    
-    
+
+
+
+
+    [SerializeField] private InputActionAsset m_inputAction;
+    public InputActionAsset InputActionAsset => m_inputAction;
+
+       
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
