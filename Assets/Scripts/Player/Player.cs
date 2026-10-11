@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     [SerializeField] private BoxCollider2D m_PlayerCollider;
     public BoxCollider2D PlayerCollider => m_PlayerCollider;
@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     [SerializeField] private InputActionAsset m_inputAction;
     public InputActionAsset InputActionAsset => m_inputAction;
 
+    [Header("Player Components")]
+    [SerializeField] private PlayerInventory m_playerInventory;
+    public PlayerInventory PlayerInventory => m_playerInventory;
 
     void OnEnable()
     {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
-public class PlayerThrowingController : MonoBehaviour
+public class PlayerPotionController : MonoBehaviour
 {
     [SerializeField] private Player m_Player;
     public Player Player => m_Player;
@@ -11,7 +11,7 @@ public class PlayerThrowingController : MonoBehaviour
     public Transform AimIndicator => m_AimIndicator;
     
     private InputAction m_fireInput;
-
+    private InputAction m_drinkInput;
     
     [Header("Throwing")]
     [SerializeField] private Transform m_throwingPoint;
@@ -20,6 +20,7 @@ public class PlayerThrowingController : MonoBehaviour
     void Awake()
     {
         m_fireInput = Player.InputActionAsset.FindAction("Fire");
+        m_drinkInput = Player.InputActionAsset.FindAction("Drink");
     }
 
     public void Update()
@@ -32,6 +33,11 @@ public class PlayerThrowingController : MonoBehaviour
         if (m_fireInput.WasPressedThisFrame())
         {
             Throw();
+        }
+
+        if (m_drinkInput.WasPressedThisFrame())
+        {
+            Drink();
         }
     }
 
@@ -52,6 +58,12 @@ public class PlayerThrowingController : MonoBehaviour
         
         PotionProjectile projectile = Instantiate(Player.PotionProjectile, m_throwingPoint.position,Quaternion.identity);
         projectile.Lauch(direction,m_throwingForce);
+    }
+
+    void Drink()
+    {
+        Potion potion = Player.PlayerInventory.GetPotion();
+        potion.Affect(Player);
     }
 
 
