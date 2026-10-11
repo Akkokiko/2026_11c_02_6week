@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerThrowingController : MonoBehaviour
 {
@@ -9,10 +10,17 @@ public class PlayerThrowingController : MonoBehaviour
     [SerializeField] private Transform m_AimIndicator;
     public Transform AimIndicator => m_AimIndicator;
     
+    private InputAction m_fireInput;
+
     
-    public InputAction m_fireInput;
+    [Header("Throwing")]
+    [SerializeField] private Transform m_throwingPoint;
+    [SerializeField] private float m_throwingForce;
 
-
+    void Awake()
+    {
+        m_fireInput = Player.InputActionAsset.FindAction("Fire");
+    }
 
     public void Update()
     {
@@ -20,6 +28,11 @@ public class PlayerThrowingController : MonoBehaviour
         Vector3 rotation = aimDirection();
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;    
         m_AimIndicator.localRotation = Quaternion.Euler(0f, 0f, rotZ);
+
+        if (m_fireInput.WasPressedThisFrame())
+        {
+            Throw();
+        }
     }
 
 
@@ -33,5 +46,13 @@ public class PlayerThrowingController : MonoBehaviour
         return rotation;
     }
 
-    
+    void Throw()
+    {
+        Vector3 direction = aimDirection();
+        
+        PotionProjectile projectile = Instantiate(Player.PotionProjectile, m_throwingPoint.position,Quaternion.identity);
+        projectile.Lauch(direction,m_throwingForce);
+    }
+
+
 }

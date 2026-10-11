@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     
     
     [SerializeField] private PotionProjectile m_PotionProjectile;
+    public PotionProjectile PotionProjectile => m_PotionProjectile;
 
 
 
@@ -24,7 +25,16 @@ public class Player : MonoBehaviour
     [SerializeField] private InputActionAsset m_inputAction;
     public InputActionAsset InputActionAsset => m_inputAction;
 
-       
+
+    void OnEnable()
+    {
+        m_inputAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        m_inputAction.Disable();    
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

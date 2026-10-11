@@ -488,6 +488,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerThrowingController
   m_Player: {fileID: 1331644268}
   m_AimIndicator: {fileID: 2027165509}
+  m_throwingPoint: {fileID: 2103286910}
+  m_throwingForce: 3
 --- !u!1 &1749546017
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +777,7 @@ Transform:
   m_GameObject: {fileID: 2103286909}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
