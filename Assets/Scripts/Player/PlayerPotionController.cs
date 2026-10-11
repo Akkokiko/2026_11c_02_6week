@@ -12,8 +12,9 @@ public class PlayerPotionController : MonoBehaviour
     
     private InputAction m_fireInput;
     private InputAction m_drinkInput;
-    
-    [Header("Throwing")]
+
+    [Header("Throwing")] 
+    [SerializeField] private PotionProjectile m_potionProjectilePref;
     [SerializeField] private Transform m_throwingPoint;
     [SerializeField] private float m_throwingForce;
 
@@ -56,7 +57,7 @@ public class PlayerPotionController : MonoBehaviour
     {
         Vector3 direction = aimDirection();
         
-        PotionProjectile projectile = Instantiate(Player.PotionProjectile, m_throwingPoint.position,Quaternion.identity);
+        PotionProjectile projectile = Instantiate(m_potionProjectilePref, m_throwingPoint.position,Quaternion.identity);
         projectile.Lauch(direction,Player.PlayerInventory.GetPotion(),m_throwingForce);
     }
 

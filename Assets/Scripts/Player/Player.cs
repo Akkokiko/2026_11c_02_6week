@@ -14,13 +14,6 @@ public class Player : Entity
     
     [SerializeField] private Camera m_Camera;
     public Camera Camera => m_Camera;
-    
-    
-    [SerializeField] private PotionProjectile m_PotionProjectile;
-    public PotionProjectile PotionProjectile => m_PotionProjectile;
-
-
-
 
     [SerializeField] private InputActionAsset m_inputAction;
     public InputActionAsset InputActionAsset => m_inputAction;
