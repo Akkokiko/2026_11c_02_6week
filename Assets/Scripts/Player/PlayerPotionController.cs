@@ -57,7 +57,7 @@ public class PlayerPotionController : MonoBehaviour
         Vector3 direction = aimDirection();
         
         PotionProjectile projectile = Instantiate(Player.PotionProjectile, m_throwingPoint.position,Quaternion.identity);
-        projectile.Lauch(direction,m_throwingForce);
+        projectile.Lauch(direction,Player.PlayerInventory.GetPotion(),m_throwingForce);
     }
 
     void Drink()
