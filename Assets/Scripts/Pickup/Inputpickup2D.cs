@@ -4,7 +4,7 @@ public class InteractPickup2D : MonoBehaviour
 {
     private bool playerNearby = false;
 
-    private virtual void OnTriggerEnter2D(Collider2D other)
+    private  void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -14,7 +14,7 @@ public class InteractPickup2D : MonoBehaviour
         }
     }
 
-    private virtual void OnTriggerExit2D(Collider2D other)
+    private  void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

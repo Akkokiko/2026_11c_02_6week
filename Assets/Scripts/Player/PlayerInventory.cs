@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
    
-   [SerializeField] private List<Potion> m_potions = new List<Potion>();
+   
+   [SerializeField] private Potion[] m_potions = new Potion[3];
    
    
    [SerializeField] private Player m_player;
@@ -34,8 +35,48 @@ public class PlayerInventory : MonoBehaviour
       
    }
 
+   //Potion Inventory
+
+   public int getPotionInventorySize()
+   {
+      return m_inventory.Count;
+   }
+
    public Potion GetPotion(int index = 0)
    {
-      return m_potions[index];
+      return m_potions[index];   
    }
+
+   public bool isSlotEmpty(int slotIndex)
+   {
+      Debug.Log("isSlotEmpty: " +  !m_potions[slotIndex] );
+      return !m_potions[slotIndex]; ;
+   }
+
+   public void addPotion(Potion potion)
+   {
+      for (int i = 0; i < m_potions.Length; i++)
+      {
+         if (isSlotEmpty(i))
+         {
+            m_potions[i] = potion;
+            return;
+         }
+      }
+   }
+
+   public void removePotion(int slotIndex)
+   {
+      if (!isSlotEmpty(slotIndex))
+      {
+         m_potions[slotIndex] = null;
+         for (int i = slotIndex + 1; i < m_potions.Length; i++)
+         {
+            m_potions[i-1] = m_potions[i];
+         }
+         m_potions[^1] = null;
+      }
+   }
+   
+   
 }
