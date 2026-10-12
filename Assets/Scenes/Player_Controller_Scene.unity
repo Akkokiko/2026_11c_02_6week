@@ -1069,6 +1069,7 @@ MonoBehaviour:
   m_Player: {fileID: 1331644268}
   m_PlayerRigidbody: {fileID: 1331644265}
   m_moveSpeed: 5
+  m_jumpHeight: 10
 --- !u!1 &1734161701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,7 +1172,7 @@ GameObject:
   - component: {fileID: 1749546020}
   - component: {fileID: 1749546019}
   - component: {fileID: 1749546018}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform_Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
