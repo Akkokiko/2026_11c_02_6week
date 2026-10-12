@@ -585,7 +585,6 @@ GameObject:
   - component: {fileID: 1331644268}
   - component: {fileID: 1331644270}
   - component: {fileID: 1331644269}
-  - component: {fileID: 1331644271}
   - component: {fileID: 1331644266}
   - component: {fileID: 1331644265}
   m_Layer: 0
@@ -734,21 +733,6 @@ MonoBehaviour:
   m_potions:
   - {fileID: 468744587}
   m_player: {fileID: 1331644268}
---- !u!114 &1331644271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331644264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 955d26389d03c5549be107aed372d9be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  m_Player: {fileID: 1331644268}
-  m_PlayerRigidbody: {fileID: 1331644265}
-  m_moveSpeed: 5
 --- !u!1 &1749546017
 GameObject:
   m_ObjectHideFlags: 0
