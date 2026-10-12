@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public class Potion : MonoBehaviour
+
+[CreateAssetMenu(fileName = "Potion", menuName = "PotionTest")]
+public class Potion : ScriptableObject
 {
     [SerializeField] private string m_potionName;
 
