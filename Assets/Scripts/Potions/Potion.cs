@@ -5,7 +5,8 @@ using UnityEngine;
 public class Potion : ScriptableObject
 {
     [SerializeField] private string m_potionName;
-
+    [SerializeField] private Sprite m_potionSprite; 
+    public Sprite PotionSprite => m_potionSprite;
 
     public virtual void use(Player player)
     {

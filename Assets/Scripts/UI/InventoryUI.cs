@@ -12,6 +12,7 @@ public class InventoryUI : MonoBehaviour
       {
           potionIcon.GetComponent<Outline>().enabled = false;
       }
+      
    }
 
 
@@ -22,5 +23,21 @@ public class InventoryUI : MonoBehaviour
            potionIcon.GetComponent<Outline>().enabled = false;
        }
        m_potionIcons[slot].GetComponent<Outline>().enabled = true;
+   }
+
+   public void updatePotionInventory(Potion[] potions)
+   {
+       for(int i=0; i<potions.Length; i++)
+       {
+           Potion potion = potions[i];
+           if (null == potion)
+           {
+               m_potionIcons[i].GetComponent<Image>().sprite = null;
+           }
+           else
+           {
+               m_potionIcons[i].GetComponent<Image>().sprite = potion.PotionSprite;
+           }
+       }
    }
 }

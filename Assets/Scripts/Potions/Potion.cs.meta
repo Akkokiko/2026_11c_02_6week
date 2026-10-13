@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: 65de632947821524c9905287f7c9b11c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_potionSprite: {fileID: -3164809056393425246, guid: bb041bd297aa1de4fa7dafea16e0993a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

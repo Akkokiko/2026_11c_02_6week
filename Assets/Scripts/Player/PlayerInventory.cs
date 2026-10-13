@@ -21,6 +21,8 @@ public class PlayerInventory : MonoBehaviour
       m_inventory.Add("Blue Flowers",0);
       m_inventory.Add("Red Flowers", 0);
       m_inventory.Add("Green Flowers", 0);
+      UIManager.instance.InventoryUI.updatePotionInventory(m_potions);  
+      
    }
 
    //Function adding Item to inventory
@@ -63,6 +65,7 @@ public class PlayerInventory : MonoBehaviour
             return;
          }
       }
+      UIManager.instance.InventoryUI.updatePotionInventory(m_potions);
    }
 
    public void removePotion(int slotIndex)
@@ -75,6 +78,7 @@ public class PlayerInventory : MonoBehaviour
             m_potions[i-1] = m_potions[i];
          }
          m_potions[^1] = null;
+         UIManager.instance.InventoryUI.updatePotionInventory(m_potions);
       }
    }
    
