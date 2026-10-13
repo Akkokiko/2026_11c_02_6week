@@ -27,7 +27,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "Pick",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "532bf21b-d3f5-45ff-a090-4ca0863328bb",
                     "expectedControlType": "",
@@ -97,7 +97,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pick",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

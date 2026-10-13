@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Potion
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   m_potionName: PotionTest
+  m_potionSprite: {fileID: -3164809056393425246, guid: bb041bd297aa1de4fa7dafea16e0993a, type: 3}

@@ -21,6 +21,15 @@ public class Player : Entity
     [Header("Player Components")]
     [SerializeField] private PlayerInventory m_playerInventory;
     public PlayerInventory PlayerInventory => m_playerInventory;
+    
+    [SerializeField] private PlayerMovement m_playerMovement;
+    public PlayerMovement PlayerMovement => m_playerMovement;
+    
+    [SerializeField] private PlayerPotionController m_playerPotionController;
+    public PlayerPotionController PlayerPotionController => m_playerPotionController;
+    
+    [SerializeField] private PlayerInteractController m_playerInteractController;
+    public PlayerInteractController PlayerInteractController => m_playerInteractController;
 
     void OnEnable()
     {
@@ -31,17 +40,5 @@ public class Player : Entity
     {
         m_inputAction.Disable();    
     }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

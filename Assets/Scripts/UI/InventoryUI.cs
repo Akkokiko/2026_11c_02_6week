@@ -1,10 +1,18 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
    public GameObject[] m_potionIcons;
+   
+   
+   //Flowers
+   [Header("Flowers")]
+   public TextMeshProUGUI m_flowerCountBlue;
+   public TextMeshProUGUI m_flowerCountSeth;
+   public TextMeshProUGUI m_flowerCountGreen;
 
    public void Awake()
    {
@@ -40,4 +48,7 @@ public class InventoryUI : MonoBehaviour
            }
        }
    }
+   
+   
+   
 }
