@@ -34,15 +34,13 @@ public class PlayerMovement : MonoBehaviour
         m_PlayerCollider = (Collider2D)Player.PlayerCollider;
 
         m_groundedMask = LayerMask.GetMask("Floor");
-        float m_currJumpDuration = 0;
+        m_currJumpDuration = 0;
 
     }
     
     void Update()
     {
         m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask);
-
-        Debug.Log("IsGrounded: "+m_isGrounded);
 
         if(m_isGrounded && m_jumpInput.WasPressedThisFrame())
         {
