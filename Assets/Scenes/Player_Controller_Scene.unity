@@ -378,9 +378,7 @@ MonoBehaviour:
   - {fileID: 307614476}
   - {fileID: 1734161701}
   - {fileID: 622273614}
-  m_flowerCountBlue: {fileID: 0}
-  m_flowerCountSeth: {fileID: 0}
-  m_flowerCountGreen: {fileID: 0}
+  m_flowerCards: []
 --- !u!1 &157265181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickup2D
   flower: {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
+  amount: 2
 --- !u!4 &749270157
 Transform:
   m_ObjectHideFlags: 0
@@ -1148,6 +1147,7 @@ GameObject:
   - component: {fileID: 941393596}
   - component: {fileID: 941393598}
   - component: {fileID: 941393597}
+  - component: {fileID: 941393599}
   m_Layer: 5
   m_Name: Flower_Card_Green
   m_TagString: Untagged
@@ -1214,6 +1214,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941393595}
   m_CullTransparentMesh: 1
+--- !u!114 &941393599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941393595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954d6b4268ab1c4bb90f7b00c1879e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerUICard
+  m_representedFlower: {fileID: 11400000, guid: c0751ccf068382049aa880f9eef8fc70, type: 2}
+  m_countText: {fileID: 395858866}
 --- !u!1 &1038679456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickup2D
   flower: {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
+  amount: 1
 --- !u!58 &1286066493
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2086,6 +2101,7 @@ GameObject:
   - component: {fileID: 1354262268}
   - component: {fileID: 1354262270}
   - component: {fileID: 1354262269}
+  - component: {fileID: 1354262271}
   m_Layer: 5
   m_Name: Flower_Card_Seth
   m_TagString: Untagged
@@ -2152,6 +2168,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354262267}
   m_CullTransparentMesh: 1
+--- !u!114 &1354262271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354262267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954d6b4268ab1c4bb90f7b00c1879e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerUICard
+  m_representedFlower: {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
+  m_countText: {fileID: 2045086050}
 --- !u!1 &1419545111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,6 +2741,7 @@ GameObject:
   - component: {fileID: 2013628520}
   - component: {fileID: 2013628522}
   - component: {fileID: 2013628521}
+  - component: {fileID: 2013628523}
   m_Layer: 5
   m_Name: Flower_Card_Blue
   m_TagString: Untagged
@@ -2777,6 +2808,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013628519}
   m_CullTransparentMesh: 1
+--- !u!114 &2013628523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013628519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f954d6b4268ab1c4bb90f7b00c1879e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerUICard
+  m_representedFlower: {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
+  m_countText: {fileID: 157265183}
 --- !u!1 &2027165508
 GameObject:
   m_ObjectHideFlags: 0

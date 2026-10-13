@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +11,7 @@ public class InventoryUI : MonoBehaviour
    
    //Flowers
    [Header("Flowers")]
-   public TextMeshProUGUI m_flowerCountBlue;
-   public TextMeshProUGUI m_flowerCountSeth;
-   public TextMeshProUGUI m_flowerCountGreen;
+   public FlowerUICard[] m_flowerCards;
 
    public void Awake()
    {
@@ -50,5 +49,19 @@ public class InventoryUI : MonoBehaviour
    }
    
    
-   
+   //Flowers
+   public void updateFlowerCard(Flower flower, int newAmount)
+   {
+       foreach (FlowerUICard card in m_flowerCards)
+       {
+           if (card.RepresentedFlower == flower)
+           {
+               card.updateCountText(newAmount);
+               return;
+           }
+       }
+   }
+
+
+
 }

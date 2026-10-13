@@ -13,35 +13,31 @@ public class PlayerInventory : MonoBehaviour
    public Player Player => m_player;
    
    //Later this dictionary will use Flower object as a key
-   private Dictionary<String, int> m_inventory = new Dictionary<String, int>();
+   private Dictionary<Flower, int> m_flowerInventory = new Dictionary<Flower, int>();
 
 
    public void Awake()
    {
-      m_inventory.Add("Blue Flowers",0);
-      m_inventory.Add("Red Flowers", 0);
-      m_inventory.Add("Green Flowers", 0);
+      
       UIManager.instance.InventoryUI.updatePotionInventory(m_potions);  
       
    }
 
    //Function adding Item to inventory
-   public void AddItem(String key, int amount)
+   public void AddFlower(Flower key, int amount)
    {
-      if (m_inventory.ContainsKey(key))
+      if (!m_flowerInventory.TryAdd(key, amount))
       {
-         m_inventory[key] += amount;
-         return;
+         m_flowerInventory[key] += amount;
       }
-      m_inventory.Add(key, amount);
-      
+      UIManager.instance.InventoryUI.updateFlowerCard(key, m_flowerInventory[key]);
    }
 
    //Potion Inventory
 
    public int getPotionInventorySize()
    {
-      return m_inventory.Count;
+      return m_flowerInventory.Count;
    }
 
    public Potion GetPotion(int index = 0)
