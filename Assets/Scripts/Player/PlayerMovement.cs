@@ -16,9 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump")]
     [SerializeField] private float m_jumpHeight;
+    [SerializeField] private AnimationCurve m_jumpCurve;
     private InputAction m_jumpInput;
     private bool m_isGrounded;
-    private bool m_jumpPressed;
     private bool m_isMidJump;
 
     private LayerMask m_groundedMask;
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         
         if(m_isMidJump)
         {
-            m_PlayerRigidbody.linearVelocityY = m_jumpHeight;
+            m_PlayerRigidbody.linearVelocityY = m_jumpHeight * m_jumpCurve.Evaluate(m_currJumpDuration);
             
         }
         
