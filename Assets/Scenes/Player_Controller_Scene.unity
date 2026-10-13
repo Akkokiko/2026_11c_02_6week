@@ -268,7 +268,6 @@ GameObject:
   - component: {fileID: 47426484}
   - component: {fileID: 47426483}
   - component: {fileID: 47426482}
-  - component: {fileID: 47426485}
   m_Layer: 5
   m_Name: PotionInventory_Content
   m_TagString: Untagged
@@ -283,7 +282,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47426480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -291,11 +290,11 @@ RectTransform:
   - {fileID: 307614477}
   - {fileID: 1734161702}
   - {fileID: 622273615}
-  m_Father: {fileID: 1203273916}
+  m_Father: {fileID: 1368135072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 182.14154, y: -76}
+  m_AnchoredPosition: {x: -532.85846, y: 282}
   m_SizeDelta: {x: 332.2831, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47426482
@@ -362,23 +361,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47426480}
   m_CullTransparentMesh: 1
---- !u!114 &47426485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47426480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5647fa777fff7e45a1b6533fc0592ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
-  m_potionIcons:
-  - {fileID: 307614476}
-  - {fileID: 1734161701}
-  - {fileID: 622273614}
-  m_flowerCards: []
 --- !u!1 &157265181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,8 +1579,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 47426481}
-  - {fileID: 1282136402}
+  - {fileID: 1368135072}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1618,7 +1599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8264fd452dd0e249adda1a94194bf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  m_inventoryUI: {fileID: 47426485}
+  m_inventoryUI: {fileID: 1368135071}
 --- !u!1 &1282136401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1626,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282136401}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1653,11 +1634,11 @@ RectTransform:
   - {fileID: 2013628520}
   - {fileID: 941393596}
   - {fileID: 1354262268}
-  m_Father: {fileID: 1203273916}
+  m_Father: {fileID: 1368135072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -209.78345, y: -714.17267}
+  m_AnchoredPosition: {x: 505.21655, y: -356.17267}
   m_SizeDelta: {x: 367.9326, y: 152.4799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282136403
@@ -2182,6 +2163,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FlowerUICard
   m_representedFlower: {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
   m_countText: {fileID: 2045086050}
+--- !u!1 &1368135070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368135072}
+  - component: {fileID: 1368135071}
+  m_Layer: 5
+  m_Name: InventoryUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1368135071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368135070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5647fa777fff7e45a1b6533fc0592ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
+  m_potionIcons:
+  - {fileID: 307614476}
+  - {fileID: 1734161701}
+  - {fileID: 622273614}
+  m_flowerCards:
+  - {fileID: 941393599}
+  - {fileID: 1354262271}
+  - {fileID: 2013628523}
+--- !u!224 &1368135072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368135070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 47426481}
+  - {fileID: 1282136402}
+  m_Father: {fileID: 1203273916}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1419545111
 GameObject:
   m_ObjectHideFlags: 0
