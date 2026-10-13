@@ -37,7 +37,7 @@ public class PlayerInventory : MonoBehaviour
 
    public int getPotionInventorySize()
    {
-      return m_flowerInventory.Count;
+      return m_potions.Length;
    }
 
    public Potion GetPotion(int index = 0)
