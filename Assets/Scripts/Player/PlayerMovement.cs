@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Player m_Player;
     private Rigidbody2D m_PlayerRigidbody;
+    private Collider2D m_PlayerCollider;
     public Player Player => m_Player;
 
 
@@ -30,14 +31,18 @@ public class PlayerMovement : MonoBehaviour
         m_jumpInput = Player.InputActionAsset.FindAction("Jump");
 
         m_PlayerRigidbody = Player.PlayerRigidbody;
+        m_PlayerCollider = (Collider2D)Player.PlayerCollider;
 
         m_groundedMask = LayerMask.GetMask("Floor");
         float m_currJumpDuration = 0;
+
     }
     
     void Update()
     {
-        m_isGrounded = m_PlayerRigidbody.IsTouchingLayers(m_groundedMask);
+        m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask);
+
+        Debug.Log("IsGrounded: "+m_isGrounded);
 
         if(m_isGrounded && m_jumpInput.WasPressedThisFrame())
         {
