@@ -89,8 +89,10 @@ public class PlayerPotionController : MonoBehaviour
 
     void Drink()
     {
-        Potion potion = Player.PlayerInventory.GetPotion();
+        
+        Potion potion = Player.PlayerInventory.GetPotion(m_potionInHand);
         potion.Affect(Player);
+        Player.PlayerInventory.removePotion(m_potionInHand);
     }
 
 

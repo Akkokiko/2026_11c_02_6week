@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class Player : Entity
 {
+    
+    [Header("Player")]
     [SerializeField] private BoxCollider2D m_PlayerCollider;
     public BoxCollider2D PlayerCollider => m_PlayerCollider;
     
@@ -30,6 +32,8 @@ public class Player : Entity
     
     [SerializeField] private PlayerInteractController m_playerInteractController;
     public PlayerInteractController PlayerInteractController => m_playerInteractController;
+    
+    
 
     void OnEnable()
     {

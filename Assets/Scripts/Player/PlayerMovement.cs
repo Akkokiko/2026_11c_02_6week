@@ -10,12 +10,12 @@ public class PlayerMovement : MonoBehaviour
     public Player Player => m_Player;
 
 
-    [Header("Horizontal Movement")]
-    [SerializeField] private float m_moveSpeed;
+    [Header("Horizontal Movement")] 
+    private float m_moveSpeed => Player.m_currentMoveSpeed;
     private InputAction m_horizontalInput;
 
     [Header("Jump")]
-    [SerializeField] private float m_jumpHeight;
+    private float m_jumpHeight => Player.m_currentJumpForce;
     [SerializeField] private AnimationCurve m_jumpCurve;
     private InputAction m_jumpInput;
     private bool m_isGrounded;
