@@ -44,5 +44,10 @@ public class Player : Entity
     {
         m_inputAction.Disable();    
     }
-    
+
+    public override void applyEffect(Effect effect)
+    {
+        base.applyEffect(effect);
+        UIManager.instance.EffectBarUI.addEffectCard(effect);
+    }
 }

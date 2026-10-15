@@ -6,6 +6,9 @@ public class UIManager : MonoBehaviour
     
     [SerializeField] private InventoryUI m_inventoryUI;
     public InventoryUI InventoryUI => m_inventoryUI;
+    
+    [SerializeField] private EffectBarUI m_effectBarUI;
+    public EffectBarUI EffectBarUI => m_effectBarUI;
 
     public void Awake()
     {

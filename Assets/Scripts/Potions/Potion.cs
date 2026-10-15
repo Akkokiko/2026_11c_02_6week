@@ -6,6 +6,8 @@ public class Potion : ScriptableObject
 {
     [SerializeField] private string m_potionName;
     [SerializeField] private Sprite m_potionSprite; 
+    [SerializeField] private Sprite m_effectSprite;
+    
     public Sprite PotionSprite => m_potionSprite;
     
     
@@ -25,7 +27,8 @@ public class Potion : ScriptableObject
 
     public virtual void Affect(Entity entity)
     {
-        entity.applyEffect(m_effectType, m_duration, m_strength);
+        Effect n = new Effect(m_effectType, m_duration, m_strength,m_effectSprite);
+        entity.applyEffect(n);
     }
 
 }

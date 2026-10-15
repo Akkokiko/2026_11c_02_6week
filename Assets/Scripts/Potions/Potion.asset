@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   m_potionName: PotionTest
   m_potionSprite: {fileID: -3164809056393425246, guid: bb041bd297aa1de4fa7dafea16e0993a, type: 3}
+  m_effectSprite: {fileID: -855298285791758126, guid: 14b7ee987d60fa1488fb7bae31e66693, type: 3}
   m_effectType: 0
   m_duration: 5
   m_strength: 2

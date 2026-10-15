@@ -54,12 +54,11 @@ public class Entity : MonoBehaviour
        m_effectsToRemove.Clear();
    }
 
-   public void applyEffect(EffectType effectType, float duration,float strength)
+   public virtual void applyEffect(Effect effect)
    {
-       Debug.Log("Applying " + effectType.ToString());
-       Effect e =  new Effect(effectType, duration, strength);
-       m_activeEffects.Add(e);
-       modifyStats(e);
+      
+       m_activeEffects.Add(effect);
+       modifyStats(effect);
    }    
 
    public void modifyStats(Effect effect, bool remove = false)
