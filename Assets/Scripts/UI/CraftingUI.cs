@@ -18,6 +18,7 @@ public class CraftingUI : MonoBehaviour
         if (m_OpenCraftingUIInput.WasPressedThisFrame())
         {
             m_CraftingUI.SetActive(!m_CraftingUI.activeSelf);
+            m_Player.swapIsInMenuState();
         }
     }
 }

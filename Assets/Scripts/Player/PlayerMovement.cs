@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_maxJumpDuration;
     private float m_currJumpDuration;
     
+    //needed for ui stop
+    private float m_initialGravityScale;
+
     void Start()
     {
         m_horizontalInput = Player.InputActionAsset.FindAction("MoveHorizontal");
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         m_groundedMask = LayerMask.GetMask("Floor");
         m_currJumpDuration = 0;
 
+        m_initialGravityScale = m_PlayerRigidbody.gravityScale;
     }
     
     void Update()
@@ -60,12 +64,22 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        m_PlayerRigidbody.linearVelocityX = m_horizontalInput.ReadValue<float>() * m_moveSpeed;
-        
-        if(m_isMidJump)
+        if (!Player.IsInMenu)
         {
-            m_PlayerRigidbody.linearVelocityY = m_jumpHeight * m_jumpCurve.Evaluate(m_currJumpDuration);
+            //TO DO: Find a way to get rid of this dumb set
+            m_PlayerRigidbody.gravityScale = m_initialGravityScale;
+            m_PlayerRigidbody.linearVelocityX = m_horizontalInput.ReadValue<float>() * m_moveSpeed;
+        
+            if(m_isMidJump)
+            {
+             m_PlayerRigidbody.linearVelocityY = m_jumpHeight * m_jumpCurve.Evaluate(m_currJumpDuration);
             
+            }
+        }
+        else
+        {
+            m_PlayerRigidbody.linearVelocity = new Vector2(0,0);
+            m_PlayerRigidbody.gravityScale = 0;
         }
         
     }
