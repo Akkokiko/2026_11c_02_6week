@@ -76,7 +76,7 @@ public class Entity : MonoBehaviour
                break;
            
            case EffectType.JUMP_BOOST:
-               m_currentMoveSpeed += ((m_baseMoveSpeed * effect.Strength) * (remove?-1:1));
+               m_currentJumpForce += ((m_baseJumpForce * effect.Strength) * (remove?-1:1));
                break;
            
            default:
@@ -87,6 +87,7 @@ public class Entity : MonoBehaviour
 
    public virtual void takeDamage(int damage)
    {
+       Debug.Log("Taking damage");
        m_currentHealth -= damage;
        if (m_currentHealth <= 0)
        {
