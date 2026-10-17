@@ -881,6 +881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftingUI
   m_Player: {fileID: 0}
   m_CraftingUI: {fileID: 655894827900744002}
+  m_InventoryUI: {fileID: 122994350201303064}
+  m_Raycaster: {fileID: 3148774857470285340}
 --- !u!1 &2171576681870949770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1595,7 @@ GameObject:
   - component: {fileID: 1161591198725011405}
   - component: {fileID: 5844237083089725796}
   - component: {fileID: 6821429393761507043}
+  - component: {fileID: 3836236628623911053}
   m_Layer: 5
   m_Name: FlowerSlot1
   m_TagString: Untagged
@@ -1657,6 +1660,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3836236628623911053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5610741009796881442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0e2b034b263494d9b66d73b69c5755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingSlot
 --- !u!1 &5675871454041117648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2041,7 @@ GameObject:
   - component: {fileID: 300789658984953841}
   - component: {fileID: 5630737246512019638}
   - component: {fileID: 4129938591921279648}
+  - component: {fileID: 6026996424269934195}
   m_Layer: 5
   m_Name: FlowerSlot2
   m_TagString: Untagged
@@ -2090,6 +2106,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6026996424269934195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7294032142443691804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0e2b034b263494d9b66d73b69c5755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingSlot
 --- !u!1 &7395443782154561387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,6 +2418,7 @@ GameObject:
   - component: {fileID: 5940921537110563925}
   - component: {fileID: 1794007456819372698}
   - component: {fileID: 2668529685602793116}
+  - component: {fileID: 2175230791077058473}
   m_Layer: 5
   m_Name: FlowerSlot3
   m_TagString: Untagged
@@ -2454,6 +2483,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2175230791077058473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521344343992340158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0e2b034b263494d9b66d73b69c5755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingSlot
 --- !u!1 &8855185915643610968
 GameObject:
   m_ObjectHideFlags: 0

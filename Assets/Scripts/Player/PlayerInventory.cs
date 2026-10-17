@@ -32,6 +32,16 @@ public class PlayerInventory : MonoBehaviour
       }
       UIManager.instance.InventoryUI.updateFlowerCard(key, m_flowerInventory[key]);
    }
+   public bool TryTakeFlower(Flower key)
+   {
+      if (m_flowerInventory[key] > 0)
+      {
+         m_flowerInventory[key]--;
+         UIManager.instance.InventoryUI.updateFlowerCard(key, m_flowerInventory[key]);
+         return true;
+      }
+      return false;
+   }
 
    //Potion Inventory
 
