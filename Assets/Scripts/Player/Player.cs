@@ -6,8 +6,8 @@ public class Player : Entity
 {
     
     [Header("Player")]
-    [SerializeField] private BoxCollider2D m_PlayerCollider;
-    public BoxCollider2D PlayerCollider => m_PlayerCollider;
+    [SerializeField] private CircleCollider2D m_PlayerCollider;
+    public CircleCollider2D PlayerCollider => m_PlayerCollider;
     
     [SerializeField] private Rigidbody2D m_PlayerRigidbody;
     public Rigidbody2D PlayerRigidbody => m_PlayerRigidbody;

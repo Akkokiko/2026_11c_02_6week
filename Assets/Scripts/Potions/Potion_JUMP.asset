@@ -17,4 +17,4 @@ MonoBehaviour:
   m_effectSprite: {fileID: 6937817954938267909, guid: 7ec87289e5c0c0a49af2f33a8f8c115e, type: 3}
   m_effectType: 2
   m_duration: 3
-  m_strength: 5
+  m_strength: 1
