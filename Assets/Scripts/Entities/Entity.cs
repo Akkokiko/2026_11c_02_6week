@@ -5,6 +5,11 @@ using UnityEngine.Serialization;
 
 public class Entity : MonoBehaviour
 {
+
+    [Header("Health")] 
+    [SerializeField] private int m_maxHealth;
+    private int m_currentHealth;
+    
     [Header("Base Stats")]
     [SerializeField] private float m_baseMoveSpeed = 5;
     [SerializeField] private float m_baseJumpForce = 20;
@@ -22,6 +27,7 @@ public class Entity : MonoBehaviour
    {
        m_currentMoveSpeed = m_baseMoveSpeed;    
        m_currentJumpForce = m_baseJumpForce;
+       m_currentHealth = m_maxHealth;
    }
    
    
@@ -77,6 +83,26 @@ public class Entity : MonoBehaviour
                Debug.Log("Effect type not implemented");
                break;
        }
+   }
+
+   public virtual void takeDamage(int damage)
+   {
+       m_currentHealth -= damage;
+       if (m_currentHealth <= 0)
+       {
+           die();
+       }
+   }
+
+   public virtual void heal(int value)
+   {
+       m_currentHealth += value;
+       m_currentHealth = Mathf.Clamp(m_currentHealth, 0, m_maxHealth);
+   }
+
+   public virtual void die()
+   {
+       Destroy(gameObject);
    }
 
 }
