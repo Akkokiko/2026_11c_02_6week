@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: BlueFlower
   m_EditorClassIdentifier: Assembly-CSharp::Flower
   m_name: BlueFlower
+  m_sprite: {fileID: -3164809056393425246, guid: 4787e906af3d8314cb9d0f4c97e79598, type: 3}

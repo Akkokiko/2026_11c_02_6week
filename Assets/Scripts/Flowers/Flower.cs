@@ -5,5 +5,7 @@ using UnityEngine;
 public class Flower : ScriptableObject
 {
     [SerializeField] private string m_name;
+    [SerializeField] private Sprite m_sprite;
+    public Sprite sprite => m_sprite;
     
 }
