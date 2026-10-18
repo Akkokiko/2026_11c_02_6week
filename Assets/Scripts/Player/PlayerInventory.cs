@@ -68,6 +68,7 @@ public class PlayerInventory : MonoBehaviour
          if (isSlotEmpty(i))
          {
             m_potions[i] = potion;
+            UIManager.instance.InventoryUI.updatePotionInventory(m_potions);
             return;
          }
       }

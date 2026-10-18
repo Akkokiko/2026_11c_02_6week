@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c161485e0377e547800e382621ad81b, type: 3}
   m_Name: SpeedBoostRecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  m_RecipeResult: {fileID: 0}
-  m_NeededFlowers: []
-  m_hasBeenDiscovered: 0
+  m_RecipeResult: {fileID: 11400000, guid: 78b6862438467eb4e90be08c045c085e, type: 2}
+  m_NeededFlowers:
+  - {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
+  m_hasBeenDiscovered: 1
