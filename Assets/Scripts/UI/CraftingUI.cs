@@ -17,6 +17,10 @@ public class CraftingUI : MonoBehaviour
     private InputAction m_menuInteractInput;
     private Flower m_heldFlower;
 
+    [SerializeField] private CraftingSlot[] m_craftingSlots;
+
+    [SerializeField] private RecipeBook m_recipeBook;
+
     void Start()
     {
         m_OpenCraftingUIInput = m_Player.InputActionAsset.FindAction("OpenCraftingUI");
@@ -59,6 +63,14 @@ public class CraftingUI : MonoBehaviour
                 }
                 m_heldFlower = null;
             }
+        }
+    }
+    void OnDisable()
+    {
+        if (m_heldFlower != null)
+        {
+            m_Player.PlayerInventory.AddFlower(m_heldFlower,1);
+            m_heldFlower = null;
         }
     }
     private FlowerUICard GetClickedFlowerUICard()
@@ -114,12 +126,37 @@ public class CraftingUI : MonoBehaviour
         return null;
     }
 
-    void OnDisable()
+    public void CraftPotion()
     {
-        if (m_heldFlower != null)
+        List<Flower> flowersInCraftSlots = new List<Flower>();
+        foreach (CraftingSlot slot in m_craftingSlots)
         {
-            m_Player.PlayerInventory.AddFlower(m_heldFlower,1);
-            m_heldFlower = null;
+            Flower currFlower = slot.FlowerInSlot;
+            if (currFlower != null)
+            {
+                flowersInCraftSlots.Add(currFlower);
+            }
+        }
+
+        Recipe recipe; ;
+        if (!m_Player.PlayerInventory.isFull() && (recipe = m_recipeBook.evaluateRecipe(flowersInCraftSlots)) != null)
+        {
+            m_Player.PlayerInventory.addPotion(recipe.RecipeResult);
+            recipe.markAsDiscovered();
+        }
+        else
+        {
+            //refund
+            foreach (Flower flower in flowersInCraftSlots)
+            {
+                m_Player.PlayerInventory.AddFlower(flower, 1);
+            }
+        }
+
+        //clear slots
+        foreach (CraftingSlot slot in m_craftingSlots)
+        {
+            slot.putFlowerInSlot(null);
         }
     }
 }

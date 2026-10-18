@@ -87,6 +87,16 @@ public class PlayerInventory : MonoBehaviour
          UIManager.instance.InventoryUI.updatePotionInventory(m_potions);
       }
    }
-   
+   public bool isFull()
+   {
+      for (int i = 0; i < m_potions.Length; i++)
+      {
+         if (isSlotEmpty(i))
+         {
+            return false;
+         }
+      }
+      return true;
+   }
    
 }
