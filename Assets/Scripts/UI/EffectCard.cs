@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,11 +34,12 @@ public class EffectCard : MonoBehaviour
 
     public void stopEffect()
     {
+        
         Destroy(gameObject);
     }
 
-
-
-
-
+    private void OnDestroy()
+    {
+        m_durationBarMotionHandle.TryCancel();
+    }
 }

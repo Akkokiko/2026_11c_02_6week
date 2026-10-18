@@ -15,5 +15,14 @@ public class EffectBarUI : MonoBehaviour
       effectCard.StartEffect(effect);
       
    }
+
+   public void removeAllEffectCards()
+   {
+      int childCount = m_effectBarContent.transform.childCount;
+      for (int i = childCount - 1; i >= 0; i--)
+      {
+         Destroy(m_effectBarContent.transform.GetChild(i).gameObject);
+      }
+   }
 }
    

@@ -44,7 +44,10 @@ public class Entity : MonoBehaviour
        {
            if (effect.countdown(Time.deltaTime))
            {
-               m_effectsToRemove.Add(effect);
+               if (!m_effectsToRemove.Contains(effect))
+               {
+                   m_effectsToRemove.Add(effect);
+               }
            }
        }
    }
@@ -58,6 +61,15 @@ public class Entity : MonoBehaviour
            m_activeEffects.Remove(effect);
        }
        m_effectsToRemove.Clear();
+   }
+
+   protected virtual void removeAllEffect()
+   {
+       foreach (Effect effect in m_activeEffects)
+       {
+           m_effectsToRemove.Add(effect);
+       }
+       removeExpiredEffects();
    }
 
    public virtual void applyEffect(Effect effect)

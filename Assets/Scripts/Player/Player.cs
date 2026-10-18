@@ -53,9 +53,16 @@ public class Player : Entity
         UIManager.instance.EffectBarUI.addEffectCard(effect);
     }
 
+    protected override void removeAllEffect()
+    {
+        base.removeAllEffect();
+        UIManager.instance.EffectBarUI.removeAllEffectCards();
+    }
+
     public override void die()
     {
         m_OnPlayerDeath.Invoke(this);
+        removeAllEffect();
     }
 
 
