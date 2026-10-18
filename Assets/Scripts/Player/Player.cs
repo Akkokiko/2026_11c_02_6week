@@ -1,5 +1,7 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Player : Entity
@@ -33,7 +35,7 @@ public class Player : Entity
     [SerializeField] private PlayerInteractController m_playerInteractController;
     public PlayerInteractController PlayerInteractController => m_playerInteractController;
     
-    
+    public UnityEvent<Player> m_OnPlayerDeath = new UnityEvent<Player>();
 
     void OnEnable()
     {
@@ -50,4 +52,11 @@ public class Player : Entity
         base.applyEffect(effect);
         UIManager.instance.EffectBarUI.addEffectCard(effect);
     }
+
+    public override void die()
+    {
+        m_OnPlayerDeath.Invoke(this);
+    }
+
+
 }
