@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 
@@ -20,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     public float attackCooldown = 1.5f;
     public float anticipationDuration = 0.6f;
     public float attackDuration = 0.5f;
+    public EnemyAttackHitbox attackHitboxScript;
 
     [Header("Ground Check")]
     public LayerMask floorLayer;
@@ -33,6 +33,8 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D bodyCollider;
     private Transform targetPoint;
+    private Vector2 pointAPosition;
+    private Vector2 pointBPosition;
 
     private float nextAttackTime;
     private bool chasing;
@@ -51,9 +53,36 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void Start()
+{
+    if (pointA == null)
     {
-        targetPoint = pointB;
+        Transform a = transform.Find("PointA");
+        if (a != null)
+            pointA = a;
     }
+
+    if (pointB == null)
+    {
+        Transform b = transform.Find("PointB");
+        if (b != null)
+            pointB = b;
+    }
+
+    if (pointA == null || pointB == null)
+    {
+        Debug.LogError(
+            "EnemyAI: Nie znaleziono punktów patrolu!",
+            this
+        );
+        enabled = false;
+        return;
+    }
+
+    pointAPosition = pointA.position;
+    pointBPosition = pointB.position;
+
+    targetPoint = pointB;
+}
 
     private void Update()
     {
@@ -66,7 +95,7 @@ public class EnemyAI : MonoBehaviour
         float distance = Vector2.Distance(
             transform.position, player.position);
 
-        chasing = distance <= sightRange && IsFacingPlayer();
+        chasing = distance <= sightRange;// && IsFacingPlayer();
 
         if (!busy && chasing && distance <= attackRange)
         {
@@ -115,8 +144,11 @@ public class EnemyAI : MonoBehaviour
         if (targetPoint == null)
             return;
 
-        float difference =
-            targetPoint.position.x - transform.position.x;
+        float targetX = targetPoint == pointA
+            ? pointAPosition.x
+            : pointBPosition.x;
+
+        float difference = targetX - transform.position.x;
 
         if (Mathf.Abs(difference) < 0.1f)
         {
@@ -136,7 +168,7 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-        MoveTowards(targetPoint.position.x, patrolSpeed);
+        MoveTowards(targetX, patrolSpeed);
     }
 
     private void MoveTowards(float targetX, float speed)
@@ -220,17 +252,26 @@ public class EnemyAI : MonoBehaviour
         busy = true;
         nextAttackTime = Time.time + attackCooldown;
 
+        if (attackHitboxScript != null)
+            attackHitboxScript.EndAttack();
+
         StopHorizontalMovement();
 
         if (animator != null)
-            animator.SetTrigger("Charged");
+            animator.SetTrigger("Charging");
 
         yield return new WaitForSeconds(anticipationDuration);
 
         if (animator != null)
             animator.SetTrigger("Attack");
 
+        if (attackHitboxScript != null)
+            attackHitboxScript.BeginAttack();
+
         yield return new WaitForSeconds(attackDuration);
+
+        if (attackHitboxScript != null)
+            attackHitboxScript.EndAttack();
 
         busy = false;
     }
