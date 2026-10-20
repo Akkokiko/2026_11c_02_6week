@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GreenFlower
   m_EditorClassIdentifier: Assembly-CSharp::Flower
   m_name: Green Flower
+  m_sprite: {fileID: 21300000, guid: 9d90ba1e193173148ae0db10eec31104, type: 3}

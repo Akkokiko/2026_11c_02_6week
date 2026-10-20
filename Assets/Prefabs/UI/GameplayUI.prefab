@@ -1017,7 +1017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23, y: -16.453918}
+  m_AnchoredPosition: {x: -23, y: -16.453857}
   m_SizeDelta: {x: 400, y: 75}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &9082007231811411998
@@ -1608,6 +1608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecipeBook
   m_RecipeList:
   - {fileID: 11400000, guid: 89ffc2347966dbe4e8a72f9c7b73c601, type: 2}
+  - {fileID: 11400000, guid: e3284742924e7494f9b1f276ed1b099d, type: 2}
   recipeVisual: {fileID: 7261449453880338577, guid: c69a1fa7a81091b4c94d868bace93f78, type: 3}
 --- !u!114 &4758873125347505483
 MonoBehaviour:

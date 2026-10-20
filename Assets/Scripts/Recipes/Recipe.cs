@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "Scriptable Objects/Recipe")]
@@ -40,10 +41,12 @@ public class Recipe : ScriptableObject
                 flowerAmountsGiven.Add(flowers[i], 1);
             }
         }
-        Debug.Log(flowerAmountsRecipe);
-        Debug.Log(flowerAmountsGiven);
+        if (!flowerAmountsRecipe.Keys.SequenceEqual(flowerAmountsGiven.Keys))
+        {
+            return false;
+        }
         //For each flower we just transcribed 
-        foreach (Flower flower in flowerAmountsRecipe.Keys)
+        foreach (Flower flower in flowerAmountsGiven.Keys)
         {
             //check if both recipes match
             if (flowerAmountsGiven[flower] != flowerAmountsRecipe[flower])

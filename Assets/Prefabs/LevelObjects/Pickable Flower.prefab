@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6327b909009cf7347afef1872ea222a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickup2D
-  flower: {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
+  flower: {fileID: 11400000, guid: c0751ccf068382049aa880f9eef8fc70, type: 2}
   amount: 1
   m_spriteRenderer: {fileID: 7244949996572572001}
 --- !u!58 &7047532056370141161
