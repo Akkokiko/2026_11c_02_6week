@@ -4,10 +4,14 @@ public class AutoPickup2D : MonoBehaviour
 {
     private  void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.TryGetComponent(out Player player))
         {
-            Debug.Log("Item aquired");
-            Destroy(gameObject);
+            pickup(player);
         }
+    }
+
+    public virtual void pickup(Player player)
+    {
+        
     }
 }
