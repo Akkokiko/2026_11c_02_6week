@@ -32,6 +32,16 @@ public class PlayerInventory : MonoBehaviour
       }
       UIManager.instance.InventoryUI.updateFlowerCard(key, m_flowerInventory[key]);
    }
+   public bool TryTakeFlower(Flower key)
+   {
+      if (m_flowerInventory[key] > 0)
+      {
+         m_flowerInventory[key]--;
+         UIManager.instance.InventoryUI.updateFlowerCard(key, m_flowerInventory[key]);
+         return true;
+      }
+      return false;
+   }
 
    //Potion Inventory
 
@@ -58,6 +68,7 @@ public class PlayerInventory : MonoBehaviour
          if (isSlotEmpty(i))
          {
             m_potions[i] = potion;
+            UIManager.instance.InventoryUI.updatePotionInventory(m_potions);
             return;
          }
       }
@@ -77,6 +88,16 @@ public class PlayerInventory : MonoBehaviour
          UIManager.instance.InventoryUI.updatePotionInventory(m_potions);
       }
    }
-   
+   public bool isFull()
+   {
+      for (int i = 0; i < m_potions.Length; i++)
+      {
+         if (isSlotEmpty(i))
+         {
+            return false;
+         }
+      }
+      return true;
+   }
    
 }

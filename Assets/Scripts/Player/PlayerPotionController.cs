@@ -35,23 +35,25 @@ public class PlayerPotionController : MonoBehaviour
     public void Update()
     {
 
-        Vector3 rotation = aimDirection();
-        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;    
-        m_AimIndicator.localRotation = Quaternion.Euler(0f, 0f, rotZ);
-
-        if (m_fireInput.WasPressedThisFrame())
+        if (!Player.IsInMenu)
         {
-            Throw();
+            Vector3 rotation = aimDirection();
+            float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;    
+            m_AimIndicator.localRotation = Quaternion.Euler(0f, 0f, rotZ);
+
+            if (m_fireInput.WasPressedThisFrame())
+            {
+                Throw();
+            }
+
+            if (m_drinkInput.WasPressedThisFrame())
+            {
+                Drink();
+            }
+
+
+            m_potionSwapScroll.performed += x => swapPotion_Scroll(x.ReadValue<float>());
         }
-
-        if (m_drinkInput.WasPressedThisFrame())
-        {
-            Drink();
-        }
-
-
-        m_potionSwapScroll.performed += x => swapPotion_Scroll(x.ReadValue<float>());
-
 
     }
 

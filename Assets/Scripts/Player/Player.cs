@@ -36,15 +36,19 @@ public class Player : Entity
     public PlayerInteractController PlayerInteractController => m_playerInteractController;
     
     public UnityEvent<Player> m_OnPlayerDeath = new UnityEvent<Player>();
+    [SerializeField] private bool m_isInMenu;
+    public bool IsInMenu => m_isInMenu;
 
     void OnEnable()
     {
         m_inputAction.Enable();
+        m_isInMenu = false;
     }
 
     void OnDisable()
     {
-        m_inputAction.Disable();    
+        m_inputAction.Disable();
+        m_isInMenu = true; 
     }
 
     public override void applyEffect(Effect effect)
@@ -66,4 +70,8 @@ public class Player : Entity
     }
 
 
+    public void swapIsInMenuState()
+    {
+        m_isInMenu = !m_isInMenu;
+    }
 }
