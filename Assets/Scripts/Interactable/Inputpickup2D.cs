@@ -4,6 +4,12 @@ public class InteractPickup2D : Interactable
 {
     [SerializeField] private Flower flower;
     [SerializeField] private int amount;
+    [SerializeField] private SpriteRenderer m_spriteRenderer;
+
+    private void Start()
+    {
+        m_spriteRenderer.sprite = flower.sprite;
+    }
 
     public override void Interact(Player player)
     {
