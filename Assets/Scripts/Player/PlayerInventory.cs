@@ -16,6 +16,8 @@ public class PlayerInventory : MonoBehaviour
    private Dictionary<Flower, int> m_flowerInventory = new Dictionary<Flower, int>();
 
 
+   public int m_coinAmount = 0;
+   
    public void Awake()
    {
       
@@ -100,4 +102,11 @@ public class PlayerInventory : MonoBehaviour
       return true;
    }
    
+
+   public void addCoin(int amount)
+   {
+      m_coinAmount += amount;
+      Debug.Log("Mamy " + m_coinAmount + " coins");
+      //UI update
+   }
 }
