@@ -107,6 +107,7 @@ public class PlayerInventory : MonoBehaviour
    {
       m_coinAmount += amount;
       Debug.Log("Mamy " + m_coinAmount + " coins");
+      UIManager.instance.InventoryUI.updateCoinsText(m_coinAmount);
       //UI update
    }
 }

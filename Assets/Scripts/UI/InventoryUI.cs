@@ -8,6 +8,8 @@ public class InventoryUI : MonoBehaviour
 {
    public GameObject[] m_potionIcons;
    
+   [SerializeField] private TextMeshProUGUI m_coinAmount;
+   
    
    //Flowers
    [Header("Flowers")]
@@ -60,6 +62,12 @@ public class InventoryUI : MonoBehaviour
                return;
            }
        }
+   }
+
+
+   public void updateCoinsText(int newAmount)
+   {
+       m_coinAmount.text = newAmount.ToString();    
    }
 
 
