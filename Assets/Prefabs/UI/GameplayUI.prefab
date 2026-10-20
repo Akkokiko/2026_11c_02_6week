@@ -1527,6 +1527,7 @@ GameObject:
   - component: {fileID: 2992328007757737937}
   - component: {fileID: 263159559605176740}
   - component: {fileID: 4441907718125292789}
+  - component: {fileID: 4758873125347505483}
   m_Layer: 5
   m_Name: Recipe Area
   m_TagString: Untagged
@@ -1605,6 +1606,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RecipeBook
   m_RecipeList:
   - {fileID: 11400000, guid: 89ffc2347966dbe4e8a72f9c7b73c601, type: 2}
+  recipeVisual: {fileID: 7261449453880338577, guid: c69a1fa7a81091b4c94d868bace93f78, type: 3}
+--- !u!114 &4758873125347505483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876375593203336245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &5610741009796881442
 GameObject:
   m_ObjectHideFlags: 0

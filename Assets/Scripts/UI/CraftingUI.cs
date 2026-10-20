@@ -143,6 +143,7 @@ public class CraftingUI : MonoBehaviour
         {
             m_Player.PlayerInventory.addPotion(recipe.RecipeResult);
             recipe.markAsDiscovered();
+            m_recipeBook.showDiscoveredRecipes();
         }
         else
         {

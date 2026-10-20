@@ -1,19 +1,16 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RecipeBook : MonoBehaviour
 {
     [SerializeField] private List<Recipe> m_RecipeList;
+    [SerializeField] private GameObject recipeVisual;
     
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        showDiscoveredRecipes();
     }
 
     public Recipe evaluateRecipe(List<Flower> flowers)
@@ -33,5 +30,27 @@ public class RecipeBook : MonoBehaviour
             return null;
         }
         else return validRecipes[0];
+    }
+    
+    public void showDiscoveredRecipes()
+    {
+        foreach (Recipe recipe in m_RecipeList)
+        {
+            if (recipe.HasBeenDiscovered && this.gameObject.transform.Find(recipe.name) == null)
+            {
+                GameObject newRecipeVisual = Instantiate(recipeVisual);
+                newRecipeVisual.name = recipe.name;
+
+                //setting images
+                newRecipeVisual.transform.Find("PotionResult").GetComponent<Image>().sprite = recipe.RecipeResult.PotionSprite;
+
+                for (int i = 0; i < recipe.NeededFlowers.Count; i++)
+                {
+                    newRecipeVisual.transform.Find("FlowerSlot"+(i+1)).GetComponent<Image>().sprite = recipe.NeededFlowers[i].sprite;
+                }
+
+                newRecipeVisual.transform.SetParent(this.transform, false);
+            }
+        }
     }
 }

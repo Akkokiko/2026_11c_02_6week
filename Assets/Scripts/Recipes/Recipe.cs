@@ -7,6 +7,7 @@ public class Recipe : ScriptableObject
     [SerializeField] private Potion m_RecipeResult;
     public Potion RecipeResult => m_RecipeResult;
     [SerializeField] private List<Flower> m_NeededFlowers;
+    public List<Flower> NeededFlowers => m_NeededFlowers;
     [SerializeField] private bool m_hasBeenDiscovered;
     public bool HasBeenDiscovered => m_hasBeenDiscovered;
 
