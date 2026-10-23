@@ -168,6 +168,11 @@ GameObject:
   - component: {fileID: 1560252950593433527}
   - component: {fileID: 5649867008956730495}
   - component: {fileID: 7896319668094507828}
+  - component: {fileID: 1218943333215881798}
+  - component: {fileID: 8434558202389602597}
+  - component: {fileID: 8543389457531545628}
+  - component: {fileID: 8712160383072672389}
+  - component: {fileID: 7789966457846623343}
   m_Layer: 6
   m_Name: Patricio
   m_TagString: Untagged
@@ -337,24 +342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb3af267ad32074e937a575a83f4fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  pointA: {fileID: 1493011782588390128}
-  pointB: {fileID: 5301256010638916441}
-  patrolSpeed: 2
-  player: {fileID: 0}
-  sightRange: 5
-  attackRange: 1.2
-  chaseSpeed: 3
-  attackCooldown: 1.5
-  anticipationDuration: 0.6
-  attackDuration: 0.5
-  attackHitboxScript: {fileID: 5266987667345099061}
-  floorLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheckDistance: 0.3
-  groundCheckForwardOffset: 0.05
-  animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
 --- !u!95 &7896319668094507828
 Animator:
   serializedVersion: 7
@@ -377,3 +364,81 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1218943333215881798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729828931456995036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff488e1f0acd406479bf16acf8b747ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationSwitcher
+  animator: {fileID: 7896319668094507828}
+  spriteRenderer: {fileID: 4536020396811936104}
+--- !u!114 &8434558202389602597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729828931456995036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a749b21ca1a3c39459f817200db79161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCombat
+  attackCooldown: 1.5
+  anticipationDuration: 0.6
+  attackDuration: 0.5
+  attackHitboxScript: {fileID: 5266987667345099061}
+--- !u!114 &8543389457531545628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729828931456995036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69635681d7fb8b4c91b616b69c69d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GroundChecker
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckDistance: 0.3
+  groundCheckForwardOffset: 0.05
+--- !u!114 &8712160383072672389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729828931456995036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5a64f5566ef6874d85bf729b2ce1f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDetection
+  player: {fileID: 0}
+  sightRange: 5
+  attackRange: 1.2
+--- !u!114 &7789966457846623343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729828931456995036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d4f531e13a13b4bb70cb3b5fa7c067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointPatrol
+  pointA: {fileID: 1493011782588390128}
+  pointB: {fileID: 5301256010638916441}
+  patrolSpeed: 2
+  chaseSpeed: 5
