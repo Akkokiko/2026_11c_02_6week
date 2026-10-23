@@ -63,7 +63,7 @@ public class Entity : MonoBehaviour
        m_effectsToRemove.Clear();
    }
 
-   protected virtual void removeAllEffect()
+   public virtual void removeAllEffect()
    {
        foreach (Effect effect in m_activeEffects)
        {

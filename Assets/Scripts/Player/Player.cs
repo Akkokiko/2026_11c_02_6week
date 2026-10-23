@@ -57,7 +57,7 @@ public class Player : Entity
         UIManager.instance.EffectBarUI.addEffectCard(effect);
     }
 
-    protected override void removeAllEffect()
+    public override void removeAllEffect()
     {
         base.removeAllEffect();
         UIManager.instance.EffectBarUI.removeAllEffectCards();
