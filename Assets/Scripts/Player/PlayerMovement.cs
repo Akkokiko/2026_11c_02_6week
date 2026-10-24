@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {   
         //TODO: Delete the magic number from ray detection
-        m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask) && Physics2D.Raycast(this.transform.position, Vector2.down, 0.65f, m_groundedMask).collider != null;
+        m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask) && Physics2D.Raycast(this.transform.position, Vector2.down, 0.65f * transform.localScale.x, m_groundedMask).collider != null;
 
         if(m_isGrounded && m_jumpInput.WasPressedThisFrame())
         {
