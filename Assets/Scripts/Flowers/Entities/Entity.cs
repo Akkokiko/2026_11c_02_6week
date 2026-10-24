@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class Entity : MonoBehaviour
@@ -13,10 +14,15 @@ public class Entity : MonoBehaviour
     [Header("Base Stats")]
     [SerializeField] private float m_baseMoveSpeed = 5;
     [SerializeField] private float m_baseJumpForce = 20;
+    [SerializeField] private float m_baseWeight = 10;
 
     [Header("Active Stats")]
     public float m_currentMoveSpeed;
     public float m_currentJumpForce;
+    public float m_currentWeight;
+    
+    [Header("Weight")]
+    public UnityEvent m_onWeightChanged;
     
     
     //EFFECTS
@@ -27,6 +33,7 @@ public class Entity : MonoBehaviour
    {
        m_currentMoveSpeed = m_baseMoveSpeed;    
        m_currentJumpForce = m_baseJumpForce;
+       m_currentWeight = m_baseWeight;
        m_currentHealth = m_maxHealth;
    }
    
@@ -91,11 +98,19 @@ public class Entity : MonoBehaviour
                m_currentJumpForce += ((m_baseJumpForce * effect.Strength) * (remove?-1:1));
                break;
            
+               case EffectType.SIZE_UP:
+                   m_currentWeight += (m_baseWeight * effect.Strength)*(remove?-1:1);
+               transform.localScale = new Vector3(m_currentWeight/m_baseWeight, m_currentWeight/m_baseWeight, m_currentWeight/m_baseWeight);
+               m_onWeightChanged.Invoke();
+               break;
+           
            default:
                Debug.Log("Effect type not implemented");
                break;
        }
    }
+
+   
 
    public virtual void takeDamage(int damage)
    {

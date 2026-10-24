@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
+  m_Name: SizeUP
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  m_potionName: Size Up
+  m_potionSprite: {fileID: -3164809056393425246, guid: 91a71f3167c823d4496ecf603f0a9321, type: 3}
+  m_effectSprite: {fileID: 2750298860172458669, guid: 1666dc2145cd04c43aeddc43d5778a52, type: 3}
+  m_effectType: 3
+  m_duration: 5
+  m_strength: 0.5

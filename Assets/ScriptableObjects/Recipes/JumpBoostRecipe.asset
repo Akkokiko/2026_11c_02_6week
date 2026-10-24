@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c161485e0377e547800e382621ad81b, type: 3}
   m_Name: JumpBoostRecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  m_RecipeResult: {fileID: 11400000, guid: d259be8f5e17a2d4a8774e844e89224d, type: 2}
+  m_RecipeResult: {fileID: 11400000, guid: b8820523a99b2104bb79e02eb280f9f1, type: 2}
   m_NeededFlowers:
   - {fileID: 11400000, guid: c0751ccf068382049aa880f9eef8fc70, type: 2}
-  m_hasBeenDiscovered: 0
+  m_hasBeenDiscovered: 1

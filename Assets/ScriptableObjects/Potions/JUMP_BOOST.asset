@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
-  m_Name: Potion_JUMP
+  m_Name: JUMP_BOOST
   m_EditorClassIdentifier: Assembly-CSharp::Potion
-  m_potionName: JUMP Potion
+  m_potionName: Jump Boost
   m_potionSprite: {fileID: -3164809056393425246, guid: f2979318e94fbb64bb68ce129daee067, type: 3}
-  m_effectSprite: {fileID: 6937817954938267909, guid: 7ec87289e5c0c0a49af2f33a8f8c115e, type: 3}
+  m_effectSprite: {fileID: -3164809056393425246, guid: f2979318e94fbb64bb68ce129daee067, type: 3}
   m_effectType: 2
   m_duration: 5
   m_strength: 2
