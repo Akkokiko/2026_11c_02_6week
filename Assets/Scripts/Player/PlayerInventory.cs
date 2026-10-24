@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
 
 
    public int m_coinAmount = 0;
+   public int m_diamondAmount = 0;
    
    public void Awake()
    {
@@ -109,5 +110,11 @@ public class PlayerInventory : MonoBehaviour
       Debug.Log("Mamy " + m_coinAmount + " coins");
       UIManager.instance.InventoryUI.updateCoinsText(m_coinAmount);
       //UI update
+   }
+
+   public void addDiamond(int amount)
+   {
+      m_diamondAmount += amount;
+      UIManager.instance.InventoryUI.updateDiamondText(m_diamondAmount);
    }
 }
