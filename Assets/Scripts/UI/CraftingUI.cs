@@ -46,11 +46,9 @@ public class CraftingUI : MonoBehaviour
 
         if (m_CraftingUI.activeSelf && m_menuInteractInput.WasPressedThisFrame())
         {
-            //TODO: rewrite this segment so it isn't 3 raycasts but one raycasts that checks for stuff
            FlowerUICard clickedCard = GetClickedFlowerUICard();
            CraftingSlot craftingSlot = GetCraftingSlot();
-           Debug.Log("cC: " + clickedCard != null);
-           Debug.Log("cS: " + clickedCard != null);
+           
             if(clickedCard != null)
             {
                 m_heldFlower = clickedCard.RepresentedFlower;
