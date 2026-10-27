@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class EnemyAI : MonoBehaviour
+public class EnemyAI : Entity
 {
     private Rigidbody2D rb;
     private PointPatrol patrol;
@@ -10,18 +10,20 @@ public class EnemyAI : MonoBehaviour
     private EnemyCombat combat;
     private AnimationSwitcher eAnimation;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         rb = GetComponent<Rigidbody2D>();
 
         patrol = GetComponent<PointPatrol>();
         detection = GetComponent<PlayerDetection>();
-        combat = GetComponent<EnemyCombat>();
+        combat = GetComponent<EnemyCombat>();   
         eAnimation = GetComponent<AnimationSwitcher>();
     }
 
-    private void Update()
+    public override void Update()
     {
+        base.Update();
         detection.Refresh();
 
         if (detection.Player != null &&

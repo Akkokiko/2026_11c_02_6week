@@ -32,7 +32,7 @@ public class Entity : MonoBehaviour
    private List<Effect> m_activeEffects = new List<Effect>();
    private List<Effect> m_effectsToRemove = new List<Effect>();
 
-   void Awake()
+   protected virtual void Awake()
    {
        m_currentMoveSpeed = m_baseMoveSpeed;    
        m_currentJumpForce = m_baseJumpForce;
@@ -42,7 +42,7 @@ public class Entity : MonoBehaviour
    
    
 
-   public void Update()
+   public virtual void Update()
    {
       updateEffects();
       removeExpiredEffects();

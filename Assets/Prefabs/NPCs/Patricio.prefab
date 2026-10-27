@@ -342,6 +342,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb3af267ad32074e937a575a83f4fad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  m_maxHealth: 100
+  m_currentHealth: 100
+  m_baseMoveSpeed: 5
+  m_baseJumpForce: 20
+  m_baseWeight: 10
+  m_currentMoveSpeed: 0
+  m_currentJumpForce: 0
+  m_currentWeight: 0
+  m_onWeightChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnEntityHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &7896319668094507828
 Animator:
   serializedVersion: 7
