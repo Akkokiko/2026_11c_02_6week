@@ -7708,6 +7708,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5117019448158628807, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
+      propertyPath: m_connectedEntity
+      value: 
+      objectReference: {fileID: 1446554745}
     - target: {fileID: 5779425945283759440, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
       propertyPath: m_Name
       value: GameplayUI
@@ -21603,6 +21607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1522947665446763913, guid: c2dbbca007fd356449058c02bcd181dd, type: 3}
+      propertyPath: m_spikesDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3071894571852694107, guid: c2dbbca007fd356449058c02bcd181dd, type: 3}
       propertyPath: m_Name
       value: Spikes (5)
