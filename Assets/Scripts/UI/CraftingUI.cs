@@ -48,10 +48,17 @@ public class CraftingUI : MonoBehaviour
         {
             //TODO: rewrite this segment so it isn't 3 raycasts but one raycasts that checks for stuff
            FlowerUICard clickedCard = GetClickedFlowerUICard();
+           CraftingSlot craftingSlot = GetCraftingSlot();
+           Debug.Log("cC: " + clickedCard != null);
+           Debug.Log("cS: " + clickedCard != null);
             if(clickedCard != null)
             {
                 m_heldFlower = clickedCard.RepresentedFlower;
                     
+            }else if (craftingSlot != null)
+            {
+                m_heldFlower = craftingSlot.FlowerInSlot;
+                craftingSlot.putFlowerInSlot(null);
             }
             clickedOnRecipe();
         }
@@ -80,7 +87,8 @@ public class CraftingUI : MonoBehaviour
             m_heldFlower = null;
         }
     }
-    private FlowerUICard GetClickedFlowerUICard()
+
+    private List<RaycastResult> getRaycastResultsOfClick()
     {
         if (m_Raycaster == null || EventSystem.current == null) return null;
 
@@ -92,6 +100,12 @@ public class CraftingUI : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
 
         m_Raycaster.Raycast(pointerData, results);
+        return results;
+    }
+
+    private FlowerUICard GetClickedFlowerUICard()
+    {
+        List<RaycastResult> results = getRaycastResultsOfClick();
 
         foreach (RaycastResult result in results)
         {
@@ -109,16 +123,7 @@ public class CraftingUI : MonoBehaviour
 
     private CraftingSlot GetCraftingSlot()
     {
-        if (m_Raycaster == null || EventSystem.current == null) return null;
-
-        
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        PointerEventData pointerData = new PointerEventData(EventSystem.current);
-        pointerData.position = mousePosition;
-
-        List<RaycastResult> results = new List<RaycastResult>();
-
-        m_Raycaster.Raycast(pointerData, results);
+        List<RaycastResult> results = getRaycastResultsOfClick();
 
         foreach (RaycastResult result in results)
         {
@@ -134,16 +139,7 @@ public class CraftingUI : MonoBehaviour
     }
     private void clickedOnRecipe()
     {
-        if (m_Raycaster == null || EventSystem.current == null) return;
-
-        
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
-        PointerEventData pointerData = new PointerEventData(EventSystem.current);
-        pointerData.position = mousePosition;
-
-        List<RaycastResult> results = new List<RaycastResult>();
-
-        m_Raycaster.Raycast(pointerData, results);
+        List<RaycastResult> results = getRaycastResultsOfClick();
 
         foreach (RaycastResult result in results)
         {
