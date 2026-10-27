@@ -6,6 +6,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
     [Header("Player")]
     [SerializeField] private Player m_player;
+    public Player Player => m_player;
     [Header("Checkpoints")]
     public CheckpointFlag[] m_checkpointFlags;
     private CheckpointFlag m_activeCheckpointFlag;

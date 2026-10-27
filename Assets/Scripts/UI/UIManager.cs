@@ -10,6 +10,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private EffectBarUI m_effectBarUI;
     public EffectBarUI EffectBarUI => m_effectBarUI;
 
+    [SerializeField] private CraftingUI m_craftingUI;
+    public CraftingUI CraftingUI => m_craftingUI;
+
     public void Awake()
     {
         if (instance == null) {

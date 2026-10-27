@@ -2499,6 +2499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   m_inventoryUI: {fileID: 6111821093522139207}
   m_effectBarUI: {fileID: 2866370467856303414}
+  m_craftingUI: {fileID: 8162396452205978448}
 --- !u!1 &6219012739118146914
 GameObject:
   m_ObjectHideFlags: 0

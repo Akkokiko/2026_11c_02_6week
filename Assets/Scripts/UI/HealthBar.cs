@@ -9,9 +9,11 @@ public class HealthBar : MonoBehaviour
 
     void Start()
     {
+        if (m_connectedEntity == null)
+        {
+          m_connectedEntity = LevelManager.instance.Player;  
+        }
         m_connectedEntity.m_OnEntityHealthChanged.AddListener(updateHealth);
-        
-
     }
 
     private void updateHealth(Entity entity)

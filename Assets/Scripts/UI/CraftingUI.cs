@@ -24,6 +24,10 @@ public class CraftingUI : MonoBehaviour
 
     void Start()
     {
+        if(m_Player == null)
+        {
+            m_Player = LevelManager.instance.Player;
+        }
         m_OpenCraftingUIInput = m_Player.InputActionAsset.FindAction("OpenCraftingUI");
         m_flowerList = m_InventoryUI.GetComponentsInChildren<FlowerUICard>();
         

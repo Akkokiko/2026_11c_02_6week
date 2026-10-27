@@ -7692,6 +7692,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1855190111853094910, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855190111853094910, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1938180254785431422, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7711,7 +7719,7 @@ PrefabInstance:
     - target: {fileID: 5117019448158628807, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
       propertyPath: m_connectedEntity
       value: 
-      objectReference: {fileID: 1446554745}
+      objectReference: {fileID: 0}
     - target: {fileID: 5779425945283759440, guid: 183e8296aa7fa2d4db48fba71f47a38b, type: 3}
       propertyPath: m_Name
       value: GameplayUI
@@ -21609,7 +21617,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1522947665446763913, guid: c2dbbca007fd356449058c02bcd181dd, type: 3}
       propertyPath: m_spikesDamage
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3071894571852694107, guid: c2dbbca007fd356449058c02bcd181dd, type: 3}
       propertyPath: m_Name
