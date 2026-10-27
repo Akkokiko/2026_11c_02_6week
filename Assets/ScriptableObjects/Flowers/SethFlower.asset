@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: SethFlower
   m_EditorClassIdentifier: Assembly-CSharp::Flower
   m_name: Seth Flower
+  m_sprite: {fileID: 2912297781628502651, guid: af7d879c593cddc48bf00d7fdbed1db2, type: 3}
