@@ -198,7 +198,7 @@ public class CraftingUI : MonoBehaviour
 
     public void CraftPotion()
     {
-        List<Flower> flowersInCraftSlots = m_craftingSlots.Select(cs => cs.FlowerInSlot).ToList();
+        List<Flower> flowersInCraftSlots = m_craftingSlots.Where(cs => cs.FlowerInSlot != null).Select(cs => cs.FlowerInSlot).ToList();
 
         Recipe recipe;
         if (!m_Player.PlayerInventory.isFull() && (recipe = m_recipeBook.evaluateRecipe(flowersInCraftSlots)) != null)

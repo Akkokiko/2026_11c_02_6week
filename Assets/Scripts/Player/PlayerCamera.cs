@@ -28,11 +28,11 @@ public class PlayerCamera : MonoBehaviour
     void FixedUpdate()
     {
         m_isPlayerStill = m_Player.PlayerRigidbody.linearVelocity.sqrMagnitude < 0.01f;
-        if (m_isPlayerStill && m_currStayingStilTime > 0)
+        if (!m_Player.IsInMenu && m_isPlayerStill && m_currStayingStilTime > 0)
         {
             m_currStayingStilTime -= Time.deltaTime;
         }
-        else if (m_isPlayerStill && m_currStayingStilTime <= 0)
+        else if (!m_Player.IsInMenu && m_isPlayerStill && m_currStayingStilTime <= 0)
         {
             var mousePos = Mouse.current.position.ReadValue();
             Vector3 targetDirection = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y,0)) - m_Player.transform.position;
