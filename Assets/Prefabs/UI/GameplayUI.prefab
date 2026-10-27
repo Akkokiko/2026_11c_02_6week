@@ -1612,6 +1612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
   m_connectedEntity: {fileID: 0}
   m_slider: {fileID: 616335992612598480}
+  m_duration: 0.2
 --- !u!1 &4253766733362134617
 GameObject:
   m_ObjectHideFlags: 0
