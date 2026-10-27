@@ -144,7 +144,6 @@ public class CraftingUI : MonoBehaviour
             string resultObjectName = result.gameObject.name;
             if (resultObjectName.ToLower().Contains("recipe"))
             {
-                //TODO: refund reset, do separate function.
                 foreach (CraftingSlot slot in m_craftingSlots)
                 {
                     Flower currFlower = slot.FlowerInSlot;
@@ -199,15 +198,7 @@ public class CraftingUI : MonoBehaviour
 
     public void CraftPotion()
     {
-        List<Flower> flowersInCraftSlots = new List<Flower>();
-        foreach (CraftingSlot slot in m_craftingSlots)
-        {
-            Flower currFlower = slot.FlowerInSlot;
-            if (currFlower != null)
-            {
-                flowersInCraftSlots.Add(currFlower);
-            }
-        }
+        List<Flower> flowersInCraftSlots = m_craftingSlots.Select(cs => cs.FlowerInSlot).ToList();
 
         Recipe recipe;
         if (!m_Player.PlayerInventory.isFull() && (recipe = m_recipeBook.evaluateRecipe(flowersInCraftSlots)) != null)
