@@ -9,7 +9,9 @@ public class Entity : MonoBehaviour
 
     [Header("Health")] 
     [SerializeField] private int m_maxHealth;
-    private int m_currentHealth;
+    public int MaxHealth => m_maxHealth;
+    [SerializeField]private int m_currentHealth;
+    public int CurrentHealth => m_currentHealth;
     
     [Header("Base Stats")]
     [SerializeField] private float m_baseMoveSpeed = 5;
@@ -24,7 +26,8 @@ public class Entity : MonoBehaviour
     [Header("Weight")]
     public UnityEvent m_onWeightChanged;
     
-    
+    public UnityEvent<Entity> m_OnEntityHealthChanged = new UnityEvent<Entity>();
+
     //EFFECTS
    private List<Effect> m_activeEffects = new List<Effect>();
    private List<Effect> m_effectsToRemove = new List<Effect>();
@@ -115,17 +118,20 @@ public class Entity : MonoBehaviour
    public virtual void takeDamage(int damage)
    {
        Debug.Log("Taking damage");
-       m_currentHealth -= damage;
+       m_currentHealth -= Mathf.Clamp(damage, 0, m_currentHealth);
+       m_OnEntityHealthChanged.Invoke(this);
        if (m_currentHealth <= 0)
        {
            die();
        }
+       
    }
 
    public virtual void heal(int value)
    {
        m_currentHealth += value;
        m_currentHealth = Mathf.Clamp(m_currentHealth, 0, m_maxHealth);
+       m_OnEntityHealthChanged.Invoke(this);
    }
 
    public virtual void die()

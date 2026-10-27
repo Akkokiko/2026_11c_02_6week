@@ -66,6 +66,7 @@ public class Player : Entity
     public override void die()
     {
         m_OnPlayerDeath.Invoke(this);
+        heal(this.MaxHealth);
         removeAllEffect();
     }
 
