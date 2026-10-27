@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
         m_jumpInput = Player.InputActionAsset.FindAction("Jump");
 
         m_PlayerRigidbody = Player.PlayerRigidbody;
-        m_PlayerCollider = (Collider2D)Player.PlayerCollider;
+        m_PlayerCollider = (Collider2D)Player.PlayerCollider;   
 
         m_groundedMask = LayerMask.GetMask("Floor");
         m_currJumpDuration = 0;

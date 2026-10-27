@@ -173,3 +173,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15d84e531c930642961f46c158ca4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
+  m_coinSound: {fileID: 11400000, guid: e9b10e4f8f8ff11409cf4ef3bb83b8ff, type: 2}
