@@ -16,7 +16,7 @@ MonoBehaviour:
   soundPriority: 0
   clip: {fileID: 8300000, guid: 016c948cc5fa9aa47aeea71c353af6f0, type: 3}
   pitchRange: {x: 1, y: 1}
-  volumeRange: {x: 0.2, y: 1}
+  volumeRange: {x: 1.08, y: 1.88}
   spatialBlend: 1
   minDistance: 20
   maxDistance: 20
