@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 245843146258300366}
   - component: {fileID: 1333971635956779784}
   - component: {fileID: 6147299778543714622}
+  - component: {fileID: 6249096892281015987}
   m_Layer: 6
   m_Name: Whale
   m_TagString: Untagged
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639b8f6dcf7b5b14ca331c6673f658c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
-  jumpForce: 5
+  m_entity: {fileID: 6249096892281015987}
 --- !u!61 &1333971635956779784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,4 +180,30 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
+--- !u!114 &6249096892281015987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398310162895072597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6cc1f1a0386fb49b2e2ad4d26539f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NeutralNPC
+  m_maxHealth: 999
+  m_currentHealth: 0
+  m_baseMoveSpeed: 5
+  m_baseJumpForce: 0
+  m_baseWeight: 10
+  m_currentMoveSpeed: 0
+  m_currentJumpForce: 0
+  m_currentWeight: 0
+  m_onWeightChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnEntityHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
