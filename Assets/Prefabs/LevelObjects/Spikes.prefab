@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f5bf51dac8304a9192a9ae0866609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spikes
-  m_spikesDamage: 100
+  m_spikesDamage: 500
 --- !u!61 &8984978280299530834
 BoxCollider2D:
   m_ObjectHideFlags: 0
