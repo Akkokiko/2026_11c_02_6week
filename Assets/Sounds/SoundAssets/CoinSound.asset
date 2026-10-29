@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sound.ClipSex
   group: {fileID: 24300002, guid: c0e9a74ff3d46a346b045c6fd4ed4242, type: 2}
   soundPriority: 0
-  clip: {fileID: 8300000, guid: 016c948cc5fa9aa47aeea71c353af6f0, type: 3}
+  clip: {fileID: 8300000, guid: 23661e43706524a49a39d4e7eda21373, type: 3}
   pitchRange: {x: 1, y: 1}
   volumeRange: {x: 1.08, y: 1.88}
   spatialBlend: 1
