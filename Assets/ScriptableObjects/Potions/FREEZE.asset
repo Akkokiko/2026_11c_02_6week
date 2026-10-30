@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
+  m_Name: FREEZE
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  m_potionName: Freeze
+  m_potionSprite: {fileID: -855298285791758126, guid: b7ddb03b7dafc7440b60c371704df2cc, type: 3}
+  m_effectSprite: {fileID: -3164809056393425246, guid: d08580a2ff25b3e4d8e55ea50ba8e08a, type: 3}
+  m_effectType: 5
+  m_duration: 10
+  m_strength: 1

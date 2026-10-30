@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7126358110721674019}
   - component: {fileID: 760722940378251538}
   - component: {fileID: 5903525129822887899}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Witus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3f557ef408bc84981212a8e71e0598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendlyNPC
+  m_intereactionCollider: {fileID: 0}
   dialogue: Interakcja z Witusiem
 --- !u!95 &7126358110721674019
 Animator:

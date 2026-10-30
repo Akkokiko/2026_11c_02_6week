@@ -7,6 +7,7 @@ public enum EffectType
     JUMP_BOOST,
     SIZE_UP,
     SIZE_DOWN,
+    FREEZE
 }
 
 public class Effect 

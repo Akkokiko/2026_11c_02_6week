@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 8543389457531545628}
   - component: {fileID: 8712160383072672389}
   - component: {fileID: 7789966457846623343}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Patricio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,6 +350,7 @@ MonoBehaviour:
   m_currentMoveSpeed: 0
   m_currentJumpForce: 0
   m_currentWeight: 0
+  m_shouldBeMoving: 0
   m_onWeightChanged:
     m_PersistentCalls:
       m_Calls: []

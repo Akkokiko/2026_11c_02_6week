@@ -22,6 +22,7 @@ public class Entity : MonoBehaviour
     public float m_currentMoveSpeed;
     public float m_currentJumpForce;
     public float m_currentWeight;
+    public bool m_shouldBeMoving;
     
     [Header("Weight")]
     public UnityEvent m_onWeightChanged;
@@ -38,6 +39,7 @@ public class Entity : MonoBehaviour
        m_currentJumpForce = m_baseJumpForce;
        m_currentWeight = m_baseWeight;
        m_currentHealth = m_maxHealth;
+       m_shouldBeMoving = true;
    }
    
    
@@ -106,7 +108,10 @@ public class Entity : MonoBehaviour
                transform.localScale = new Vector3(m_currentWeight/m_baseWeight, m_currentWeight/m_baseWeight, m_currentWeight/m_baseWeight);
                m_onWeightChanged.Invoke();
                break;
-           
+           case EffectType.FREEZE:
+                m_shouldBeMoving = remove;
+                break;
+
            default:
                Debug.Log("Effect type not implemented");
                break;

@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2912297781628502651
-    second: pixil-frame-0 (4)_0
+    second: Seth_Flower_Texture
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixil-frame-0 (4)_0
+      name: Seth_Flower_Texture
       rect:
         serializedVersion: 2
         x: 0
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixil-frame-0 (4)_0: 2912297781628502651
+      Seth_Flower_Texture: 2912297781628502651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (!Player.IsInMenu)
+        if (!Player.IsInMenu && Player.m_shouldBeMoving)
         {
             //TO DO: Find a way to get rid of this dumb set
             m_PlayerRigidbody.gravityScale = m_initialGravityScale;

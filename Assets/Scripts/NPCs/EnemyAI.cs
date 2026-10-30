@@ -42,6 +42,12 @@ public class EnemyAI : Entity
 
     private void FixedUpdate()
     {
+        if (!this.m_shouldBeMoving)
+        {
+            rb.linearVelocity = new Vector2(0,0);
+            return;
+        }
+
         if (combat.IsBusy)
         {
             patrol.StopHorizontalMovement();

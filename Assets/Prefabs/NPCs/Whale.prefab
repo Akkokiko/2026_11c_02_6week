@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1333971635956779784}
   - component: {fileID: 6147299778543714622}
   - component: {fileID: 6249096892281015987}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Whale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_currentMoveSpeed: 0
   m_currentJumpForce: 0
   m_currentWeight: 0
+  m_shouldBeMoving: 0
   m_onWeightChanged:
     m_PersistentCalls:
       m_Calls: []
