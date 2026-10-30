@@ -24,6 +24,10 @@ public class Entity : MonoBehaviour
     public float m_currentWeight;
     public bool m_shouldBeMoving;
     
+    [Header("Entity Components")]
+    [SerializeField] private Rigidbody2D m_entityRigidbody;
+    public Rigidbody2D EntityRigidbody => m_entityRigidbody;
+    
     [Header("Weight")]
     public UnityEvent m_onWeightChanged;
     
@@ -35,11 +39,12 @@ public class Entity : MonoBehaviour
 
    protected virtual void Awake()
    {
-       m_currentMoveSpeed = m_baseMoveSpeed;    
-       m_currentJumpForce = m_baseJumpForce;
-       m_currentWeight = m_baseWeight;
-       m_currentHealth = m_maxHealth;
-       m_shouldBeMoving = true;
+        m_entityRigidbody = this.gameObject.GetComponent<Rigidbody2D>();
+        m_currentMoveSpeed = m_baseMoveSpeed;    
+        m_currentJumpForce = m_baseJumpForce;
+        m_currentWeight = m_baseWeight;
+        m_currentHealth = m_maxHealth;
+        m_shouldBeMoving = true;
    }
    
    
@@ -110,6 +115,16 @@ public class Entity : MonoBehaviour
                break;
            case EffectType.FREEZE:
                 m_shouldBeMoving = remove;
+                break;
+            case EffectType.GRAVITY_REVERSE:
+                /*if (remove)
+                {
+                    
+                }
+                else
+                {*/
+                    this.gameObject.GetComponent<Rigidbody2D>().gravityScale = -this.gameObject.GetComponent<Rigidbody2D>().gravityScale;
+                //}
                 break;
 
            default:

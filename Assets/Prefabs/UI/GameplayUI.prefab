@@ -1955,6 +1955,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3284742924e7494f9b1f276ed1b099d, type: 2}
   - {fileID: 11400000, guid: 38329e03864634b45a72082e6a830526, type: 2}
   - {fileID: 11400000, guid: ed6eb4262d9cd864bb5d5b65a4d3576d, type: 2}
+  - {fileID: 11400000, guid: de4a19c7cd3f84e47bd6402943aa5561, type: 2}
   recipeVisual: {fileID: 7261449453880338577, guid: c69a1fa7a81091b4c94d868bace93f78, type: 3}
 --- !u!114 &4758873125347505483
 MonoBehaviour:

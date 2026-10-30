@@ -50,6 +50,12 @@ public class Player : Entity
         m_inputAction.Disable();
         m_isInMenu = true; 
     }
+    
+    protected override void Awake()
+    {
+        base.Awake();
+        m_PlayerRigidbody = this.EntityRigidbody;
+    }
 
     public override void applyEffect(Effect effect)
     {

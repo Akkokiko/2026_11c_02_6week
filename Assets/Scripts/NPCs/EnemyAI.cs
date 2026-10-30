@@ -13,7 +13,7 @@ public class EnemyAI : Entity
     protected override void Awake()
     {
         base.Awake();
-        rb = GetComponent<Rigidbody2D>();
+        rb = this.EntityRigidbody;
 
         patrol = GetComponent<PointPatrol>();
         detection = GetComponent<PlayerDetection>();
