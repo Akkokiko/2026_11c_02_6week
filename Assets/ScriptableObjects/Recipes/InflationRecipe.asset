@@ -15,4 +15,4 @@ MonoBehaviour:
   m_RecipeResult: {fileID: 11400000, guid: 6f65f36076057874f9b0b6eafdbbb800, type: 2}
   m_NeededFlowers:
   - {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
-  m_hasBeenDiscovered: 0
+  m_hasBeenDiscovered: 1

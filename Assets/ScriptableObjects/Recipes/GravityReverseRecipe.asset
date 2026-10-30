@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c161485e0377e547800e382621ad81b, type: 3}
   m_Name: GravityReverseRecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  m_RecipeResult: {fileID: 0}
-  m_NeededFlowers: []
-  m_hasBeenDiscovered: 0
+  m_RecipeResult: {fileID: 11400000, guid: e48a08114cfcda34f8f5374ed6d5ff8e, type: 2}
+  m_NeededFlowers:
+  - {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
+  - {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
+  m_hasBeenDiscovered: 1

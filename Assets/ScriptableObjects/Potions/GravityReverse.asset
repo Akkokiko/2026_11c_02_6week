@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
   m_Name: GravityReverse
   m_EditorClassIdentifier: Assembly-CSharp::Potion
-  m_potionName: 
-  m_potionSprite: {fileID: -3164809056393425246, guid: bb041bd297aa1de4fa7dafea16e0993a, type: 3}
-  m_effectSprite: {fileID: 0}
-  m_effectType: 0
-  m_duration: 0
-  m_strength: 0
+  m_potionName: GravityReverse
+  m_potionSprite: {fileID: 8793915729297761979, guid: 138d35ee3829f0747ab7f142a41a504c, type: 3}
+  m_effectSprite: {fileID: -3164809056393425246, guid: 0ca050d172b0b294e80d3c74bf47ceaa, type: 3}
+  m_effectType: 6
+  m_duration: 15
+  m_strength: 1
