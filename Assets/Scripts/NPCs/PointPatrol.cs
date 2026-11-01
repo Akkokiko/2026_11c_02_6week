@@ -14,7 +14,7 @@ public class PointPatrol : MonoBehaviour
     private Rigidbody2D rb;
     private Transform targetPoint;
     private GroundChecker groundCheck;
-    private AnimationSwitcher eAnimation;
+    public AnimationSwitcher eAnimation;
 
     private Vector2 pointAPosition;
     private Vector2 pointBPosition;
