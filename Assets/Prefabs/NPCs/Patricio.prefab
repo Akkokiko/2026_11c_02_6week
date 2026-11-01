@@ -328,7 +328,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.85, y: 0.85}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &5649867008956730495
 MonoBehaviour:
@@ -458,3 +458,4 @@ MonoBehaviour:
   pointB: {fileID: 5301256010638916441}
   patrolSpeed: 2
   chaseSpeed: 5
+  eAnimation: {fileID: 0}
