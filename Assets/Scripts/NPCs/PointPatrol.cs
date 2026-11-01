@@ -41,7 +41,7 @@ public class PointPatrol : MonoBehaviour
             return;
         }
 
-        pointAPosition = pointA.position;
+            pointAPosition = pointA.position;
         pointBPosition = pointB.position;
 
         targetPoint = pointB;
