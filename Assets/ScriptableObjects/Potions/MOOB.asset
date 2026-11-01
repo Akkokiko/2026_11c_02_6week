@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
-  m_Name: GravityReverse
+  m_Name: MOOB
   m_EditorClassIdentifier: Assembly-CSharp::Potion
-  m_potionName: GravityReverse
-  m_potionSprite: {fileID: 8793915729297761979, guid: 138d35ee3829f0747ab7f142a41a504c, type: 3}
-  m_effectSprite: {fileID: -3164809056393425246, guid: 0ca050d172b0b294e80d3c74bf47ceaa, type: 3}
-  m_effectType: 6
-  m_duration: 15
-  m_strength: 1
+  m_potionName: BOOM
+  m_potionSprite: {fileID: -8314853801317715943, guid: 731598be83077e0498ba7972679adc5d, type: 3}
+  m_effectSprite: {fileID: 2469185590745767088, guid: 8c667b7a27b8b9742b442b9febe2ab48, type: 3}
+  m_effectType: 8
+  m_duration: 0.4
+  m_strength: 20

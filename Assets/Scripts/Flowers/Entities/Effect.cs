@@ -8,7 +8,9 @@ public enum EffectType
     SIZE_UP,
     SIZE_DOWN,
     FREEZE,
-    GRAVITY_REVERSE
+    GRAVITY_REVERSE,
+    EXPLODE,
+    IMPLODE
 }
 
 public class Effect 

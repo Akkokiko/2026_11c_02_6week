@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
+  m_Name: GRAVITY_REVERSE
+  m_EditorClassIdentifier: Assembly-CSharp::Potion
+  m_potionName: GravityReverse
+  m_potionSprite: {fileID: 8793915729297761979, guid: 138d35ee3829f0747ab7f142a41a504c, type: 3}
+  m_effectSprite: {fileID: -3164809056393425246, guid: 0ca050d172b0b294e80d3c74bf47ceaa, type: 3}
+  m_effectType: 6
+  m_duration: 15
+  m_strength: 1

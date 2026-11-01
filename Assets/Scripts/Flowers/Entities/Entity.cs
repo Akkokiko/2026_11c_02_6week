@@ -119,6 +119,42 @@ public class Entity : MonoBehaviour
             case EffectType.GRAVITY_REVERSE:
                 m_entityRigidbody.gravityScale *= -1;
                 break;
+            case EffectType.EXPLODE:
+            case EffectType.IMPLODE:
+                if(remove)
+                {
+                    m_shouldBeMoving = true;
+                    break;    
+                }
+                Vector2 entitiesPosition = m_entityRigidbody.position;
+
+                float explosionStrength = (effect.EffectType==EffectType.EXPLODE?1:-1)* effect.Strength;
+                float explosionRadius = 5*effect.Strength; 
+
+                LayerMask layerMask = ~(1 << LayerMask.NameToLayer("UI"));
+
+                foreach (Collider2D hit in Physics2D.OverlapCircleAll(entitiesPosition, explosionRadius, layerMask))
+                {
+
+                    if(hit.attachedRigidbody != null)
+                    {
+                        Vector2 hitPos = hit.attachedRigidbody.position;
+
+                        Vector2 expDirection = hitPos - entitiesPosition;
+                        float distanceToExp =  expDirection.magnitude;
+
+                        expDirection = expDirection.normalized;
+
+                        float lossFactor = Mathf.Clamp01((explosionRadius - distanceToExp) / explosionRadius);
+                        
+                        Vector2 expForce = expDirection * explosionStrength * lossFactor;
+
+                        hit.attachedRigidbody.AddForce(expForce, ForceMode2D.Impulse);
+                    }
+                    m_shouldBeMoving = false;
+                }
+
+                break;
 
            default:
                Debug.Log("Effect type not implemented");
