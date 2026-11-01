@@ -26,6 +26,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_maxJumpDuration;
     private float m_currJumpDuration;
 
+    private void Awake()
+    {
+        GameEventSystem.OnSaveGame += SaveGame;
+        GameEventSystem.OnLoadGame += LoadGame;
+    }
+
+    private void OnDestroy()
+    {
+        GameEventSystem.OnSaveGame -= SaveGame;
+        GameEventSystem.OnLoadGame -= LoadGame;
+    }
+
     void Start()
     {
         m_horizontalInput = Player.InputActionAsset.FindAction("MoveHorizontal");
@@ -80,6 +92,23 @@ public class PlayerMovement : MonoBehaviour
             m_PlayerRigidbody.linearVelocity = new Vector2(0,0);
         }
         
+    }
+    private void SaveGame(SaveData data)
+    {
+        Vector3 position = transform.position;
+
+        data.PositionX = position.x;
+        data.PositionY = position.y;
+    }
+
+    private void LoadGame(SaveData data)
+    {   
+        Vector2 position = new Vector2(
+            data.PositionX,
+            data.PositionY
+        );
+
+        transform.position = position;
     }
 
 }
