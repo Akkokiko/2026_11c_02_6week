@@ -117,14 +117,7 @@ public class Entity : MonoBehaviour
                 m_shouldBeMoving = remove;
                 break;
             case EffectType.GRAVITY_REVERSE:
-                /*if (remove)
-                {
-                    
-                }
-                else
-                {*/
-                    this.gameObject.GetComponent<Rigidbody2D>().gravityScale = -this.gameObject.GetComponent<Rigidbody2D>().gravityScale;
-                //}
+                m_entityRigidbody.gravityScale *= -1;
                 break;
 
            default:

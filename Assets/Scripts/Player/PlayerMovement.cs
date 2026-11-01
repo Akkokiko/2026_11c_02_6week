@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,9 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private LayerMask m_groundedMask;
     [SerializeField] private float m_maxJumpDuration;
     private float m_currJumpDuration;
-    
-    //needed for ui stop
-    private float m_initialGravityScale;
 
     void Start()
     {
@@ -38,14 +36,16 @@ public class PlayerMovement : MonoBehaviour
 
         m_groundedMask = LayerMask.GetMask("Floor");
         m_currJumpDuration = 0;
-
-        m_initialGravityScale = m_PlayerRigidbody.gravityScale;
     }
     
     void Update()
-    {   
-        //TODO: Delete the magic number from ray detection
-        m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask) && Physics2D.Raycast(this.transform.position, Vector2.down, 0.65f * transform.localScale.x, m_groundedMask).collider != null;
+    {
+        Player.m_shouldBeMoving = !Player.IsInMenu;
+        if (Player.IsInMenu)
+        {
+            return;
+        }
+        m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask) && Physics2D.Raycast(this.transform.position, m_PlayerRigidbody.gravityScale >= 0 ? Vector2.down : Vector2.up, 0.65f * transform.localScale.x, m_groundedMask).collider != null;
 
         if(m_isGrounded && m_jumpInput.WasPressedThisFrame())
         {
@@ -67,20 +67,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!Player.IsInMenu && Player.m_shouldBeMoving)
         {
-            //TO DO: Find a way to get rid of this dumb set
-            m_PlayerRigidbody.gravityScale = m_initialGravityScale;
             m_PlayerRigidbody.linearVelocityX = m_horizontalInput.ReadValue<float>() * m_moveSpeed;
         
             if(m_isMidJump)
             {
-             m_PlayerRigidbody.linearVelocityY = m_jumpHeight * m_jumpCurve.Evaluate(m_currJumpDuration);
+             m_PlayerRigidbody.linearVelocityY = (m_PlayerRigidbody.gravityScale >=0? 1 : -1 ) * m_jumpHeight * m_jumpCurve.Evaluate(m_currJumpDuration);
             
             }
         }
         else
         {
             m_PlayerRigidbody.linearVelocity = new Vector2(0,0);
-            m_PlayerRigidbody.gravityScale = 0;
         }
         
     }
