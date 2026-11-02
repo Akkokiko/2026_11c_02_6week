@@ -185,7 +185,13 @@ public class Entity : MonoBehaviour
 
    public virtual void die()
    {
-       Destroy(gameObject);
+       removeExpiredEffects();
+       gameObject.SetActive(false);
+   }
+
+   public virtual void respawn()
+   {
+       gameObject.SetActive(true);
    }
 
 }
