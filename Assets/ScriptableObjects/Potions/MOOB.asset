@@ -17,5 +17,5 @@ MonoBehaviour:
   m_effectSprite: {fileID: 2469185590745767088, guid: 8c667b7a27b8b9742b442b9febe2ab48, type: 3}
   m_effectType: 8
   m_duration: 0.4
-  m_strength: 20
-  m_distance: 15
+  m_strength: 40
+  m_distance: 20
