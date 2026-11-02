@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Linq;
 
 
 [CreateAssetMenu(fileName = "Potion", menuName = "Scriptable Objects/UniquePotions/ExplosionPotion")]
@@ -34,24 +35,26 @@ public class ExplosionPotion : Potion
 
         LayerMask layerMask = ~(1 << LayerMask.NameToLayer("UI"));
 
-        foreach (Collider2D hit in Physics2D.OverlapCircleAll(entitiesPosition, explosionRadius, layerMask))
+        foreach (Rigidbody2D hit in Physics2D.OverlapCircleAll(entitiesPosition, explosionRadius, layerMask).Where(col => col.attachedRigidbody != null).Select(col => col.attachedRigidbody))
         {
-            if (hit.attachedRigidbody != null)
+            Vector2 hitPos = hit.position;
+
+            Vector2 expDirection = hitPos - entitiesPosition;
+            float distanceToExp = expDirection.magnitude;
+            if (distanceToExp > m_distance)
             {
-                Vector2 hitPos = hit.attachedRigidbody.position;
-
-                Vector2 expDirection = hitPos - entitiesPosition;
-                float distanceToExp = expDirection.magnitude;
-
-                expDirection = expDirection.normalized;
-
-                float lossFactor = Mathf.Clamp01((explosionRadius - distanceToExp) / explosionRadius);
-
-                Vector2 expForce = expDirection * explosionStrength * lossFactor;
-
-                hit.attachedRigidbody.linearVelocity = new Vector2(0,0);
-                hit.attachedRigidbody.AddForce(expForce, ForceMode2D.Impulse);
+                continue;
             }
+
+            expDirection = expDirection.normalized;
+
+            float lossFactor = Mathf.Clamp01((explosionRadius - distanceToExp) / explosionRadius);
+
+            Vector2 expForce = expDirection * explosionStrength * lossFactor;
+            expForce.y *= 1.2f;
+
+            hit.linearVelocity = new Vector2(0,0);
+            hit.AddForce(expForce, ForceMode2D.Impulse);
 
         }
     }

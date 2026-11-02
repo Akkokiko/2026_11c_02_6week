@@ -94,10 +94,22 @@ public class PointPatrol : MonoBehaviour
             return;
         }
 
-        rb.linearVelocity = new Vector2(
-            direction * speed,
-            rb.linearVelocity.y
-        );
+        //actual movement
+        if (Mathf.Abs(rb.linearVelocityX) > speed)
+        {
+            if (Mathf.Sign(rb.linearVelocityX) == direction)
+            {
+                rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, 0, Time.deltaTime*5);
+            }
+            else
+            {
+                rb.linearVelocityX = Mathf.Lerp(rb.linearVelocityX, rb.linearVelocityX + direction * speed/5, Time.deltaTime);
+            }
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+        }
 
         eAnimation.FaceDirection(direction);
     }
