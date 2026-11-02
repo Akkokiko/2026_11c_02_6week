@@ -1135,6 +1135,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6249096892281015987, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_baseWeight
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7082128221038943567, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.5
@@ -37809,7 +37813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1832550049}
   m_Layer: 0
-  m_Name: Challange_03_01
+  m_Name: Challange_03_01  Elements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
