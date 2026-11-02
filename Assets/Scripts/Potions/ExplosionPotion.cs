@@ -49,6 +49,7 @@ public class ExplosionPotion : Potion
 
                 Vector2 expForce = expDirection * explosionStrength * lossFactor;
 
+                hit.attachedRigidbody.linearVelocity = new Vector2(0,0);
                 hit.attachedRigidbody.AddForce(expForce, ForceMode2D.Impulse);
             }
 
