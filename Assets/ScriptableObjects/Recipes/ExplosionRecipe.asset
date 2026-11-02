@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c161485e0377e547800e382621ad81b, type: 3}
   m_Name: ExplosionRecipe
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
-  m_RecipeResult: {fileID: 11400000, guid: 1ce685f9208515442ae02b689992471b, type: 2}
+  m_RecipeResult: {fileID: 11400000, guid: 20bbcad543a45d14283ad5dd76c7b86e, type: 2}
   m_NeededFlowers:
   - {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
   - {fileID: 11400000, guid: c0751ccf068382049aa880f9eef8fc70, type: 2}
