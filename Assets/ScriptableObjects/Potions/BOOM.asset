@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65de632947821524c9905287f7c9b11c, type: 3}
+  m_Script: {fileID: 11500000, guid: 11b5ccecedb13b8499c7b331d7547809, type: 3}
   m_Name: BOOM
-  m_EditorClassIdentifier: Assembly-CSharp::Potion
-  m_potionName: BOOM
+  m_EditorClassIdentifier: Assembly-CSharp::ExplosionPotion
+  m_potionName: Explosion Potion
   m_potionSprite: {fileID: -855298285791758126, guid: 4f7bf25f243726e4f9f63b2a770bfe14, type: 3}
   m_effectSprite: {fileID: 5360363192392752745, guid: 8c667b7a27b8b9742b442b9febe2ab48, type: 3}
   m_effectType: 7
   m_duration: 0.4
   m_strength: 20
+  m_distance: 15
