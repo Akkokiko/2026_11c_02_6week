@@ -33,7 +33,7 @@ public class PotionProjectile : MonoBehaviour
         }
         else if (m_potionCarried.m_effectType == EffectType.EXPLODE || m_potionCarried.m_effectType == EffectType.IMPLODE)
         {
-            Entity tempEntity = Entity.makeDummyEntityAtPoint(collision);
+            Entity tempEntity = Entity.makeDummyEntityAtPoint(collision.GetContact(0));
             m_potionCarried.Affect(tempEntity);
             Destroy(tempEntity.gameObject);
         }

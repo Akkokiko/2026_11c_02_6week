@@ -191,10 +191,10 @@ public class Entity : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public static Entity makeDummyEntityAtPoint(Collision2D collision2D)
+    public static Entity makeDummyEntityAtPoint(ContactPoint2D pointOfContact)
     {
         GameObject dummyHolder = new GameObject("DummyEntity");
-        dummyHolder.transform.position = collision2D.transform.position;
+        dummyHolder.transform.position = pointOfContact.point;
         Entity dummyEntity = dummyHolder.AddComponent<Entity>();
 
         return dummyEntity;
