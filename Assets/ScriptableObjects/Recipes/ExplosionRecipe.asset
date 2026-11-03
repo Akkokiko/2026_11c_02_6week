@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Recipe
   m_RecipeResult: {fileID: 11400000, guid: 20bbcad543a45d14283ad5dd76c7b86e, type: 2}
   m_NeededFlowers:
-  - {fileID: 11400000, guid: c869e1837a07f8e42b596238688b5e1c, type: 2}
-  - {fileID: 11400000, guid: c0751ccf068382049aa880f9eef8fc70, type: 2}
+  - {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
+  - {fileID: 11400000, guid: daf05816a2ed4894caa0ab24cc02743b, type: 2}
   m_hasBeenDiscovered: 1
