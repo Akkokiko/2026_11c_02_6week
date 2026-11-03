@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9e15c0397b8c0bc8722e95082f186a, type: 3}
   m_Name: CoinSound
   m_EditorClassIdentifier: Assembly-CSharp::Sound.ClipSex
-  group: {fileID: 24300002, guid: c0e9a74ff3d46a346b045c6fd4ed4242, type: 2}
+  group: {fileID: -8683219782856867797, guid: c0e9a74ff3d46a346b045c6fd4ed4242, type: 2}
   soundPriority: 0
   clip: {fileID: 8300000, guid: 23661e43706524a49a39d4e7eda21373, type: 3}
   pitchRange: {x: 1, y: 1}
