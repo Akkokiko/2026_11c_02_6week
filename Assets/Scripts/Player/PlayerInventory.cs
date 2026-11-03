@@ -117,4 +117,13 @@ public class PlayerInventory : MonoBehaviour
       m_diamondAmount += amount;
       UIManager.instance.InventoryUI.updateDiamondText(m_diamondAmount);
    }
+
+   
+   public void setCoinAmount(int amount)
+   {
+      m_coinAmount = amount;
+
+      UIManager.instance.InventoryUI.updateCoinsText(m_coinAmount);
+   }
+
 }

@@ -11590,6 +11590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 0101
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18122,6 +18126,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 00
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20160,6 +20168,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 0203
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20369,6 +20381,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20897,6 +20913,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21935,6 +21955,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 0204
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37204,6 +37228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41479,6 +41507,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 0301
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52261,6 +52293,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 0201
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52439,6 +52475,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 0302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -56504,6 +56544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56560,6 +56604,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: lobby
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60693,6 +60741,10 @@ PrefabInstance:
     - target: {fileID: 6043655082678810382, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284752085741323478, guid: 1f19d51c347ba38408cd129204498d30, type: 3}
+      propertyPath: m_checkpointID
+      value: 02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class CheckpointFlag : Interactable
 {
-    
+    [SerializeField] private string m_checkpointID;
+
+    public string CheckpointID => m_checkpointID;
+
     private bool m_isCheckpointActive = false;
     public bool IsCheckpointActive => m_isCheckpointActive;
     
