@@ -54,30 +54,6 @@ public class LevelManager : MonoBehaviour
 
     private void SaveGame()
     {
-        if (m_player == null)
-        {
-            Debug.LogError("SaveGame: m_player jest NULL!");
-            return;
-        }
-
-        if (m_player.PlayerInventory == null)
-        {
-            Debug.LogError("SaveGame: PlayerInventory jest NULL!");
-            return;
-        }
-
-        if (m_activeCheckpointFlag == null)
-        {
-            Debug.LogError("SaveGame: aktywny checkpoint jest NULL!");
-            return;
-        }
-
-        if (SaveController.Instance == null)
-        {
-            Debug.LogError("SaveGame: SaveController.Instance jest NULL!");
-            return;
-        }
-
         int coins = m_player.PlayerInventory.m_coinAmount;
 
         SaveController.Instance.SaveGame(
