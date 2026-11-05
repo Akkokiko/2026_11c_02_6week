@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MOOB
   m_EditorClassIdentifier: Assembly-CSharp::ExplosionPotion
   m_potionName: Implosion Potion
-  m_potionSprite: {fileID: -8314853801317715943, guid: 731598be83077e0498ba7972679adc5d, type: 3}
+  m_potionSprite: {fileID: 1618893543897839774, guid: 039dbb98b0807c34fb5b98502ba75c9a, type: 3}
   m_effectSprite: {fileID: 2469185590745767088, guid: 8c667b7a27b8b9742b442b9febe2ab48, type: 3}
   m_effectType: 8
   m_duration: 0.4

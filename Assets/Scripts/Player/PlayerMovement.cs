@@ -70,14 +70,14 @@ public class PlayerMovement : MonoBehaviour
             float currentVelocityX = m_PlayerRigidbody.linearVelocityX;
             float inputVelocityX = m_horizontalInput.ReadValue<float>() * m_moveSpeed;
 
-            if (Mathf.Abs(currentVelocityX) > m_moveSpeed)
-            {
+                if (Mathf.Abs(currentVelocityX) > m_moveSpeed)
+                {
                 if(inputVelocityX == 0 || Mathf.Sign(inputVelocityX) != Mathf.Sign(currentVelocityX))
                 {
                     m_PlayerRigidbody.linearVelocityX = Mathf.Lerp(currentVelocityX, 0, Time.deltaTime*5);
                 }else
                 {
-                    m_PlayerRigidbody.linearVelocityX = Mathf.Lerp(currentVelocityX, currentVelocityX + inputVelocityX/5, Time.deltaTime);
+                    m_PlayerRigidbody.linearVelocityX = Mathf.Lerp(currentVelocityX, currentVelocityX + inputVelocityX/0.1f, Time.deltaTime);
                 }
             }
             else

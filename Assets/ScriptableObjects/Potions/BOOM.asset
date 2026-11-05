@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BOOM
   m_EditorClassIdentifier: Assembly-CSharp::ExplosionPotion
   m_potionName: Explosion Potion
-  m_potionSprite: {fileID: -855298285791758126, guid: 4f7bf25f243726e4f9f63b2a770bfe14, type: 3}
+  m_potionSprite: {fileID: 8903539410294325039, guid: a8598216bea1d674fb9c1a390caf2e07, type: 3}
   m_effectSprite: {fileID: 5360363192392752745, guid: 8c667b7a27b8b9742b442b9febe2ab48, type: 3}
   m_effectType: 7
   m_duration: 0.4

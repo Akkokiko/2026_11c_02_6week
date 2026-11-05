@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SizeUP
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   m_potionName: Size Up
-  m_potionSprite: {fileID: -3164809056393425246, guid: 91a71f3167c823d4496ecf603f0a9321, type: 3}
+  m_potionSprite: {fileID: 1161456126705517232, guid: 57ad154da52f7ed43a1efe64179bcee7, type: 3}
   m_effectSprite: {fileID: 2750298860172458669, guid: 1666dc2145cd04c43aeddc43d5778a52, type: 3}
   m_effectType: 3
   m_duration: 5
