@@ -19,3 +19,4 @@ MonoBehaviour:
   m_duration: 0.4
   m_strength: 20
   m_distance: 15
+  m_explosionPrefab: {fileID: 6273355897433905414, guid: ac2142ff5bb83d646990e1bdfced140d, type: 3}

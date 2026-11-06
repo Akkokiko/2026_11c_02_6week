@@ -76890,6 +76890,10 @@ PrefabInstance:
       value: Virtual Camera
       objectReference: {fileID: 0}
     - target: {fileID: 7200948946808793551, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200948946808793551, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
       propertyPath: orthographic size
       value: 7
       objectReference: {fileID: 0}

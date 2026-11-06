@@ -8,6 +8,8 @@ public class ExplosionPotion : Potion
 {
     [Header("Effect")]
     [SerializeField] private float m_distance;
+
+    [SerializeField] private ExplosionEffect m_explosionPrefab;
     private bool m_isExplosive;
 
     void Awake()
@@ -29,7 +31,7 @@ public class ExplosionPotion : Potion
     public override void Affect(Entity entity)
     {
         Vector2 entitiesPosition = entity.gameObject.transform.position;
-
+        SpawnExplosion(entity.transform.position);
         float explosionStrength = (m_isExplosive ? 1 : -1) * this.Strength;
         float explosionRadius = m_distance;
 
@@ -57,5 +59,11 @@ public class ExplosionPotion : Potion
             hit.AddForce(expForce, ForceMode2D.Impulse);
 
         }
+    }
+
+    void SpawnExplosion(Vector3 position)
+    {
+        var ex = Instantiate(m_explosionPrefab,position,Quaternion.identity);
+        ex.Puff(m_distance);
     }
 }
