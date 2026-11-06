@@ -8,8 +8,9 @@ public class ResetTotem : Interactable
     private Dictionary<Entity, Vector3> m_entityPositions = new Dictionary<Entity, Vector3>();
 
 
-    public void Start()
+    protected override void Start()
     {
+        base.Start();
         foreach (var e in m_assignedObjects)
         {
             m_entityPositions.TryAdd(e, e.transform.position);

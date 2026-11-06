@@ -133,7 +133,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 0a0e75b67f239a942b4f7769f05fa91b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractPickup2D
   m_intereactionCollider: {fileID: 7047532056370141161}
+  m_intereactionSpriteRenderer: {fileID: 7244949996572572001}
   flower: {fileID: 11400000, guid: c0751ccf068382049aa880f9eef8fc70, type: 2}
   amount: 1
   m_spriteRenderer: {fileID: 7244949996572572001}

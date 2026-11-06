@@ -10,6 +10,9 @@ public class PlayerInteractController : MonoBehaviour
    
     public List<Interactable> nearbyInteractables = new List<Interactable>();
    private InputAction interactAction;
+   
+   public Interactable m_currentlyHoveredInteractable;
+   
 
 
    public void Awake()
@@ -20,10 +23,10 @@ public class PlayerInteractController : MonoBehaviour
 
    public void Update()
    {
-      if (nearbyInteractables.Count > 1)
-      {
+      
+      
          sortByDistance();
-      }
+      
 
       if (interactAction.WasPerformedThisFrame())
       {
@@ -33,7 +36,30 @@ public class PlayerInteractController : MonoBehaviour
 
    public void sortByDistance()
    {
+      if(nearbyInteractables.Count == 0)
+         return;
       nearbyInteractables.Sort((x1,x2) => Vector2.Distance(transform.position,x1.transform.position).CompareTo( Vector2.Distance(transform.position,x2.transform.position)));
+
+      if (nearbyInteractables[0] != m_currentlyHoveredInteractable)
+      {
+         m_currentlyHoveredInteractable = nearbyInteractables[0];
+         foreach (Interactable interactable in nearbyInteractables)
+         {
+            if (interactable != m_currentlyHoveredInteractable)
+            {
+               interactable.unHover();
+            }
+            else
+            {
+               interactable.Hover();
+            }
+         }
+      }
+
+     
+
+      
+      
    }
 
    public void interact()
@@ -41,9 +67,11 @@ public class PlayerInteractController : MonoBehaviour
       if (nearbyInteractables.Count > 0)
       {
          Debug.Log("Interact with: " +  nearbyInteractables[0].gameObject.name);
-         nearbyInteractables[0].Interact(Player);
+         m_currentlyHoveredInteractable.Interact(Player);
       }
    }
+
+  
 
    public void addNearbyInteractable(Interactable interactable)
    {
@@ -55,5 +83,7 @@ public class PlayerInteractController : MonoBehaviour
    {
       if(nearbyInteractables.Contains(interactable))  
          nearbyInteractables.Remove(interactable);
+      if(interactable == m_currentlyHoveredInteractable)
+         m_currentlyHoveredInteractable = null;
    }
 }

@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: e8661a8bb960f5b429dabc7dc09ebe7e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -183,4 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9ef0ee5d082c040bd03a184eb0c8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointFlag
+  m_intereactionCollider: {fileID: 0}
+  m_intereactionSpriteRenderer: {fileID: 1501465122157407447}
+  m_checkpointID: 
   m_spriteRenderer: {fileID: 1501465122157407447}

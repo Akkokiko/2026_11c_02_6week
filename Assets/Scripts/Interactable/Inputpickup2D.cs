@@ -15,8 +15,9 @@ public class InteractPickup2D : Interactable
     [SerializeField] private Image m_cooldownIndicator;
     
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         m_spriteRenderer.sprite = flower.sprite;
         m_cooldownIndicator.enabled = false;
     }
