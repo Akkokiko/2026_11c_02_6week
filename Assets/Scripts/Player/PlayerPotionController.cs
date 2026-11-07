@@ -20,14 +20,20 @@ public class PlayerPotionController : MonoBehaviour
     
     [Header("Throwing")] 
     [SerializeField] private PotionProjectile m_potionProjectilePref;
+    public PotionProjectile PotionProjectile => m_potionProjectilePref;
     [SerializeField] private Transform m_throwingPoint;
     [SerializeField] private float m_throwingForce;
+    public float ThrowingForce => m_throwingForce;
+    
+    [SerializeField] private TrajectoryLine m_trajectoryLine;
 
     void Awake()
     {
         m_fireInput = Player.InputActionAsset.FindAction("Fire");
         m_drinkInput = Player.InputActionAsset.FindAction("Drink");
         m_potionSwapScroll = Player.InputActionAsset.FindAction("Potion_Swap_Scroll");
+        m_trajectoryLine.gameObject.SetActive(false);
+        
         
         UIManager.instance.InventoryUI.chosePotion(m_potionInHand);
     }
@@ -43,7 +49,13 @@ public class PlayerPotionController : MonoBehaviour
 
             if (m_fireInput.WasPressedThisFrame())
             {
+                m_trajectoryLine.gameObject.SetActive(true);
+            }
+
+            if (m_fireInput.WasReleasedThisFrame())
+            {
                 Throw();
+                m_trajectoryLine.gameObject.SetActive(false);
             }
 
             if (m_drinkInput.WasPressedThisFrame())
@@ -68,7 +80,7 @@ public class PlayerPotionController : MonoBehaviour
         UIManager.instance.InventoryUI.chosePotion(m_potionInHand);
     }
     
-    Vector3 aimDirection()
+    public Vector3 aimDirection()
     {
         Vector3 mousePosition = Mouse.current.position.ReadValue();
         Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
