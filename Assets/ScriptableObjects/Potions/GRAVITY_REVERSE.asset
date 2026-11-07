@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   m_potionName: GravityReverse
   m_potionSprite: {fileID: -1791388622492950880, guid: 0549b42fb21b165409dd45f311c45063, type: 3}
-  m_effectSprite: {fileID: -3164809056393425246, guid: 0ca050d172b0b294e80d3c74bf47ceaa, type: 3}
+  m_effectSprite: {fileID: 3963164162426875007, guid: fd8025f4dbd5a854cb918f4bc42d6603, type: 3}
   m_effectType: 6
   m_duration: 15
   m_strength: 1
