@@ -76913,11 +76913,11 @@ PrefabInstance:
     - target: {fileID: 1110046093582837590, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
       propertyPath: 'm_potions.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 1ce685f9208515442ae02b689992471b, type: 2}
+      objectReference: {fileID: 11400000, guid: ec9539242db9ee04aa85937bf8f479ef, type: 2}
     - target: {fileID: 1110046093582837590, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
       propertyPath: 'm_potions.Array.data[1]'
       value: 
-      objectReference: {fileID: 11400000, guid: 1ce685f9208515442ae02b689992471b, type: 2}
+      objectReference: {fileID: 11400000, guid: ec9539242db9ee04aa85937bf8f479ef, type: 2}
     - target: {fileID: 1110046093582837590, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
       propertyPath: 'm_potions.Array.data[2]'
       value: 

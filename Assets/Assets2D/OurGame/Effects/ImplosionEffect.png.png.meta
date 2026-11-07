@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: 61591a263a90b274a8115a9eb8105e8f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1201988147844702573
+    second: ImplosionEffect.png_0
+  - first:
+      213: -2911269742098359563
+    second: ImplosionEffect.png_1
+  - first:
+      213: 4873478542540576607
+    second: ImplosionEffect.png_2
+  - first:
+      213: -613984266151313771
+    second: ImplosionEffect.png_3
+  - first:
+      213: -8906367005225633184
+    second: ImplosionEffect.png_4
+  - first:
+      213: 1164718677418812208
+    second: ImplosionEffect.png_5
+  - first:
+      213: 8421436261697320023
+    second: ImplosionEffect.png_6
+  - first:
+      213: -8638806983912200429
+    second: ImplosionEffect.png_7
+  - first:
+      213: 2250059158938945046
+    second: ImplosionEffect.png_8
+  - first:
+      213: 1906585884079648179
+    second: ImplosionEffect.png_9
+  - first:
+      213: 4559863626222416611
+    second: ImplosionEffect.png_10
+  - first:
+      213: -5422528205012471722
+    second: ImplosionEffect.png_11
+  - first:
+      213: 8048609102760855249
+    second: ImplosionEffect.png_12
+  - first:
+      213: 1131664934015346468
+    second: ImplosionEffect.png_13
+  - first:
+      213: 7540159170521367836
+    second: ImplosionEffect.png_14
+  - first:
+      213: 7304652847969614370
+    second: ImplosionEffect.png_15
+  - first:
+      213: 233444900183271773
+    second: ImplosionEffect.png_16
+  - first:
+      213: 5343824199001492988
+    second: ImplosionEffect.png_17
+  - first:
+      213: -4810036223004203161
+    second: ImplosionEffect.png_18
+  - first:
+      213: 3006146886207592926
+    second: ImplosionEffect.png_19
+  - first:
+      213: -3216987188224079909
+    second: ImplosionEffect.png_20
+  - first:
+      213: -6449512285509032641
+    second: ImplosionEffect.png_21
+  - first:
+      213: 5306718681699643662
+    second: ImplosionEffect.png_22
+  - first:
+      213: -4016172946143822832
+    second: ImplosionEffect.png_23
+  - first:
+      213: 2963577493887746852
+    second: ImplosionEffect.png_24
+  - first:
+      213: 8191314755375848346
+    second: ImplosionEffect.png_25
+  - first:
+      213: 3668126367315276420
+    second: ImplosionEffect.png_26
+  - first:
+      213: -8243914747033525326
+    second: ImplosionEffect.png_27
+  - first:
+      213: -484246255572693686
+    second: ImplosionEffect.png_28
+  - first:
+      213: -23420613742422449
+    second: ImplosionEffect.png_29
+  - first:
+      213: -4204640966859473386
+    second: ImplosionEffect.png_30
+  - first:
+      213: 8983263575953717926
+    second: ImplosionEffect.png_31
+  - first:
+      213: -7048513976238962828
+    second: ImplosionEffect.png_32
+  - first:
+      213: 7625883646109270001
+    second: ImplosionEffect.png_33
+  - first:
+      213: -712783929216215404
+    second: ImplosionEffect.png_34
+  - first:
+      213: -1293363523042102260
+    second: ImplosionEffect.png_35
+  - first:
+      213: 6748904283890990786
+    second: ImplosionEffect.png_36
+  - first:
+      213: -5200363855637339551
+    second: ImplosionEffect.png_37
+  - first:
+      213: -2984805487516652766
+    second: ImplosionEffect.png_38
+  - first:
+      213: -6867996712999146425
+    second: ImplosionEffect.png_39
+  - first:
+      213: 6097351838385307687
+    second: ImplosionEffect.png_40
+  - first:
+      213: 8252809235536657870
+    second: ImplosionEffect.png_41
+  - first:
+      213: -6783437572682874498
+    second: ImplosionEffect.png_42
+  - first:
+      213: -2199928503665938002
+    second: ImplosionEffect.png_43
+  - first:
+      213: -4045470817446199868
+    second: ImplosionEffect.png_44
+  - first:
+      213: 356909321374386708
+    second: ImplosionEffect.png_45
+  - first:
+      213: 6955886628873401240
+    second: ImplosionEffect.png_46
+  - first:
+      213: -6671333931129190349
+    second: ImplosionEffect.png_47
+  - first:
+      213: -1470967683972251437
+    second: ImplosionEffect.png_48
+  - first:
+      213: 4788751333585656786
+    second: ImplosionEffect.png_49
+  - first:
+      213: -1278277254721772463
+    second: ImplosionEffect.png_50
+  - first:
+      213: 6089817160490924885
+    second: ImplosionEffect.png_51
+  - first:
+      213: 5370276129281128413
+    second: ImplosionEffect.png_52
+  - first:
+      213: -8422782946549222760
+    second: ImplosionEffect.png_53
+  - first:
+      213: 2714266441608728051
+    second: ImplosionEffect.png_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ImplosionEffect.png_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6163802ad15ea010800000000000000
+      internalID: 1201988147844702573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa52e818971997d0800000000000000
+      internalID: -2911269742098359563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f579e94e9e212a340800000000000000
+      internalID: 4873478542540576607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e3f5e1090ba77f0800000000000000
+      internalID: -613984266151313771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_4
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a344e856a366480800000000000000
+      internalID: -8906367005225633184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_5
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033afc65779e92010800000000000000
+      internalID: 1164718677418812208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 754ff0d49a3fed470800000000000000
+      internalID: 8421436261697320023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_7
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f53422cc3050649973dc6f3286bed6
+      internalID: -8638806983912200429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ImplosionEffect.png_8
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b3f61ebebb0724d8c625d43438d583
+      internalID: -1447338593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ab63f503072e57f488af0796a42481d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":1.0},"gridSpriteSize":{"x":54.0,"y":60.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ImplosionEffect.png_0: 1201988147844702573
+      ImplosionEffect.png_1: -2911269742098359563
+      ImplosionEffect.png_2: 4873478542540576607
+      ImplosionEffect.png_3: -613984266151313771
+      ImplosionEffect.png_4: -8906367005225633184
+      ImplosionEffect.png_5: 1164718677418812208
+      ImplosionEffect.png_6: 8421436261697320023
+      ImplosionEffect.png_7: -8638806983912200429
+      ImplosionEffect.png_8: -1447338593
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
