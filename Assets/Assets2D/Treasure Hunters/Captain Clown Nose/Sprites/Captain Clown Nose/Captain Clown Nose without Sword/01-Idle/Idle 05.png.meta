@@ -103,12 +103,12 @@ TextureImporter:
       name: Idle 05_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 7
-        width: 26
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 20
+        y: 8
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c093802cbb0a5bc4b92d135df9fe4a4a
     internalID: 0
     vertices: []
     indices: 

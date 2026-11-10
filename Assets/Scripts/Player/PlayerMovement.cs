@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_PlayerRigidbody;
     private Collider2D m_PlayerCollider;
     public Player Player => m_Player;
+    [SerializeField] private Animator m_animator;
 
 
     [Header("Horizontal Movement")]
@@ -65,6 +66,10 @@ public class PlayerMovement : MonoBehaviour
             m_isMidJump = false;
             m_currJumpDuration = 0;
         }
+
+        m_animator.SetFloat("Speed", Mathf.Abs(m_PlayerRigidbody.linearVelocityX));
+        m_animator.SetFloat("YVelocity", m_PlayerRigidbody.linearVelocityY);
+        m_animator.SetBool("Grounded", m_isGrounded);
 
     }
     void FixedUpdate()

@@ -36,14 +36,12 @@ public class Jump : MonoBehaviour
             m_groundedMask
         ).collider != null;
 
-        // Just landed
         if (m_isGrounded && !m_wasGrounded)
         {
             m_animator.SetTrigger("Landing");
             StartCoroutine(PrepareNextJump());
         }
 
-        // Falling
         m_animator.SetBool(
             "IsFalling",
             rb.linearVelocity.y < -0.01f && !m_isGrounded
@@ -56,16 +54,12 @@ public class Jump : MonoBehaviour
     {
         m_isPreparingJump = true;
 
-        // Wait after landing
         yield return new WaitForSeconds(m_landingCooldown);
 
-        // Start anticipation animation
         m_animator.SetTrigger("Anticipation");
 
-        // Wait for anticipation to finish
         yield return new WaitForSeconds(m_anticipationDuration);
 
-        // Actually jump
         if (m_isGrounded)
         {
             rb.linearVelocity = new Vector2(
