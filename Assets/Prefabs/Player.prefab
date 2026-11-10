@@ -428,6 +428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   m_Player: {fileID: 1320477900441688907}
   m_animator: {fileID: 1929698144045064771}
+  m_spriteRenderer: {fileID: 1328658780334301545}
   m_jumpCurve:
     serializedVersion: 2
     m_Curve:
