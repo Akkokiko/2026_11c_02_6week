@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7082128221038943567}
   - component: {fileID: 674432506773439473}
-  - component: {fileID: 245843146258300366}
   - component: {fileID: 1333971635956779784}
   - component: {fileID: 6147299778543714622}
   - component: {fileID: 6249096892281015987}
+  - component: {fileID: 4716528402966536434}
   m_Layer: 3
-  m_Name: Whale
+  m_Name: GravitylessWhale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -855298285791758126, guid: 89e136d08fd5161428140894cc16ac55, type: 3}
+  m_Sprite: {fileID: -855298285791758126, guid: 70d1ae6cbc0f4654bb2a735d4578d4d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,19 +95,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &245843146258300366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398310162895072597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639b8f6dcf7b5b14ca331c6673f658c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Jump
-  m_entity: {fileID: 6249096892281015987}
 --- !u!61 &1333971635956779784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +133,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.09375, y: 1.21875}
+    oldSize: {x: 2.0625, y: 1.28125}
     newSize: {x: 0.67, y: 0.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -162,7 +149,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398310162895072597}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -202,9 +189,32 @@ MonoBehaviour:
   m_currentJumpForce: 0
   m_currentWeight: 0
   m_shouldBeMoving: 0
+  m_entityRigidbody: {fileID: 0}
   m_onWeightChanged:
     m_PersistentCalls:
       m_Calls: []
   m_OnEntityHealthChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!95 &4716528402966536434
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398310162895072597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b24609e9914e38f4d8c794dacf7e3a64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

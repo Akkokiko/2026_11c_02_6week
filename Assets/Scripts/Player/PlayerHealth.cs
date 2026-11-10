@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private Animator m_animator;
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        
         if (currentHealth <= 0 || damage <= 0)
             return;
 
@@ -19,7 +21,12 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            m_animator.SetBool("Dead", true);
+            m_animator.SetTrigger("GotDeadlyHit");
             Die();
+        }
+        else{
+            m_animator.SetTrigger("GotHit");
         }
     }
 
