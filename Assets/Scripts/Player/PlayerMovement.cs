@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D m_PlayerCollider;
     public Player Player => m_Player;
     [SerializeField] private Animator m_animator;
+    [SerializeField] private SpriteRenderer m_spriteRenderer;
 
 
     [Header("Horizontal Movement")]
@@ -78,6 +79,14 @@ public class PlayerMovement : MonoBehaviour
         {
             float currentVelocityX = m_PlayerRigidbody.linearVelocityX;
             float inputVelocityX = m_horizontalInput.ReadValue<float>() * m_moveSpeed;
+            if (inputVelocityX > 0.01f)
+            {
+                m_spriteRenderer.flipX = false;
+            }
+            else if (inputVelocityX < -0.01f)
+            {
+                m_spriteRenderer.flipX = true;
+            }
 
             if (Mathf.Abs(currentVelocityX) > m_moveSpeed)
             {
