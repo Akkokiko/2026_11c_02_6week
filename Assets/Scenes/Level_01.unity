@@ -36207,6 +36207,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.38716316}
   m_EdgeRadius: 0
+--- !u!212 &1132141397 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1328658780334301545, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
+  m_PrefabInstance: {fileID: 5424521935153566631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1153836309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6339959280452046585, guid: 51ba338adb5a9f24c9b899f8efb8db98, type: 3}
@@ -72287,6 +72292,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8986572434406713882, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
+      propertyPath: m_spriteRenderer
+      value: 
+      objectReference: {fileID: 1132141397}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
