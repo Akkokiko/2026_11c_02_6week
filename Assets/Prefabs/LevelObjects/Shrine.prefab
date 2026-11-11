@@ -521,3 +521,4 @@ MonoBehaviour:
   m_potionRecipe: {fileID: 11400000, guid: 3c913b6eb0141f14caa7ada4ad7c82db, type: 2}
   m_descriptionText: {fileID: 6284628337527730374}
   m_description: Become faster
+  m_explosionPrefab: {fileID: 8526746485307111507, guid: b6c079061ba01c54eb1495936bd7c5c8, type: 3}

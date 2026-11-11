@@ -8,6 +8,8 @@ public class PotionShrine : Interactable
 
     [SerializeField] private TextMeshProUGUI m_descriptionText;
     [SerializeField] private string m_description;
+    
+    [SerializeField] private ExplosionEffect m_explosionPrefab;
 
     protected override void Start()
     {       
@@ -25,8 +27,14 @@ public class PotionShrine : Interactable
             player.AddKnownRecipe(m_potionRecipe);
             Debug.Log(player);
             player.RecipeBook.showDiscoveredRecipes();
+            SpawnExplosion(transform.position);
         }
         
         
+    }
+    void SpawnExplosion(Vector3 position)
+    {
+        var ex = Instantiate(m_explosionPrefab,position,Quaternion.identity);
+        ex.Puff(35);
     }
 }

@@ -1,0 +1,504 @@
+fileFormatVersion: 2
+guid: 8910c0544e3257a4fac8d510a8cc88b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4012469554459912648
+    second: ShrineEffect_0
+  - first:
+      213: -6215749376081757557
+    second: ShrineEffect_1
+  - first:
+      213: -8315551854676614542
+    second: ShrineEffect_2
+  - first:
+      213: -7480269874498072368
+    second: ShrineEffect_3
+  - first:
+      213: 8079037636134613893
+    second: ShrineEffect_4
+  - first:
+      213: -5490903440099205456
+    second: ShrineEffect_5
+  - first:
+      213: -3898500805213909341
+    second: ShrineEffect_6
+  - first:
+      213: 6562102322196110298
+    second: ShrineEffect_7
+  - first:
+      213: 2360735948144027857
+    second: ShrineEffect_8
+  - first:
+      213: 8293769474957358412
+    second: ShrineEffect_9
+  - first:
+      213: -4552528579078540999
+    second: ShrineEffect_10
+  - first:
+      213: -3492741515086428496
+    second: ShrineEffect_11
+  - first:
+      213: 6225421068689072430
+    second: ShrineEffect_12
+  - first:
+      213: -6077755178361260775
+    second: ShrineEffect_13
+  - first:
+      213: -386635919940460370
+    second: ShrineEffect_14
+  - first:
+      213: 3467226121557543360
+    second: ShrineEffect_15
+  - first:
+      213: -214739174523733749
+    second: ShrineEffect_16
+  - first:
+      213: -3868726158580089487
+    second: ShrineEffect_17
+  - first:
+      213: 6461096272869492184
+    second: ShrineEffect_18
+  - first:
+      213: -7672442268346979319
+    second: ShrineEffect_19
+  - first:
+      213: -6581170964615144750
+    second: ShrineEffect_20
+  - first:
+      213: -2003088241120462494
+    second: ShrineEffect_21
+  - first:
+      213: -7571440205721770752
+    second: ShrineEffect_22
+  - first:
+      213: -6996832774844985825
+    second: ShrineEffect_23
+  - first:
+      213: 8255843118385033956
+    second: ShrineEffect_24
+  - first:
+      213: -7715566810904421468
+    second: ShrineEffect_25
+  - first:
+      213: 3955662725357230940
+    second: ShrineEffect_26
+  - first:
+      213: -6439562175099208368
+    second: ShrineEffect_27
+  - first:
+      213: 7278239695705406747
+    second: ShrineEffect_28
+  - first:
+      213: 8807844936081982905
+    second: ShrineEffect_29
+  - first:
+      213: -4330201292656603154
+    second: ShrineEffect_30
+  - first:
+      213: -4979726320414978137
+    second: ShrineEffect_31
+  - first:
+      213: -2139826901863291921
+    second: ShrineEffect_32
+  - first:
+      213: -4204250326879312522
+    second: ShrineEffect_33
+  - first:
+      213: 189930727077974963
+    second: ShrineEffect_34
+  - first:
+      213: -2353625497827348446
+    second: ShrineEffect_35
+  - first:
+      213: 95588210041852319
+    second: ShrineEffect_36
+  - first:
+      213: -5944560954599772090
+    second: ShrineEffect_37
+  - first:
+      213: -6038149219390184385
+    second: ShrineEffect_38
+  - first:
+      213: 2539822530356961902
+    second: ShrineEffect_39
+  - first:
+      213: 8564772645336882051
+    second: ShrineEffect_40
+  - first:
+      213: 5861600292939946918
+    second: ShrineEffect_41
+  - first:
+      213: -1710288778150739649
+    second: ShrineEffect_42
+  - first:
+      213: 6471998339903195591
+    second: ShrineEffect_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShrineEffect_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836d85ef238d058c0800000000000000
+      internalID: -4012469554459912648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a7ac9ffd83db9a0800000000000000
+      internalID: -6215749376081757557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 272e8a655a9399c80800000000000000
+      internalID: -8315551854676614542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d09c7a6e2eb03890800000000000000
+      internalID: -7480269874498072368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583b0dcece18e1070800000000000000
+      internalID: 8079037636134613893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be9aecc9646cc3b0800000000000000
+      internalID: -5490903440099205456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae86ac3c2eb5e9c0800000000000000
+      internalID: -3898500805213909341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adbd3466b45411b50800000000000000
+      internalID: 6562102322196110298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8ae9d46d403c020800000000000000
+      internalID: 2360735948144027857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45bfcb2563691370800000000000000
+      internalID: 8293769474957358412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShrineEffect_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931b53ea06b22d0c0800000000000000
+      internalID: -4552528579078540999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 84b735fd515070b4b9a4e5aa363dc5c5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":12.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ShrineEffect_0: -4012469554459912648
+      ShrineEffect_1: -6215749376081757557
+      ShrineEffect_10: -4552528579078540999
+      ShrineEffect_2: -8315551854676614542
+      ShrineEffect_3: -7480269874498072368
+      ShrineEffect_4: 8079037636134613893
+      ShrineEffect_5: -5490903440099205456
+      ShrineEffect_6: -3898500805213909341
+      ShrineEffect_7: 6562102322196110298
+      ShrineEffect_8: 2360735948144027857
+      ShrineEffect_9: 8293769474957358412
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
