@@ -59,7 +59,7 @@ public class EnemyAI : Entity
             {
                 patrol.MoveTowards(
                     detection.Player.position.x,
-                    patrol.chaseSpeed
+                    m_currentMoveSpeed * patrol.chaseSpeedMultiplayer
                 );
             }
             else

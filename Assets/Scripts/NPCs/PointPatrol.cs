@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class PointPatrol : MonoBehaviour
 {
+    [SerializeField] private EnemyAI m_enemyAI;
+    
     [Header("Patrol")]
     public Transform pointA;
     public Transform pointB;
-    public float patrolSpeed = 2f;
+    public float Speed => m_enemyAI.m_currentMoveSpeed;
 
-    [Header("Chase")]
-    public float chaseSpeed = 3f;
+    [Header("Chase")] public float chaseSpeedMultiplayer = 1.5f;
 
     private Rigidbody2D rb;
     private Transform targetPoint;
@@ -73,7 +74,7 @@ public class PointPatrol : MonoBehaviour
             return;
         }
 
-        MoveTowards(targetX, patrolSpeed);
+        MoveTowards(targetX, Speed);
     }
 
     public void MoveTowards(float targetX, float speed)

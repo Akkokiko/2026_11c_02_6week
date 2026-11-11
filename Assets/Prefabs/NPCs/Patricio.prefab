@@ -454,8 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d4f531e13a13b4bb70cb3b5fa7c067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PointPatrol
+  m_enemyAI: {fileID: 5649867008956730495}
   pointA: {fileID: 1493011782588390128}
   pointB: {fileID: 5301256010638916441}
-  patrolSpeed: 2
-  chaseSpeed: 5
+  chaseSpeedMultiplayer: 1.5
   eAnimation: {fileID: 0}
