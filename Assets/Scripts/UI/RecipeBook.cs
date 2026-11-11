@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class RecipeBook : MonoBehaviour
 {
-    [SerializeField] private List<Recipe> m_RecipeList;
     [SerializeField] private GameObject m_recipeVisual;
     [SerializeField] private Transform m_recipeContainer;
+    private Player m_player;
     
     void Start()
     {
+        m_player = FindFirstObjectByType<Player>();
+        m_player.SetRecipeBook(this);
         showDiscoveredRecipes();
     }
 
     public Recipe evaluateRecipe(List<Flower> flowers)
     {
         List<Recipe> validRecipes = new List<Recipe>();
-        foreach (Recipe recipe in m_RecipeList)
+        foreach (Recipe recipe in m_player.RecipeList)
         {
             if (recipe.doFlowersCraftThis(flowers))
             {
@@ -35,9 +37,9 @@ public class RecipeBook : MonoBehaviour
     
     public void showDiscoveredRecipes()
     {
-        foreach (Recipe recipe in m_RecipeList)
+        foreach (Recipe recipe in m_player.RecipeList)
         {
-            if (recipe.HasBeenDiscovered && m_recipeContainer.Find(recipe.name) == null)
+            if (m_recipeContainer.Find(recipe.name) == null)
             {
                 GameObject newRecipeVisual = Instantiate(m_recipeVisual);
                 newRecipeVisual.name = recipe.name;

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -39,6 +40,11 @@ public class Player : Entity
     [SerializeField] private bool m_isInMenu;
     public bool IsInMenu => m_isInMenu;
 
+    [SerializeField] private List<Recipe> m_recipes;
+    public List<Recipe> RecipeList => m_recipes;
+    [SerializeField] private RecipeBook m_recipeBook;
+    public RecipeBook RecipeBook => m_recipeBook;
+
     void OnEnable()
     {
         m_inputAction.Enable();
@@ -75,10 +81,17 @@ public class Player : Entity
         heal(this.MaxHealth);
         removeAllEffect();
     }
-
-
     public void swapIsInMenuState()
     {
         m_isInMenu = !m_isInMenu;
     }
+    public void AddKnownRecipe(Recipe newRecipe)
+    {
+        m_recipes.Add(newRecipe);
+    }
+    public void SetRecipeBook(RecipeBook recipeBook)
+    {
+        m_recipeBook = recipeBook;
+    }
+
 }

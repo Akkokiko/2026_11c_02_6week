@@ -20,8 +20,12 @@ public class PotionShrine : Interactable
 
     public override void Interact(Player player)
     {
-        //Sprawdź czy gracz ma już tą recipe
-        //Jeśli nie to dodaj ja
+        if (player.RecipeList.Contains(m_potionRecipe) == false)
+        {
+            player.AddKnownRecipe(m_potionRecipe);
+            Debug.Log(player);
+            player.RecipeBook.showDiscoveredRecipes();
+        }
         
         
     }

@@ -215,7 +215,7 @@ public class CraftingUI : MonoBehaviour
         if (!m_Player.PlayerInventory.isFull() && (recipe = m_recipeBook.evaluateRecipe(flowersInCraftSlots)) != null)
         {
             m_Player.PlayerInventory.addPotion(recipe.RecipeResult);
-            recipe.markAsDiscovered();
+            //used to add potion to list here....
             m_recipeBook.showDiscoveredRecipes();
         }
         else

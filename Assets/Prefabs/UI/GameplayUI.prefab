@@ -396,7 +396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4020055581856841994
 RectTransform:
   m_ObjectHideFlags: 0
@@ -491,9 +491,9 @@ RectTransform:
   - {fileID: 6199103712933842757}
   m_Father: {fileID: 2027547059671602779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 182.59254, y: -25}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7101654032759087254
@@ -884,6 +884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1419873537318745793}
   - component: {fileID: 8162396452205978448}
+  - component: {fileID: 2265850015444193009}
   m_Layer: 0
   m_Name: CraftingSystemUI
   m_TagString: Untagged
@@ -927,7 +928,21 @@ MonoBehaviour:
   - {fileID: 3836236628623911053}
   - {fileID: 6026996424269934195}
   - {fileID: 2175230791077058473}
-  m_recipeBook: {fileID: 544530574369635648}
+  m_recipeBook: {fileID: 2265850015444193009}
+--- !u!114 &2265850015444193009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057739956412601941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3c54bba3d624b4490d12709445dd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeBook
+  m_recipeVisual: {fileID: 7261449453880338577, guid: c69a1fa7a81091b4c94d868bace93f78, type: 3}
+  m_recipeContainer: {fileID: 2059623601556418452}
 --- !u!1 &2171576681870949770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1567,6 @@ GameObject:
   - component: {fileID: 1017183118343152937}
   - component: {fileID: 6217061739147893533}
   - component: {fileID: 4358810049533155182}
-  - component: {fileID: 544530574369635648}
   m_Layer: 5
   m_Name: RecipeArea
   m_TagString: Untagged
@@ -1618,27 +1632,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &544530574369635648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3394077649416907226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3c54bba3d624b4490d12709445dd53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RecipeBook
-  m_RecipeList:
-  - {fileID: 11400000, guid: 89ffc2347966dbe4e8a72f9c7b73c601, type: 2}
-  - {fileID: 11400000, guid: e3284742924e7494f9b1f276ed1b099d, type: 2}
-  - {fileID: 11400000, guid: 38329e03864634b45a72082e6a830526, type: 2}
-  - {fileID: 11400000, guid: de4a19c7cd3f84e47bd6402943aa5561, type: 2}
-  - {fileID: 11400000, guid: 3c913b6eb0141f14caa7ada4ad7c82db, type: 2}
-  - {fileID: 11400000, guid: 1a04720f7f5d2124996efdc8579e25f4, type: 2}
-  m_recipeVisual: {fileID: 7261449453880338577, guid: c69a1fa7a81091b4c94d868bace93f78, type: 3}
-  m_recipeContainer: {fileID: 2059623601556418452}
 --- !u!1 &3512375338625237729
 GameObject:
   m_ObjectHideFlags: 0
@@ -3057,9 +3050,9 @@ RectTransform:
   - {fileID: 3383981459108633922}
   m_Father: {fileID: 2027547059671602779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 182.59254, y: -72.4933}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3042466569848972266
@@ -3528,9 +3521,9 @@ RectTransform:
   - {fileID: 3063405800934448822}
   m_Father: {fileID: 2027547059671602779}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 182.59254, y: -119.9866}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2986371436047823255

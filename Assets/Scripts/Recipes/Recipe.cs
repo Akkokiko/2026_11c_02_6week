@@ -9,8 +9,6 @@ public class Recipe : ScriptableObject
     public Potion RecipeResult => m_RecipeResult;
     [SerializeField] private List<Flower> m_NeededFlowers;
     public List<Flower> NeededFlowers => m_NeededFlowers;
-    [SerializeField] private bool m_hasBeenDiscovered;
-    public bool HasBeenDiscovered => m_hasBeenDiscovered;
 
     public bool doFlowersCraftThis(List<Flower> flowers)
     {
@@ -56,13 +54,5 @@ public class Recipe : ScriptableObject
         }
 
         return true;
-    }
-
-    public void markAsDiscovered()
-    {
-        if (!m_hasBeenDiscovered)
-        {
-            m_hasBeenDiscovered = true;
-        }
     }
 }
