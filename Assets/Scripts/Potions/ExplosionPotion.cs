@@ -31,7 +31,6 @@ public class ExplosionPotion : Potion
     public override void Affect(Entity entity)
     {
         Vector2 entitiesPosition = entity.gameObject.transform.position;
-        SpawnExplosion(entity.gameObject.transform.position);
         float explosionStrength = (m_isExplosive ? 1 : -1) * this.Strength;
         float explosionRadius = m_distance;
 
@@ -59,6 +58,7 @@ public class ExplosionPotion : Potion
             hit.AddForce(expForce, ForceMode2D.Impulse);
 
         }
+        SpawnExplosion(entity.gameObject.transform.position);
     }
 
     void SpawnExplosion(Vector3 position)
