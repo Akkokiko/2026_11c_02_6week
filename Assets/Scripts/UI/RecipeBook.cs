@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class RecipeBook : MonoBehaviour
 {
     [SerializeField] private List<Recipe> m_RecipeList;
-    [SerializeField] private GameObject recipeVisual;
+    [SerializeField] private GameObject m_recipeVisual;
+    [SerializeField] private Transform m_recipeContainer;
     
     void Start()
     {
@@ -38,7 +39,7 @@ public class RecipeBook : MonoBehaviour
         {
             if (recipe.HasBeenDiscovered && this.gameObject.transform.Find(recipe.name) == null)
             {
-                GameObject newRecipeVisual = Instantiate(recipeVisual);
+                GameObject newRecipeVisual = Instantiate(m_recipeVisual);
                 newRecipeVisual.name = recipe.name;
 
                 //setting images
@@ -49,7 +50,7 @@ public class RecipeBook : MonoBehaviour
                     newRecipeVisual.transform.Find("FlowerSlot"+(i+1)).GetComponent<Image>().sprite = recipe.NeededFlowers[i].sprite;
                 }
 
-                newRecipeVisual.transform.SetParent(this.transform, false);
+                newRecipeVisual.transform.SetParent(m_recipeContainer, false);
             }
         }
     }
