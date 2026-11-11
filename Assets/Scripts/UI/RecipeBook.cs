@@ -37,7 +37,7 @@ public class RecipeBook : MonoBehaviour
     {
         foreach (Recipe recipe in m_RecipeList)
         {
-            if (recipe.HasBeenDiscovered && this.gameObject.transform.Find(recipe.name) == null)
+            if (recipe.HasBeenDiscovered && m_recipeContainer.Find(recipe.name) == null)
             {
                 GameObject newRecipeVisual = Instantiate(m_recipeVisual);
                 newRecipeVisual.name = recipe.name;
