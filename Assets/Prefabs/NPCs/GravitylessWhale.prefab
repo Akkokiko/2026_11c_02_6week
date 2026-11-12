@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6147299778543714622}
   - component: {fileID: 6249096892281015987}
   - component: {fileID: 4716528402966536434}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: GravitylessWhale
   m_TagString: Untagged
   m_Icon: {fileID: 0}

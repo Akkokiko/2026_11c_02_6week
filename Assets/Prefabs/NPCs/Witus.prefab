@@ -223,12 +223,37 @@ MonoBehaviour:
   dialogueBubble: {fileID: 1515785148618233781}
   dialogueText: {fileID: 3791400147503500557}
   dialogueLines:
-  - text: "By z mn\u0105 porozmawia\u0107, naci\u015Bnij przycisk 'E'"
-  - text: PIWO TESCOOOOO!!! PIWOOO!!!! TESCOOOOOOOOO!!!!!!!!!
-  - text: "konstantynopolita\u0144czykowianeczka"
-  - text: Algorytm Bluma, Floyda, Pratta, Rivesta, Tarjana
+  - text: "\u017Beby ze mn\u0105 porozmawia\u0107, naci\u015Bnij przycisk 'E'"
+    voiceover: {fileID: 11400000, guid: 7fffb2f334f1cb7429a1ae1361164eb3, type: 2}
+  - text: "By zebra\u0107 checkpoint, r\xF3wnie\u017C naci\u015Bnij przycisk \"E\""
+    voiceover: {fileID: 11400000, guid: 2cb70a60b58c91840b62b0d76e89a8dc, type: 2}
+  - text: "Czy wiedzia\u0142e\u015B \u017Ce Walenie i Hipopotamy s\u0105 blisko spokrewnione? "
+    voiceover: {fileID: 11400000, guid: e9a7f4d9803c2234380328fe87a01ba2, type: 2}
+  - text: "Mikstura przy\u015Bpieszenia sprawi, \u017Ce zaczniesz biega\u0107. Ale
+      tak szybko."
+    voiceover: {fileID: 11400000, guid: 3451ed8943c1ab24297dbf68128aefac, type: 2}
+  - text: "Mikstura ro\u015Bni\u0119cia doda ci kilka centymetr\xF3w"
+    voiceover: {fileID: 11400000, guid: be9b5fd17da8e234c8146e3887e61abe, type: 2}
+  - text: "Mikstura zamro\u017Cenia sprawi, \u017Ce zaczniesz \u015Bpiewa\u0107 \"Mam
+      t\u0119 moc\""
+    voiceover: {fileID: 11400000, guid: e8061830a3952d549b21148491fae2b4, type: 2}
+  - text: "Mikstura odwr\xF3cenia grawitacji dos\u0142ownie wywruci \u015Bwiat do
+      g\xF3ry nogami"
+    voiceover: {fileID: 11400000, guid: f1c3f857902816c4597fe3a15732dc8a, type: 2}
+  - text: "Mikstura eksplozji sprawi, \u017Ce przeciwnik b\u0119dzie w kilku miejscach
+      na raz"
+    voiceover: {fileID: 11400000, guid: 398fbd956c3235448a682d2ccc2ec314, type: 2}
+  - text: "Mikstura implozji sprawi, \u017Ce przeciwnik zmie\u015Bci si\u0119 w dziurke
+      od klucza"
+    voiceover: {fileID: 11400000, guid: 352b09d7ae5f4364fb858e9d88d6706a, type: 2}
+  - text: "Przed wyruszeniem w dalsz\u0105 drog\u0119, nale\u017Cy zebra\u0107 wi\u0119cej
+      z\u0142ota"
+    voiceover: {fileID: 11400000, guid: f5c6a5a09e0859e4892c0633bb737603, type: 2}
+  - text: "Hy Hy Hy. Czyli inwestycja powoli si\u0119 zwraca. Czas i\u015B\u0107
+      do nast\u0119pnego poziomu."
+    voiceover: {fileID: 11400000, guid: cd0a29736da84b143b93108d94b4b6ea, type: 2}
   interactionKey: 101
-  extraDisplayTime: 3
+  extraDisplayTime: 0.5
 --- !u!1 &1500640633508059678
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,8 +391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.5, y: 0.5}
-  m_SizeDelta: {x: 213, y: 200}
+  m_AnchoredPosition: {x: 0.488, y: 0.502}
+  m_SizeDelta: {x: 362, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6957311816288680704
 Canvas:
@@ -650,7 +675,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8288426215254106694, guid: 9f5f91df32f7af649adf3907b4adc4eb, type: 3}
+  m_Sprite: {fileID: -5987048354905392170, guid: 394b4c9fc2c8be1499995440e97ada84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

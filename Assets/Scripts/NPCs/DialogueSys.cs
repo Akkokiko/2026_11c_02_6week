@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using System.Collections;
+using Sound;
 
 public class DialogueSys : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class DialogueSys : MonoBehaviour
     {
         [TextArea(2, 5)]
         public string text;
+        public ClipSex voiceover;
     }
 
     [Header("Dymek")]
@@ -18,6 +20,7 @@ public class DialogueSys : MonoBehaviour
 
     [Header("Wiadomości NPC")]
     public DialogueLine[] dialogueLines;
+    
 
     [Header("Ustawienia")]
     public KeyCode interactionKey = KeyCode.E;
@@ -36,6 +39,7 @@ public class DialogueSys : MonoBehaviour
     private void Update()
     {
         if (playerInRange &&
+            dialogueCoroutine == null &&
             Keyboard.current != null &&
             Keyboard.current.eKey.wasPressedThisFrame)
         {
@@ -83,7 +87,14 @@ public class DialogueSys : MonoBehaviour
         dialogueText.text = line.text;
         dialogueBubble.SetActive(true);
 
-        yield return new WaitForSeconds(extraDisplayTime);
+        float duration = 0f;
+        if (line.voiceover != null && line.voiceover.clip != null)
+        {
+            line.voiceover.Play(transform.position);
+            duration = line.voiceover.clip.length / Mathf.Max(line.voiceover.pitchRange.x, 0.01f);
+        }
+
+        yield return new WaitForSeconds(duration + extraDisplayTime);
 
         dialogueBubble.SetActive(false);
 

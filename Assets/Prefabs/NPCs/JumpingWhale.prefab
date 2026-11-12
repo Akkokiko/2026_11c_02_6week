@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 91080096264161766}
   - component: {fileID: 4968948285151891385}
   - component: {fileID: 2214441020065373288}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: JumpingWhale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
