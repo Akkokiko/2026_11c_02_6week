@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FriendlyNPC
   m_intereactionCollider: {fileID: 0}
+  m_intereactionSpriteRenderer: {fileID: 0}
   dialogue: Interakcja z Witusiem
 --- !u!95 &7126358110721674019
 Animator:
@@ -206,7 +207,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &5903525129822887899
 MonoBehaviour:
   m_ObjectHideFlags: 0
