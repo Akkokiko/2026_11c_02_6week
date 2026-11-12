@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b088e184eeadd94478de69449f4f1872
+guid: 0fd20bbf3d22c9f4199dbccf6c8586a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3462628180961327676
-    second: Flag 01_0
+      213: -2011636523104336253
+    second: Flag 05_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,11 +96,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flag 01_0
+      name: Flag 05_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c50b84e30642ffc0800000000000000
-      internalID: -3462628180961327676
+      spriteID: 3860a278d3b3514e0800000000000000
+      internalID: -2011636523104336253
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flag 01_0: -3462628180961327676
+      Flag 05_0: -2011636523104336253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
