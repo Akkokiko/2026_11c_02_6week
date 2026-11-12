@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using UnityEngine.Events;
 
 public class CraftingUI : MonoBehaviour
 {
@@ -21,7 +22,9 @@ public class CraftingUI : MonoBehaviour
     [SerializeField] private CraftingSlot[] m_craftingSlots;
 
     [SerializeField] private RecipeBook m_recipeBook;
-
+    
+    public UnityEvent  OnOpenCraftingUI =  new UnityEvent();
+    
     void Start()
     {
         if (m_Player == null)
@@ -42,6 +45,7 @@ public class CraftingUI : MonoBehaviour
         {
             m_CraftingUI.SetActive(!m_CraftingUI.activeSelf);
             m_Player.swapIsInMenuState();
+            OnOpenCraftingUI.Invoke();      
         }
 
         if (m_CraftingUI.activeSelf && m_menuInteractInput.WasPressedThisFrame())
