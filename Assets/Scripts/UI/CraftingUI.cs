@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using LitMotion;
 using UnityEngine.Events;
+using Random = System.Random;
 
 public class CraftingUI : MonoBehaviour
 {
@@ -25,8 +27,14 @@ public class CraftingUI : MonoBehaviour
     
     public UnityEvent  OnOpenCraftingUI =  new UnityEvent();
     
+    
+    //Shaking
+    private Vector2 originalPosition_CraftingUI;
+    private MotionHandle motionHandle;
+    
     void Start()
     {
+        originalPosition_CraftingUI = m_CraftingUI.GetComponent<RectTransform>().anchoredPosition;
         if (m_Player == null)
         {
             m_Player = LevelManager.instance.Player;
@@ -225,6 +233,16 @@ public class CraftingUI : MonoBehaviour
         else
         {
             //refund
+
+            motionHandle.TryCancel();
+            motionHandle = LMotion.Create(1f, 0, 0.25f).Bind(x =>
+            {
+                Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * (5 * x);
+                m_CraftingUI.GetComponent<RectTransform>().anchoredPosition =
+                    originalPosition_CraftingUI + randomOffset;
+
+            });
+            
             foreach (Flower flower in flowersInCraftSlots)
             {
                 m_Player.PlayerInventory.AddFlower(flower, 1);
