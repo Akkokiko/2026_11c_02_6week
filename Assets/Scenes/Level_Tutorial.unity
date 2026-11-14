@@ -124,11 +124,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 7200948946808793551, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
   m_PrefabInstance: {fileID: 4462729520859969816}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &136711275 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1012365170632148258, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
-  m_PrefabInstance: {fileID: 4462729520859969816}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &137506331
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,8 +320,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press [R] to open potion crafting
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -673,8 +668,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press [E] to interact
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1200,8 +1195,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Throw potion on the NPC with [LEFT MOUSE BUTTON}
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1420,8 +1415,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press [Right Mouse Button] to use potion
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1498,97 +1493,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759403066}
   m_CullTransparentMesh: 1
---- !u!1 &781344414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 781344415}
-  - component: {fileID: 781344416}
-  m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &781344415
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781344414}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0000038147, y: -9.4, z: 10}
-  m_LocalScale: {x: 13.763603, y: 13.763603, z: 13.763603}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 136711275}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &781344416
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781344414}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 5760202260919997367, guid: eea86aafccf2e9942bc8cdee00aa2539, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
 --- !u!1 &803098260
 GameObject:
   m_ObjectHideFlags: 0
@@ -17719,8 +17623,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hold [SPACE] to jump higher
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17913,8 +17817,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press [E] to gather the flower
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18050,8 +17954,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Use [A] [D] to move
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18305,8 +18209,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press [SPACE] to jump
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
+  m_sharedMaterial: {fileID: 5007576312126337049, guid: af08689b9d1976841af7e366b9f348d9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18465,10 +18369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1012365170632148258, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 781344415}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
 --- !u!1001 &5424521935153566631
