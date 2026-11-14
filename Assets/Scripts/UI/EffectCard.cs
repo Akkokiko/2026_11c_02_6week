@@ -18,9 +18,9 @@ public class EffectCard : MonoBehaviour
 
 
         LSequence.Create()
-            .Append(LMotion.Create(0, 1.5f, 0.12f).WithEase(Ease.InSine) 
+            .Append(LMotion.Create(0, 2.5f, 0.12f).WithEase(Ease.InSine) 
                 .Bind(x => m_rectTransform.localScale = Vector2.one * x)).
-            Append(LMotion.Create(1.5f, 1f, 0.1f).WithDelay(0.05f)
+            Append(LMotion.Create(2.5f, 1, 0.1f).WithDelay(0.05f)
                 .WithEase(Ease.OutSine).Bind(x => m_rectTransform.localScale = Vector2.one * x)).
             Run();
         

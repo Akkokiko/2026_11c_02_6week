@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExplosionPotion
   m_potionName: Implosion Potion
   m_potionSprite: {fileID: 1618893543897839774, guid: 039dbb98b0807c34fb5b98502ba75c9a, type: 3}
-  m_effectSprite: {fileID: -6323419914069542551, guid: fd8025f4dbd5a854cb918f4bc42d6603, type: 3}
+  m_effectSprite: {fileID: -6323419914069542551, guid: 9db6b4193b043274e84190f4344f84d3, type: 3}
   m_effectType: 8
   m_duration: 0.4
   m_strength: 40

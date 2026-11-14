@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Potion
   m_potionName: Jump Boost
   m_potionSprite: {fileID: -1068421023354320370, guid: 82dd08bf101ccfb49a8a8ea1d7826457, type: 3}
-  m_effectSprite: {fileID: 6501076644507237226, guid: fd8025f4dbd5a854cb918f4bc42d6603, type: 3}
+  m_effectSprite: {fileID: 6501076644507237226, guid: 9db6b4193b043274e84190f4344f84d3, type: 3}
   m_effectType: 2
   m_duration: 5
   m_strength: 2

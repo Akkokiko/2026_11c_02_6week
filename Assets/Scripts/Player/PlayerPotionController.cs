@@ -97,6 +97,11 @@ public class PlayerPotionController : MonoBehaviour
             Vector3 direction = aimDirection();
             PotionProjectile projectile = Instantiate(m_potionProjectilePref, m_throwingPoint.position,Quaternion.identity);
             projectile.Lauch(direction, Player.PlayerInventory.GetPotion(m_potionInHand), m_throwingForce);
+            if (m_potionInHand != 0)
+            {
+                m_potionInHand--;
+                UIManager.instance.InventoryUI.chosePotion(m_potionInHand);
+            }
             Player.PlayerInventory.removePotion(m_potionInHand);
         }
     }
@@ -107,6 +112,12 @@ public class PlayerPotionController : MonoBehaviour
         {
             Potion potion = Player.PlayerInventory.GetPotion(m_potionInHand);
             potion.Affect(Player);
+            if (m_potionInHand != 0)
+            {
+                m_potionInHand--;
+                UIManager.instance.InventoryUI.chosePotion(m_potionInHand);
+            }
+
             Player.PlayerInventory.removePotion(m_potionInHand);
         }
     }

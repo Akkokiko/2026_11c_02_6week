@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-   public GameObject[] m_potionIcons;
+   public InventorySpot[] m_potionIcons;
    
    [Header("Gold UI")]
    [SerializeField] private RectTransform m_coinRectTransform;
@@ -24,9 +24,9 @@ public class InventoryUI : MonoBehaviour
 
    public void Awake()
    {
-      foreach (GameObject potionIcon in m_potionIcons)
+      foreach (var potionIcon in m_potionIcons)
       {
-          potionIcon.GetComponent<Outline>().enabled = false;
+          potionIcon.m_outline.enabled = false;
       }
       
    }
@@ -34,11 +34,11 @@ public class InventoryUI : MonoBehaviour
 
    public void chosePotion(int slot)
    {
-       foreach (GameObject potionIcon in m_potionIcons)
+       foreach (var potionIcon in m_potionIcons)
        {
-           potionIcon.GetComponent<Outline>().enabled = false;
+           potionIcon.m_outline.enabled = false;
        }
-       m_potionIcons[slot].GetComponent<Outline>().enabled = true;
+       m_potionIcons[slot].m_outline.enabled = true;
    }
 
    public void updatePotionInventory(Potion[] potions)
@@ -48,11 +48,13 @@ public class InventoryUI : MonoBehaviour
            Potion potion = potions[i];
            if (null == potion)
            {
-               m_potionIcons[i].GetComponent<Image>().sprite = null;
+               m_potionIcons[i].m_potionSprite.sprite = null;
+               m_potionIcons[i].m_potionSprite.enabled = false;
            }
            else
            {
-               m_potionIcons[i].GetComponent<Image>().sprite = potion.PotionSprite;
+               m_potionIcons[i].m_potionSprite.sprite = potion.PotionSprite;
+               m_potionIcons[i].m_potionSprite.enabled = true;
            }
        }
    }
