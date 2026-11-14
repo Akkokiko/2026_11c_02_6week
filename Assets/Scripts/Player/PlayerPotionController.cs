@@ -35,6 +35,7 @@ public class PlayerPotionController : MonoBehaviour
         m_trajectoryLine.gameObject.SetActive(false);
         
         
+        m_potionInHand = 0;
         UIManager.instance.InventoryUI.chosePotion(m_potionInHand);
     }
 

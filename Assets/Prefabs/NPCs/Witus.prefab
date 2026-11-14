@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6746102490926068171}
   - component: {fileID: 7674285294102876234}
   - component: {fileID: 3924586374356113775}
-  - component: {fileID: 8355669401414271224}
   - component: {fileID: 7126358110721674019}
   - component: {fileID: 760722940378251538}
   - component: {fileID: 5903525129822887899}
@@ -65,7 +64,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: -876546973899608171, guid: e8661a8bb960f5b429dabc7dc09ebe7e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,21 +143,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &8355669401414271224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197834654859803449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3f557ef408bc84981212a8e71e0598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FriendlyNPC
-  m_intereactionCollider: {fileID: 0}
-  m_intereactionSpriteRenderer: {fileID: 0}
-  dialogue: Interakcja z Witusiem
 --- !u!95 &7126358110721674019
 Animator:
   serializedVersion: 7
@@ -220,38 +204,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9c0108bf146be478956b0f6953ebf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSys
+  m_intereactionCollider: {fileID: 0}
+  m_intereactionSpriteRenderer: {fileID: 7674285294102876234}
   dialogueBubble: {fileID: 1515785148618233781}
   dialogueText: {fileID: 3791400147503500557}
   dialogueLines:
   - text: "\u017Beby ze mn\u0105 porozmawia\u0107, naci\u015Bnij przycisk 'E'"
     voiceover: {fileID: 11400000, guid: 7fffb2f334f1cb7429a1ae1361164eb3, type: 2}
+    DialogueExtras: []
   - text: "By zebra\u0107 checkpoint, r\xF3wnie\u017C naci\u015Bnij przycisk \"E\""
     voiceover: {fileID: 11400000, guid: 2cb70a60b58c91840b62b0d76e89a8dc, type: 2}
+    DialogueExtras: []
   - text: "Czy wiedzia\u0142e\u015B \u017Ce Walenie i Hipopotamy s\u0105 blisko spokrewnione? "
     voiceover: {fileID: 11400000, guid: e9a7f4d9803c2234380328fe87a01ba2, type: 2}
+    DialogueExtras: []
   - text: "Mikstura przy\u015Bpieszenia sprawi, \u017Ce zaczniesz biega\u0107. Ale
       tak szybko."
     voiceover: {fileID: 11400000, guid: 3451ed8943c1ab24297dbf68128aefac, type: 2}
+    DialogueExtras: []
   - text: "Mikstura ro\u015Bni\u0119cia doda ci kilka centymetr\xF3w"
     voiceover: {fileID: 11400000, guid: be9b5fd17da8e234c8146e3887e61abe, type: 2}
+    DialogueExtras: []
   - text: "Mikstura zamro\u017Cenia sprawi, \u017Ce zaczniesz \u015Bpiewa\u0107 \"Mam
       t\u0119 moc\""
     voiceover: {fileID: 11400000, guid: e8061830a3952d549b21148491fae2b4, type: 2}
+    DialogueExtras: []
   - text: "Mikstura odwr\xF3cenia grawitacji dos\u0142ownie wywruci \u015Bwiat do
       g\xF3ry nogami"
     voiceover: {fileID: 11400000, guid: f1c3f857902816c4597fe3a15732dc8a, type: 2}
+    DialogueExtras: []
   - text: "Mikstura eksplozji sprawi, \u017Ce przeciwnik b\u0119dzie w kilku miejscach
       na raz"
     voiceover: {fileID: 11400000, guid: 398fbd956c3235448a682d2ccc2ec314, type: 2}
+    DialogueExtras: []
   - text: "Mikstura implozji sprawi, \u017Ce przeciwnik zmie\u015Bci si\u0119 w dziurke
       od klucza"
     voiceover: {fileID: 11400000, guid: 352b09d7ae5f4364fb858e9d88d6706a, type: 2}
+    DialogueExtras: []
   - text: "Przed wyruszeniem w dalsz\u0105 drog\u0119, nale\u017Cy zebra\u0107 wi\u0119cej
       z\u0142ota"
     voiceover: {fileID: 11400000, guid: f5c6a5a09e0859e4892c0633bb737603, type: 2}
+    DialogueExtras: []
   - text: "Hy Hy Hy. Czyli inwestycja powoli si\u0119 zwraca. Czas i\u015B\u0107
       do nast\u0119pnego poziomu."
     voiceover: {fileID: 11400000, guid: cd0a29736da84b143b93108d94b4b6ea, type: 2}
+    DialogueExtras: []
   interactionKey: 101
   extraDisplayTime: 0.5
 --- !u!1 &1500640633508059678

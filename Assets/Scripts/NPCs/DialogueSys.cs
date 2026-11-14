@@ -4,7 +4,7 @@ using TMPro;
 using System.Collections;
 using Sound;
 
-public class DialogueSys : MonoBehaviour
+public class DialogueSys : Interactable
 {
     [System.Serializable]
     public class DialogueLine
@@ -12,6 +12,7 @@ public class DialogueSys : MonoBehaviour
         [TextArea(2, 5)]
         public string text;
         public ClipSex voiceover;
+        public DialogueExtra[] DialogueExtras = new  DialogueExtra[0];
     }
 
     [Header("Dymek")]
@@ -31,36 +32,17 @@ public class DialogueSys : MonoBehaviour
 
     private Coroutine dialogueCoroutine;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         dialogueBubble.SetActive(false);
     }
 
-    private void Update()
-    {
-        if (playerInRange &&
-            dialogueCoroutine == null &&
-            Keyboard.current != null &&
-            Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            StartDialogue();
-        }
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public override void Interact(Player player)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-        }
+        base.Interact(player);
+        StartDialogue();
     }
 
     private void StartDialogue()
@@ -87,6 +69,8 @@ public class DialogueSys : MonoBehaviour
         dialogueText.text = line.text;
         dialogueBubble.SetActive(true);
 
+        
+
         float duration = 0f;
         if (line.voiceover != null && line.voiceover.clip != null)
         {
@@ -97,7 +81,10 @@ public class DialogueSys : MonoBehaviour
         yield return new WaitForSeconds(duration + extraDisplayTime);
 
         dialogueBubble.SetActive(false);
-
+        foreach (DialogueExtra dialogueExtra in line.DialogueExtras)
+        {
+            dialogueExtra.DoYourStuff();
+        }
         currentLine++;
         dialogueCoroutine = null;
     }
