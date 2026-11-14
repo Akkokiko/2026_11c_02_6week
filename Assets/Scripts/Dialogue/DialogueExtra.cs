@@ -3,8 +3,8 @@
 [CreateAssetMenu(fileName = "Dialogue", menuName = "Dialogue/DialogueExtra")]
 public class DialogueExtra : ScriptableObject 
 {
-    public virtual void DoYourStuff()
+    public virtual bool DoYourStuff(Player player)
     {
-        
+        return true;
     }
 }

@@ -7,10 +7,12 @@ public class DialogueSceneTransport : DialogueExtra
 {
    
    [SerializeField] SceneAsset nextScene;
-   public override void DoYourStuff()
+   public override bool DoYourStuff(Player player)
    {
-      base.DoYourStuff();
+      
       
       SceneManager.LoadScene(nextScene.name);
+
+      return true;
    }
 }

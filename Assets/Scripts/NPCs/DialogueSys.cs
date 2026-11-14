@@ -42,10 +42,10 @@ public class DialogueSys : Interactable
     public override void Interact(Player player)
     {
         base.Interact(player);
-        StartDialogue();
+        StartDialogue(player);
     }
 
-    private void StartDialogue()
+    private void StartDialogue(Player player)
     {
         if (dialogueLines == null ||
             dialogueLines.Length == 0)
@@ -58,12 +58,12 @@ public class DialogueSys : Interactable
         }
 
         dialogueCoroutine =
-            StartCoroutine(PlayDialogueLine());
+            StartCoroutine(PlayDialogueLine(player));
     }
 
-    private IEnumerator PlayDialogueLine()
+    private IEnumerator PlayDialogueLine(Player player)
     {
-
+        bool canContinue = true;
         DialogueLine line = dialogueLines[currentLine];
 
         dialogueText.text = line.text;
@@ -83,9 +83,17 @@ public class DialogueSys : Interactable
         dialogueBubble.SetActive(false);
         foreach (DialogueExtra dialogueExtra in line.DialogueExtras)
         {
-            dialogueExtra.DoYourStuff();
+            if (!dialogueExtra.DoYourStuff(player))
+            {
+                canContinue = false;
+            }
         }
-        currentLine++;
+
+        if (canContinue)
+        {
+            currentLine++;
+        }
+
         dialogueCoroutine = null;
     }
 

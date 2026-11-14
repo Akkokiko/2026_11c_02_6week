@@ -17771,20 +17771,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].text
+      value: "Potrzebujesz 10 coin\xF3w\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].text
       value: 'Next Level
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fffb2f334f1cb7429a1ae1361164eb3, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].DialogueExtras.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].DialogueExtras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: 'dialogueLines.Array.data[0].DialogueExtras.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e3acccbe633e534db8ffe1d2c884cf9, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: 'dialogueLines.Array.data[0].DialogueExtras.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e3acccbe633e534db8ffe1d2c884cf9, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: 'dialogueLines.Array.data[1].DialogueExtras.Array.data[0]'
       value: 
       objectReference: {fileID: 11400000, guid: 78e33fad077f71d41b4ff98d1a14a17f, type: 2}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
