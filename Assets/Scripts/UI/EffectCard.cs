@@ -26,10 +26,10 @@ public class EffectCard : MonoBehaviour
         
         m_durationBarMotionHandle =
             LMotion.Create(1.0f, 0.0f, effect.Duration).WithOnComplete(() => stopEffect())
-                .Bind(x => m_effectDurationBar.fillAmount = x);
+                .Bind(x => m_effectDurationBar.fillAmount = x).AddTo(gameObject);
         
        m_effectIconImage.sprite = effect.m_effectIcon;
-    }
+    }   
     
 
     public void stopEffect()

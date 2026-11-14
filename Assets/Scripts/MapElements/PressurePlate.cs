@@ -63,7 +63,7 @@ public class PressurePlate : MonoBehaviour
             m_pressurePlateChange.Cancel();
         }
 
-        m_pressurePlateChange = LMotion.Create(m_currentWeight, nextWeight, 0.5f).Bind(x => m_pressurePlateFill.fillAmount =  (m_currentWeight = x)/m_requiredWeight);
+        m_pressurePlateChange = LMotion.Create(m_currentWeight, nextWeight, 0.5f).Bind(x => m_pressurePlateFill.fillAmount =  (m_currentWeight = x)/m_requiredWeight).AddTo(gameObject);
         
         
         if ( nextWeight>= m_requiredWeight)

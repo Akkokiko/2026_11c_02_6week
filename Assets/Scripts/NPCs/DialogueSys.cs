@@ -42,12 +42,13 @@ public class DialogueSys : Interactable
     public override void Interact(Player player)
     {
         base.Interact(player);
+        if(dialogueCoroutine != null) return;
         StartDialogue(player);
     }
 
     private void StartDialogue(Player player)
     {
-        if (dialogueLines == null ||
+        if (dialogueLines == null ||    
             dialogueLines.Length == 0)
         {
             return;

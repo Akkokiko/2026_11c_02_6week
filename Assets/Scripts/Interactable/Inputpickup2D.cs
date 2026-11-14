@@ -1,4 +1,4 @@
-using LitMotion;
+    using LitMotion;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,7 +31,7 @@ public class InteractPickup2D : Interactable
             m_spriteRenderer.sprite = null;
             m_cooldownIndicator.enabled = true;
             m_intereactionCollider.enabled = false; 
-            LMotion.Create(0f, 1f, respawnTime).WithOnComplete(respawn).Bind(x => m_cooldownIndicator.fillAmount = x);
+            LMotion.Create(0f, 1f, respawnTime).WithOnComplete(respawn).Bind(x => m_cooldownIndicator.fillAmount = x).AddTo(gameObject);
             removeFromInteractaion();
         }
         else
