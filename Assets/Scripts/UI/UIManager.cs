@@ -12,6 +12,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private CraftingUI m_craftingUI;
     public CraftingUI CraftingUI => m_craftingUI;
+    
+    [SerializeField] private PopupUI m_popupUI;
+    public PopupUI PopupUI => m_popupUI;
 
     public void Awake()
     {

@@ -27,6 +27,7 @@ public class PotionShrine : Interactable
             player.AddKnownRecipe(m_potionRecipe);
             Debug.Log(player);
             player.RecipeBook.showDiscoveredRecipes();
+            UIManager.instance.PopupUI.insertPopup(new PopupInfo("NEW RECIPE ADDED",m_potionRecipe.RecipeResult.PotionSprite));
             SpawnExplosion(transform.position);
         }
         
