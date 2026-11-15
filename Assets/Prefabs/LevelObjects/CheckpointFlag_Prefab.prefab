@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130566743196343897}
   - component: {fileID: 1501465122157407447}
+  - component: {fileID: 1799528765898598314}
   m_Layer: 0
   m_Name: Checkpoint_Flag
   m_TagString: Untagged
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3462628180961327676, guid: 657ca1d9bd6d0804ca7c6a60147f1745, type: 3}
+  m_Sprite: {fileID: -4825759366424445888, guid: b47be3c1f7bed5f4f83d5b198b6b813c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,6 +92,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &1799528765898598314
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371899181976368737}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06402d59cebe42f5ba543f1c18a2aac1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5190655315115478374
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +126,7 @@ GameObject:
   - component: {fileID: 7189530564918148695}
   - component: {fileID: 6284752085741323478}
   m_Layer: 0
-  m_Name: CheckpointFlag
+  m_Name: CheckpointFlag_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 5190655315115478374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22, y: -1, z: 0}
+  m_LocalPosition: {x: 100.54393, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -185,5 +208,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointFlag
   m_intereactionCollider: {fileID: 0}
   m_intereactionSpriteRenderer: {fileID: 1501465122157407447}
-  m_checkpointID: 
-  m_spriteRenderer: {fileID: 1501465122157407447}
+  m_checkpointID: lobby
+  m_animator: {fileID: 1799528765898598314}

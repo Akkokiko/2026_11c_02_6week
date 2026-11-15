@@ -2,35 +2,41 @@ using UnityEngine;
 
 public class CheckpointFlag : Interactable
 {
+    private static readonly int IsActiveHash = Animator.StringToHash("IsActive");
+    private static readonly int IdleStateHash = Animator.StringToHash("Idle");
+    private static readonly int DownStateHash = Animator.StringToHash("Down");
+
     [SerializeField] private string m_checkpointID;
 
     public string CheckpointID => m_checkpointID;
 
     private bool m_isCheckpointActive = false;
     public bool IsCheckpointActive => m_isCheckpointActive;
-    
-    [SerializeField] private SpriteRenderer m_spriteRenderer;
-    
+
+    [SerializeField] private Animator m_animator;
+
     public override void Interact(Player player)
     {
         LevelManager.instance.activateCheckpointFlag(this);
     }
 
-    public void activateCheckpointFlag()
+    public void activateCheckpointFlag(bool instant = false)
     {
-        if (!m_isCheckpointActive)
+        m_isCheckpointActive = true;
+        m_animator.SetBool(IsActiveHash, true);
+        if (instant)
         {
-            m_isCheckpointActive = true;
-            m_spriteRenderer.color = Color.green;
-            
+            m_animator.Play(IdleStateHash, 0, 0f);
         }
     }
 
-    public void deactivateCheckpointFlag()
+    public void deactivateCheckpointFlag(bool instant = false)
     {
         m_isCheckpointActive = false;
-        m_spriteRenderer.color = Color.white;
+        m_animator.SetBool(IsActiveHash, false);
+        if (instant)
+        {
+            m_animator.Play(DownStateHash, 0, 0f);
+        }
     }
-    
-    
 }

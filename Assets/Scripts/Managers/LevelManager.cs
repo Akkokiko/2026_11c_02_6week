@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     public Player Player => m_player;
 
     [Header("Checkpoints")]
-    public CheckpointFlag[] m_checkpointFlags;
+    private CheckpointFlag[] m_checkpointFlags;
     private CheckpointFlag m_activeCheckpointFlag;
 
     [SerializeField] private CheckpointFlag m_startCheckpointFlag;
@@ -25,6 +25,8 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        m_checkpointFlags = FindObjectsByType<CheckpointFlag>(FindObjectsInactive.Include, FindObjectsSortMode.None);
     }
 
     public void Start()
@@ -41,15 +43,18 @@ public class LevelManager : MonoBehaviour
         SaveGame();
     }
 
-    private void SetActiveCheckpoint(CheckpointFlag flag)
+    private void SetActiveCheckpoint(CheckpointFlag flag, bool instant = false)
     {
         foreach (var c in m_checkpointFlags)
         {
-            c.deactivateCheckpointFlag();
+            if (c != flag)
+            {
+                c.deactivateCheckpointFlag(instant);
+            }
         }
 
         m_activeCheckpointFlag = flag;
-        flag.activateCheckpointFlag();
+        flag.activateCheckpointFlag(instant);
     }
 
     private void SaveGame()
@@ -74,7 +79,7 @@ public class LevelManager : MonoBehaviour
             {
                 if (checkpoint.CheckpointID == data.CheckpointID)
                 {
-                    SetActiveCheckpoint(checkpoint);
+                    SetActiveCheckpoint(checkpoint, true);
 
                     Debug.Log("Przywrócono checkpoint: " + data.CheckpointID);
                     return;
@@ -84,8 +89,7 @@ public class LevelManager : MonoBehaviour
             Debug.LogWarning("Nie znaleziono zapisanego checkpointa.");
         }
 
-        // Brak zapisu lub nieznany checkpoint
-        SetActiveCheckpoint(m_startCheckpointFlag);
+        SetActiveCheckpoint(m_startCheckpointFlag, true);
     }
 
     private void respawn(Player player)
