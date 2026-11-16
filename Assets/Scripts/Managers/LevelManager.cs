@@ -77,7 +77,6 @@ public class LevelManager : MonoBehaviour
         {
             m_player.PlayerInventory.setCoinAmount(data.CoinAmount);
             Debug.Log(data.m_CurrentLevel);
-            SceneManager.LoadScene(data.m_CurrentLevel);
 
             foreach (var checkpoint in m_checkpointFlags)
             {

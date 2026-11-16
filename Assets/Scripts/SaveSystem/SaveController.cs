@@ -57,7 +57,19 @@ public class SaveController : MonoBehaviour
     }
     public IEnumerator WaitForLoadedScene()
     {
-        yield return SceneManager.LoadSceneAsync(m_saveData.m_CurrentLevel);
+        Debug.Log("Rozpoczęto asynchroniczne ładowanie poziomu...");
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(m_saveData.m_CurrentLevel);
+        asyncLoad.allowSceneActivation = false;
+
+        while (asyncLoad.progress < 0.9f && !asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        asyncLoad.allowSceneActivation = true;
+        while (!asyncLoad.isDone) yield return null;
+
+        Debug.Log("Poziom został pomyślnie załadowany.");
     }
 
     public SaveData GetSaveData()
