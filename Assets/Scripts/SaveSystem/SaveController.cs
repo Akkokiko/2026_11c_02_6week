@@ -27,7 +27,7 @@ public class SaveController : MonoBehaviour
         }
     }
 
-    public void SaveGame(int coinAmount, string checkpointID, int sceneId)
+    public void SaveGame(int coinAmount, int diamondAmount, string checkpointID, int sceneId, List<Recipe> recipeList)
     {
         m_saveData.CoinAmount = coinAmount;
         m_saveData.CheckpointID = checkpointID;

@@ -61,11 +61,14 @@ public class LevelManager : MonoBehaviour
     private void SaveGame()
     {
         int coins = m_player.PlayerInventory.m_coinAmount;
+        int diamonds = m_player.PlayerInventory.m_diamondAmount;
 
         SaveController.Instance.SaveGame(
             coins,
+            diamonds,
             m_activeCheckpointFlag.CheckpointID,
-            -1
+            -1,
+            m_player.RecipeList
         );
     }
 

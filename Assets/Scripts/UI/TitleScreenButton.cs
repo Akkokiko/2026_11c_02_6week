@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,7 @@ public class TitleScreenButton : MonoBehaviour
 
     public void NewGame()
     {
-        SaveController.Instance.SaveGame(0, "00", 1);
+        SaveController.Instance.SaveGame(0,0, "00", 1, new List<Recipe>());
 
         SaveController.Instance.LoadGame();
     }
