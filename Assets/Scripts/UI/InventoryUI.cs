@@ -7,95 +7,120 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-   public InventorySpot[] m_potionIcons;
-   
-   [Header("Gold UI")]
-   [SerializeField] private RectTransform m_coinRectTransform;
-   [SerializeField] private TextMeshProUGUI m_coinAmount;
+    public InventorySpot[] m_potionIcons;
 
-   [Header("Diamond UI")]
-   [SerializeField] private RectTransform m_diamondRectTransform;
-   [SerializeField] private TextMeshProUGUI m_diamondAmount;
-   
-   
-   //Flowers
-   [Header("Flowers")]
-   public FlowerUICard[] m_flowerCards;
+    [Header("Gold UI")]
+    [SerializeField] private RectTransform m_coinRectTransform;
+    [SerializeField] private TextMeshProUGUI m_coinAmount;
+    private MotionHandle m_coinAnimationHandle;
 
-   public void Awake()
-   {
-      foreach (var potionIcon in m_potionIcons)
-      {
-          potionIcon.m_outline.enabled = false;
-      }
-      
-   }
+    [Header("Diamond UI")]
+    [SerializeField] private RectTransform m_diamondRectTransform;
+    [SerializeField] private TextMeshProUGUI m_diamondAmount;
+    private MotionHandle m_diamondAnimationHandle;
 
 
-   public void chosePotion(int slot)
-   {
-       foreach (var potionIcon in m_potionIcons)
-       {
-           potionIcon.m_outline.enabled = false;
-       }
-       m_potionIcons[slot].m_outline.enabled = true;
-   }
 
-   public void updatePotionInventory(Potion[] potions)
-   {
-       for(int i=0; i<potions.Length; i++)
-       {
-           Potion potion = potions[i];
-           if (null == potion)
-           {
-               m_potionIcons[i].m_potionSprite.sprite = null;
-               m_potionIcons[i].m_potionSprite.enabled = false;
-           }
-           else
-           {
-               m_potionIcons[i].m_potionSprite.sprite = potion.PotionSprite;
-               m_potionIcons[i].m_potionSprite.enabled = true;
-           }
-       }
-   }
-   
-   
-   //Flowers
-   public void updateFlowerCard(Flower flower, int newAmount)
-   {
-       foreach (FlowerUICard card in m_flowerCards)
-       {
-           if (card.RepresentedFlower == flower)
-           {
-               card.updateCountText(newAmount);
-               return;
-           }
-       }
-   }
+    //Flowers
+    [Header("Flowers")]
+    public FlowerUICard[] m_flowerCards;
+
+    public void Awake()
+    {
+        foreach (var potionIcon in m_potionIcons)
+        {
+            potionIcon.m_outline.enabled = false;
+        }
+
+    }
 
 
-   public void updateCoinsText(int newAmount)
-   {
-       m_coinAmount.text = newAmount.ToString();    
-       LSequence.Create()
-           .Append(LMotion.Create(0.9f, 1.5f, 0.12f).WithEase(Ease.InSine) 
-               .Bind(x => m_coinRectTransform.localScale = Vector2.one * x)).
-           Append(LMotion.Create(1.5f, 1f, 0.1f).WithDelay(0.05f)
-               .WithEase(Ease.OutSine).Bind(x =>m_coinRectTransform.localScale = Vector2.one * x)).
-           Run();
-   }
+    public void chosePotion(int slot)
+    {
+        foreach (var potionIcon in m_potionIcons)
+        {
+            potionIcon.m_outline.enabled = false;
+        }
+        m_potionIcons[slot].m_outline.enabled = true;
+    }
 
-   public void updateDiamondText(int newAmount)
-   {
-       m_diamondAmount.text = newAmount.ToString();
-       LSequence.Create()
-           .Append(LMotion.Create(0.9f, 1.5f, 0.12f).WithEase(Ease.InSine) 
-               .Bind(x => m_diamondRectTransform.localScale = Vector2.one * x)).
-           Append(LMotion.Create(1.5f, 1f, 0.1f).WithDelay(0.05f)
-               .WithEase(Ease.OutSine).Bind(x =>m_diamondRectTransform.localScale = Vector2.one * x)).
-           Run();
-   }
+    public void updatePotionInventory(Potion[] potions)
+    {
+        for (int i = 0; i < potions.Length; i++)
+        {
+            Potion potion = potions[i];
+            if (null == potion)
+            {
+                m_potionIcons[i].m_potionSprite.sprite = null;
+                m_potionIcons[i].m_potionSprite.enabled = false;
+            }
+            else
+            {
+                m_potionIcons[i].m_potionSprite.sprite = potion.PotionSprite;
+                m_potionIcons[i].m_potionSprite.enabled = true;
+            }
+        }
+    }
 
 
+    //Flowers
+    public void updateFlowerCard(Flower flower, int newAmount)
+    {
+        foreach (FlowerUICard card in m_flowerCards)
+        {
+            if (card.RepresentedFlower == flower)
+            {
+                card.updateCountText(newAmount);
+                return;
+            }
+        }
+    }
+
+
+    public void updateCoinsText(int newAmount)
+    {
+        m_coinAmount.text = newAmount.ToString();
+
+        if (m_coinAnimationHandle.IsActive())
+        {
+            m_coinAnimationHandle.Cancel();
+        }
+
+        m_coinAnimationHandle = LSequence.Create()
+            .Append(LMotion.Create(0.9f, 1.5f, 0.12f).WithEase(Ease.InSine)
+                .Bind(x => m_coinRectTransform.localScale = Vector2.one * x)).
+            Append(LMotion.Create(1.5f, 1f, 0.1f).WithDelay(0.05f)
+                .WithEase(Ease.OutSine).Bind(x => m_coinRectTransform.localScale = Vector2.one * x)).
+            Run();
+    }
+
+    public void updateDiamondText(int newAmount)
+    {
+        m_diamondAmount.text = newAmount.ToString();
+
+        if (m_diamondAnimationHandle.IsActive())
+        {
+            m_diamondAnimationHandle.Cancel();
+        }
+
+        m_diamondAnimationHandle = LSequence.Create()
+            .Append(LMotion.Create(0.9f, 1.5f, 0.12f).WithEase(Ease.InSine)
+                .Bind(x => m_diamondRectTransform.localScale = Vector2.one * x)).
+            Append(LMotion.Create(1.5f, 1f, 0.1f).WithDelay(0.05f)
+                .WithEase(Ease.OutSine).Bind(x => m_diamondRectTransform.localScale = Vector2.one * x)).
+            Run();
+    }
+
+    private void OnDestroy()
+    {
+        if (m_coinAnimationHandle.IsActive())
+        {
+            m_coinAnimationHandle.Cancel();
+        }
+        if (m_diamondAnimationHandle.IsActive())
+        {
+            m_diamondAnimationHandle.Cancel();
+        }
+    }
 
 }

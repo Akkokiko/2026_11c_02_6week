@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
 
 public class SaveController : MonoBehaviour
 {
@@ -51,7 +52,12 @@ public class SaveController : MonoBehaviour
         {
             Debug.Log("Save Data is null");
         }
-        SceneManager.LoadSceneAsync(m_saveData.m_CurrentLevel);
+        StartCoroutine(WaitForLoadedScene());
+
+    }
+    public IEnumerator WaitForLoadedScene()
+    {
+        yield return SceneManager.LoadSceneAsync(m_saveData.m_CurrentLevel);
     }
 
     public SaveData GetSaveData()
