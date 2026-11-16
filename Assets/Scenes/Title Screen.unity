@@ -4483,6 +4483,7 @@ GameObject:
   - component: {fileID: 1452940873}
   - component: {fileID: 1452940872}
   - component: {fileID: 1452940871}
+  - component: {fileID: 1452940875}
   m_Layer: 5
   m_Name: Title Screen UI
   m_TagString: Untagged
@@ -4578,6 +4579,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1452940875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452940870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77346bc21be8ac14cb10a402d8e854c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+  newGameScene: {fileID: 102900000, guid: 0a9f2e598edac984ca00d9e8583fc388, type: 3}
 --- !u!1 &1515373640
 GameObject:
   m_ObjectHideFlags: 0
@@ -6472,11 +6486,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6953356753367738670, guid: 623ecbe888bdf854489b6cd039b8bf88, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6953356753367738670, guid: 623ecbe888bdf854489b6cd039b8bf88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1452940875}
+    - target: {fileID: 6953356753367738670, guid: 623ecbe888bdf854489b6cd039b8bf88, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: goToScene
+      value: NewGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6953356753367738670, guid: 623ecbe888bdf854489b6cd039b8bf88, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6953356753367738670, guid: 623ecbe888bdf854489b6cd039b8bf88, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
