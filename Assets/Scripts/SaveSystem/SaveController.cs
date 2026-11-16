@@ -30,15 +30,24 @@ public class SaveController : MonoBehaviour
     public void SaveGame(int coinAmount, int diamondAmount, string checkpointID, int sceneId, List<Recipe> recipeList)
     {
         m_saveData.CoinAmount = coinAmount;
+        m_saveData.DiamondAmount = diamondAmount;
+
         m_saveData.CheckpointID = checkpointID;
         if (sceneId == -1 && SceneManager.sceneCount == 1)
         {
             m_saveData.m_CurrentLevel = SceneManager.GetActiveScene().buildIndex;
         }
+        else
+        {
+            m_saveData.m_CurrentLevel = sceneId;
+        }
+
+
         if (m_saveData.CollectedCoins == null)
         {
             m_saveData.CollectedCoins = new List<string>();
         }
+
 
         SimpleSaveSystem.SaveXML(m_saveData);
 
@@ -51,7 +60,9 @@ public class SaveController : MonoBehaviour
         if (m_saveData == null)
         {
             Debug.Log("Save Data is null");
+            return;
         }
+        Debug.Log("loading level: "+m_saveData.m_CurrentLevel);
         StartCoroutine(WaitForLoadedScene());
 
     }
