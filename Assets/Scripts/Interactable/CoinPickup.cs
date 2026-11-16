@@ -1,4 +1,4 @@
-using Sound;
+    using Sound;
 using UnityEngine;
 
 public class CoinPickup : AutoPickup2D
