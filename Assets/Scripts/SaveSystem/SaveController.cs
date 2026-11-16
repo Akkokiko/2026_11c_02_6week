@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class SaveController : MonoBehaviour
@@ -9,34 +10,53 @@ public class SaveController : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-
-        m_saveData = SimpleSaveSystem.LoadXML();
-
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(this);
+        }
+        m_saveData = GetSaveData();
         if (m_saveData == null)
         {
             m_saveData = new SaveData();
         }
+    }
 
+    public void SaveGame(int coinAmount, string checkpointID, int sceneId)
+    {
+        m_saveData.CoinAmount = coinAmount;
+        m_saveData.CheckpointID = checkpointID;
+        if (sceneId == -1 && SceneManager.sceneCount == 1)
+        {
+            m_saveData.m_CurrentLevel = SceneManager.GetActiveScene().buildIndex;
+        }
         if (m_saveData.CollectedCoins == null)
         {
             m_saveData.CollectedCoins = new List<string>();
         }
-    }
-
-    public void SaveGame(int coinAmount, string checkpointID)
-    {
-        m_saveData.CoinAmount = coinAmount;
-        m_saveData.CheckpointID = checkpointID;
 
         SimpleSaveSystem.SaveXML(m_saveData);
 
         Debug.Log("Gra zapisana!");
     }
 
-    public SaveData LoadGame()
+    public void LoadGame()
     {
-        return m_saveData;
+        m_saveData = GetSaveData();
+        if (m_saveData == null)
+        {
+            Debug.Log("Save Data is null");
+        }
+        SceneManager.LoadSceneAsync(m_saveData.m_CurrentLevel);
+    }
+
+    public SaveData GetSaveData()
+    {
+        return SimpleSaveSystem.LoadXML();
     }
 
     public bool IsCoinCollected(string coinID)

@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,17 +10,21 @@ public class TitleScreenButton : MonoBehaviour
     [SerializeField] private GameObject m_connectedMenu;
     [SerializeField] private Button m_selfButton;
 
-    public void goToScene(String sceneName)
+    public void NewGame()
     {
-        SceneManager.LoadScene(sceneName);
+        SaveController.Instance.SaveGame(0, "00", 1);
+
+        SaveController.Instance.LoadGame();
     }
-    public void toggleConnectedMenu(){
+
+    public void toggleConnectedMenu()
+    {
         m_connectedMenu.SetActive(!m_connectedMenu.activeSelf);
     }
 
     public void QuitGame()
     {
-        if(Application.platform != RuntimePlatform.WebGLPlayer)
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
         {
             Application.Quit();
         }

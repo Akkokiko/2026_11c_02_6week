@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -63,17 +64,20 @@ public class LevelManager : MonoBehaviour
 
         SaveController.Instance.SaveGame(
             coins,
-            m_activeCheckpointFlag.CheckpointID
+            m_activeCheckpointFlag.CheckpointID,
+            -1
         );
     }
 
     private void LoadGame()
     {
-        SaveData data = SaveController.Instance.LoadGame();
+        SaveData data = SaveController.Instance.GetSaveData();
 
         if (data != null)
         {
             m_player.PlayerInventory.setCoinAmount(data.CoinAmount);
+            Debug.Log(data.m_CurrentLevel);
+            SceneManager.LoadScene(data.m_CurrentLevel);
 
             foreach (var checkpoint in m_checkpointFlags)
             {
