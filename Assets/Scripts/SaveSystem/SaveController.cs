@@ -42,12 +42,12 @@ public class SaveController : MonoBehaviour
             m_saveData.m_CurrentLevel = sceneId;
         }
 
-
         if (m_saveData.CollectedCoins == null)
         {
             m_saveData.CollectedCoins = new List<string>();
         }
-
+        
+        m_saveData.m_recipeList = recipeList;
 
         SimpleSaveSystem.SaveXML(m_saveData);
 
