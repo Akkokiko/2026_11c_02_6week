@@ -51,6 +51,13 @@ public class RecipeBook : MonoBehaviour
                 {
                     newRecipeVisual.transform.Find("FlowerSlot"+(i+1)).GetComponent<Image>().sprite = recipe.NeededFlowers[i].sprite;
                 }
+                for (int i = recipe.NeededFlowers.Count; i < 3; i++)
+                {
+                    Image currImg = newRecipeVisual.transform.Find("FlowerSlot"+(i+1)).GetComponent<Image>();
+                    var tempColor = currImg.color;
+                    tempColor.a = 0;
+                    currImg.color = tempColor;
+                }
 
                 newRecipeVisual.transform.SetParent(m_recipeContainer, false);
             }

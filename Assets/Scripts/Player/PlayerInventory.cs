@@ -37,6 +37,10 @@ public class PlayerInventory : MonoBehaviour
    }
    public bool TryTakeFlower(Flower key)
    {
+      if (!m_flowerInventory.ContainsKey(key))
+      {
+         return false;
+      }
       if (m_flowerInventory[key] > 0)
       {
          m_flowerInventory[key]--;
