@@ -23,12 +23,4 @@ public class CraftingSlot : MonoBehaviour
             displayedImage.sprite = flower.sprite;
         }
     }
-
-    void Update()
-    {
-        if (m_FlowerInSlot != null)
-        {
-            Debug.Log("Flower is set" + this.gameObject.name);
-        }
-    }
 }

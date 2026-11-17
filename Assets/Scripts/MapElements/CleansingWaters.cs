@@ -10,6 +10,7 @@ public class CleansingWaters : MonoBehaviour
         if (other.TryGetComponent(out Entity entity))
         {
             entity.removeAllEffect();
+            entity.EntityRigidbody.linearVelocity = new Vector2(0,0);
             clenseSe.Play(transform.position);
         }
         
