@@ -33813,11 +33813,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].text
-      value: "Potrzebujesz 90 coin\xF3w do przej\u015Bcia na nast\u0119pny level"
+      value: "Potrzebujesz 75 coin\xF3w do przej\u015Bcia na nast\u0119pny level"
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[1].text
-      value: Next level
+      value: "Czyli inwestycja powoli si\u0119 zwraca. Czas i\u015B\u0107 do nast\u0119pnego
+        poziomu."
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].voiceover
@@ -35693,7 +35694,7 @@ PrefabInstance:
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].voiceover
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: a8022fd7920974747a4e4d6fd28cffa0, type: 2}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[1].voiceover
       value: 

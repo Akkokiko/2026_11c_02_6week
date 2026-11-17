@@ -787,6 +787,31 @@ PrefabInstance:
       propertyPath: dialogueLines.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].text
+      value: "\u017Beby ze mn\u0105 porozmawia\u0107, naci\u015Bnij przycisk \u201EE\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].text
+      value: "By zebra\u0107 checkpoint r\xF3wnie\u017C naci\u015Bnij przycisk \u201EE\u201D."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[2].text
+      value: "Czy wiedzia\u0142e\u015B \u017Ce Waleniom i Hipopotamy s\u0105 blisko
+        spokrewnione?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fffb2f334f1cb7429a1ae1361164eb3, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cb70a60b58c91840b62b0d76e89a8dc, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[2].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: e9a7f4d9803c2234380328fe87a01ba2, type: 2}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7656918
