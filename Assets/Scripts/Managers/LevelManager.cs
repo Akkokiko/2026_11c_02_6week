@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
         flag.activateCheckpointFlag(instant);
     }
 
-    private void SaveGame()
+    public void SaveGame()
     {
         int coins = m_player.PlayerInventory.m_coinAmount;
         int diamonds = m_player.PlayerInventory.m_diamondAmount;

@@ -20,6 +20,7 @@ public class CheckpointFlag : Interactable
     public override void Interact(Player player)
     {
         LevelManager.instance.activateCheckpointFlag(this);
+        LevelManager.instance.SaveGame();
     }
 
     public void activateCheckpointFlag(bool instant = false)
