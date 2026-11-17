@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6cc1f1a0386fb49b2e2ad4d26539f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NeutralNPC
-  m_maxHealth: 999
+  m_maxHealth: 1
   m_currentHealth: 0
   m_baseMoveSpeed: 5
   m_baseJumpForce: 0
@@ -189,7 +189,9 @@ MonoBehaviour:
   m_currentJumpForce: 0
   m_currentWeight: 0
   m_shouldBeMoving: 0
-  m_entityRigidbody: {fileID: 0}
+  m_entityRigidbody: {fileID: 6147299778543714622}
+  m_animator: {fileID: 4716528402966536434}
+  deathse: {fileID: 0}
   m_onWeightChanged:
     m_PersistentCalls:
       m_Calls: []
