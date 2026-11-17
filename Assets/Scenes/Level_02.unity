@@ -18838,6 +18838,141 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7941330349298960350, guid: 391a3f8c5a8a372449bf3891a370c734, type: 3}
   m_PrefabInstance: {fileID: 370695237}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &376352578
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 968201172}
+    m_Modifications:
+    - target: {fileID: 197834654859803449, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_Name
+      value: Witus Explo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].text
+      value: "Mikstura eksplozjii odrzuci przeciwnika, tak jakby\u015B wzi\u0105\u0142
+        rozbieg z kilometra"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].text
+      value: "\u017Beby ze mn\u0105 porozmawia\u0107, naci\u015Bnij przycisk 'E'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[2].text
+      value: "By zebra\u0107 checkpoint, r\xF3wnie\u017C naci\u015Bnij przycisk \"E\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[3].text
+      value: "Czy wiedzia\u0142e\u015B \u017Ce Walenie i Hipopotamy s\u0105 blisko
+        spokrewnione? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[4].text
+      value: "Mikstura przy\u015Bpieszenia sprawi, \u017Ce zaczniesz biega\u0107.
+        Ale tak szybko."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[5].text
+      value: "Mikstura ro\u015Bni\u0119cia doda ci kilka centymetr\xF3w"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[6].text
+      value: "Mikstura zamro\u017Cenia sprawi, \u017Ce zaczniesz \u015Bpiewa\u0107
+        \"Mam t\u0119 moc\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[7].text
+      value: "Mikstura odwr\xF3cenia grawitacji dos\u0142ownie wywruci \u015Bwiat
+        do g\xF3ry nogami"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: a8022fd7920974747a4e4d6fd28cffa0, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fffb2f334f1cb7429a1ae1361164eb3, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[2].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cb70a60b58c91840b62b0d76e89a8dc, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[3].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: e9a7f4d9803c2234380328fe87a01ba2, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[4].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 3451ed8943c1ab24297dbf68128aefac, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[5].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: be9b5fd17da8e234c8146e3887e61abe, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[6].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: e8061830a3952d549b21148491fae2b4, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[7].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: f1c3f857902816c4597fe3a15732dc8a, type: 2}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.29774094
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1736395
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+--- !u!4 &376352579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+  m_PrefabInstance: {fileID: 376352578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &376640611
 GameObject:
   m_ObjectHideFlags: 0
@@ -19259,6 +19394,132 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d34d5ffa3cce414aa03bb9d1602ac7e, type: 3}
+--- !u!1001 &409724348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 968201172}
+    m_Modifications:
+    - target: {fileID: 197834654859803449, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_Name
+      value: Witus GravRev
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].text
+      value: "Mikstura odwr\xF3cenia grawitacji dos\u0142ownie wywruci \u015Bwiat
+        do g\xF3ry nogami"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].text
+      value: "\u017Beby ze mn\u0105 porozmawia\u0107, naci\u015Bnij przycisk 'E'"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[2].text
+      value: "By zebra\u0107 checkpoint, r\xF3wnie\u017C naci\u015Bnij przycisk \"E\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[3].text
+      value: "Czy wiedzia\u0142e\u015B \u017Ce Walenie i Hipopotamy s\u0105 blisko
+        spokrewnione? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[4].text
+      value: "Mikstura przy\u015Bpieszenia sprawi, \u017Ce zaczniesz biega\u0107.
+        Ale tak szybko."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[5].text
+      value: "Mikstura ro\u015Bni\u0119cia doda ci kilka centymetr\xF3w"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[6].text
+      value: "Mikstura zamro\u017Cenia sprawi, \u017Ce zaczniesz \u015Bpiewa\u0107
+        \"Mam t\u0119 moc\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: f1c3f857902816c4597fe3a15732dc8a, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fffb2f334f1cb7429a1ae1361164eb3, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[2].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cb70a60b58c91840b62b0d76e89a8dc, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[3].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: e9a7f4d9803c2234380328fe87a01ba2, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[4].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 3451ed8943c1ab24297dbf68128aefac, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[5].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: be9b5fd17da8e234c8146e3887e61abe, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[6].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: e8061830a3952d549b21148491fae2b4, type: 2}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.386242
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.751772
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+--- !u!4 &409724349 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+  m_PrefabInstance: {fileID: 409724348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &410041028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56762,6 +57023,40 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2dbbca007fd356449058c02bcd181dd, type: 3}
+--- !u!1 &968201171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968201172}
+  m_Layer: 0
+  m_Name: Witusie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968201172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968201171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.47019, y: -2.78569, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1753458600}
+  - {fileID: 376352579}
+  - {fileID: 409724349}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &969875455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62358,6 +62653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   m_player: {fileID: 1446554745}
   m_startCheckpointFlag: {fileID: 1031134105}
+  m_backgroundMusic: {fileID: 0}
 --- !u!4 &1407297178
 Transform:
   m_ObjectHideFlags: 0
@@ -96271,11 +96567,11 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 968201172}
     m_Modifications:
     - target: {fileID: 197834654859803449, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_Name
-      value: Witus
+      value: Witus END
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.size
@@ -96283,12 +96579,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].text
-      value: "Zosta\u0142o ci "
+      value: "Przed wyruszeniem w droge nale\u017Cy zebra\u0107 wi\u0119cej z\u0142ota"
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[1].text
       value: "Gratulacje przej\u015Bcia naszeego 6/7 weeka"
       objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[0].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: f5c6a5a09e0859e4892c0633bb737603, type: 2}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: dialogueLines.Array.data[1].voiceover
+      value: 
+      objectReference: {fileID: 11400000, guid: 4719c9e7e7d14ae42a034336fdc797b0, type: 2}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].DialogueExtras.Array.size
       value: 1
@@ -96307,11 +96611,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 21b7c1efb0d4d4f4cbcbb274b7459b2e, type: 2}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.59687
+      value: 23.126682
       objectReference: {fileID: 0}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.283525
+      value: -25.497835
       objectReference: {fileID: 0}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalPosition.z
@@ -96323,15 +96627,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -96350,6 +96654,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+--- !u!4 &1753458600 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6746102490926068171, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+  m_PrefabInstance: {fileID: 1753458599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1753511794
 GameObject:
   m_ObjectHideFlags: 0
@@ -103349,7 +103658,6 @@ SceneRoots:
   - {fileID: 1404522691}
   - {fileID: 489133325}
   - {fileID: 1923377658}
-  - {fileID: 1753458599}
   - {fileID: 1213012799}
   - {fileID: 1367567054}
   - {fileID: 713810149}
@@ -103357,3 +103665,4 @@ SceneRoots:
   - {fileID: 1412028603}
   - {fileID: 1579118435}
   - {fileID: 1624634825}
+  - {fileID: 968201172}
