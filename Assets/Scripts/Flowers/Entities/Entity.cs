@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-
+using Sound;
 public class Entity : MonoBehaviour
 {
 
@@ -27,6 +27,11 @@ public class Entity : MonoBehaviour
     [Header("Entity Components")]
     [SerializeField] private Rigidbody2D m_entityRigidbody;
     public Rigidbody2D EntityRigidbody => m_entityRigidbody;
+
+    [Header("ForThePlayerOnly")]
+    [SerializeField] private Animator m_animator;
+    [SerializeField] private Sex deathse;
+
 
     [Header("Weight")]
     public UnityEvent m_onWeightChanged;
@@ -182,6 +187,10 @@ public class Entity : MonoBehaviour
 
     public virtual void die()
     {
+        m_animator.SetBool("Dead", true);
+        m_animator.SetTrigger("GotDeadlyHit");
+        deathse.Play(transform.position);
+
         removeExpiredEffects();
         gameObject.SetActive(false);
     }

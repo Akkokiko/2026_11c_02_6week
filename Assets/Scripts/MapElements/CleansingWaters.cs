@@ -1,7 +1,8 @@
 using UnityEngine;
-
+using Sound;
 public class CleansingWaters : MonoBehaviour
 {
+    [SerializeField] private Sex clenseSe;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -9,6 +10,8 @@ public class CleansingWaters : MonoBehaviour
         if (other.TryGetComponent(out Entity entity))
         {
             entity.removeAllEffect();
+            clenseSe.Play(transform.position);
         }
+        
     }
 }

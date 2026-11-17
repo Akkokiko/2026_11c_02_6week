@@ -391,10 +391,13 @@ MonoBehaviour:
   m_playerMovement: {fileID: 8986572434406713882}
   m_playerPotionController: {fileID: 1665448172178613227}
   m_playerInteractController: {fileID: 3438588095411638192}
+  deathse: {fileID: 11400000, guid: cdd7e86763056cb4e991de37d4dc2dda, type: 2}
   m_OnPlayerDeath:
     m_PersistentCalls:
       m_Calls: []
   m_isInMenu: 0
+  m_recipes: []
+  m_recipeBook: {fileID: 0}
 --- !u!114 &1110046093582837590
 MonoBehaviour:
   m_ObjectHideFlags: 0
