@@ -72658,6 +72658,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1110046093582837590, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
+      propertyPath: 'm_potions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110046093582837590, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
+      propertyPath: 'm_potions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110046093582837590, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
+      propertyPath: 'm_potions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1320477900441688907, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
       propertyPath: m_Camera
       value: 
