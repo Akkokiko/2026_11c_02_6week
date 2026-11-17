@@ -39,7 +39,7 @@ public class Recipe : ScriptableObject
                 flowerAmountsGiven.Add(flowers[i], 1);
             }
         }
-        if (!flowerAmountsRecipe.Keys.SequenceEqual(flowerAmountsGiven.Keys))
+        if (!flowerAmountsRecipe.Keys.OrderBy(r => r.name).SequenceEqual(flowerAmountsGiven.Keys.OrderBy(r => r.name)))
         {
             return false;
         }
