@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
         m_checkpointFlags = FindObjectsByType<CheckpointFlag>(FindObjectsInactive.Include, FindObjectsSortMode.None);
     }
 
+
     public void Start()
     {
         m_player.m_OnPlayerDeath.AddListener(respawn);
@@ -96,8 +97,11 @@ public class LevelManager : MonoBehaviour
         if (data != null)
         {
             m_player.PlayerInventory.setCoinAmount(data.CoinAmount);
-            Debug.Log(data.m_CurrentLevel);
-
+            foreach (Recipe currRecipe in data.m_recipeList)
+            {
+                m_player.AddKnownRecipe(SaveController.Instance.GetRecipeForName(currRecipe.name));
+                m_player.RecipeBook.showDiscoveredRecipes();
+            }
             foreach (var checkpoint in m_checkpointFlags)
             {
                 if (checkpoint.CheckpointID == data.CheckpointID)

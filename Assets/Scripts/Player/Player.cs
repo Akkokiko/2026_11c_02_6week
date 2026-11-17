@@ -7,16 +7,16 @@ using UnityEngine.InputSystem;
 
 public class Player : Entity
 {
-    
+
     [Header("Player")]
     [SerializeField] private CircleCollider2D m_PlayerCollider;
     public CircleCollider2D PlayerCollider => m_PlayerCollider;
-    
+
     [SerializeField] private Rigidbody2D m_PlayerRigidbody;
     public Rigidbody2D PlayerRigidbody => m_PlayerRigidbody;
-    
-    
-    
+
+
+
     [SerializeField] private Camera m_Camera;
     public Camera Camera => m_Camera;
 
@@ -26,16 +26,16 @@ public class Player : Entity
     [Header("Player Components")]
     [SerializeField] private PlayerInventory m_playerInventory;
     public PlayerInventory PlayerInventory => m_playerInventory;
-    
+
     [SerializeField] private PlayerMovement m_playerMovement;
     public PlayerMovement PlayerMovement => m_playerMovement;
-    
+
     [SerializeField] private PlayerPotionController m_playerPotionController;
     public PlayerPotionController PlayerPotionController => m_playerPotionController;
-    
+
     [SerializeField] private PlayerInteractController m_playerInteractController;
     public PlayerInteractController PlayerInteractController => m_playerInteractController;
-    
+
     public UnityEvent<Player> m_OnPlayerDeath = new UnityEvent<Player>();
     [SerializeField] private bool m_isInMenu;
     public bool IsInMenu => m_isInMenu;
@@ -54,9 +54,9 @@ public class Player : Entity
     void OnDisable()
     {
         m_inputAction.Disable();
-        m_isInMenu = true; 
+        m_isInMenu = true;
     }
-    
+
     protected override void Awake()
     {
         base.Awake();
@@ -93,5 +93,4 @@ public class Player : Entity
     {
         m_recipeBook = recipeBook;
     }
-
 }

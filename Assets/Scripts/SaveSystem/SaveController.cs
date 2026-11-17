@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 public class SaveController : MonoBehaviour
 {
@@ -10,16 +11,18 @@ public class SaveController : MonoBehaviour
     private SaveData m_saveData;
     public SaveData SaveData => m_saveData;
 
+    [SerializeField] List<Recipe> m_allRecipes;
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         m_saveData = GetSaveDataFromFile();
         if (m_saveData == null)
@@ -63,14 +66,11 @@ public class SaveController : MonoBehaviour
             Debug.Log("Save Data is null");
             return;
         }
-        Debug.Log("loading level: " + m_saveData.m_CurrentLevel);
         StartCoroutine(WaitForLoadedScene());
 
     }
     public IEnumerator WaitForLoadedScene()
     {
-        Debug.Log("Rozpoczęto asynchroniczne ładowanie poziomu...");
-
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(m_saveData.m_CurrentLevel);
         asyncLoad.allowSceneActivation = false;
 
@@ -81,7 +81,7 @@ public class SaveController : MonoBehaviour
         asyncLoad.allowSceneActivation = true;
         while (!asyncLoad.isDone) yield return null;
 
-        Debug.Log("Poziom został pomyślnie załadowany.");
+        Debug.Log("loaded.");
     }
 
     public SaveData GetSaveDataFromFile()
@@ -101,5 +101,10 @@ public class SaveController : MonoBehaviour
             m_saveData.CollectedCoins.Add(coinID);
         }
         Debug.Log("Zarejestrowano zebraną monetę: " + coinID);
+    }
+
+    public Recipe GetRecipeForName(string recipeName)
+    {
+        return m_allRecipes.Where(r => r.name == recipeName).FirstOrDefault();
     }
 }
