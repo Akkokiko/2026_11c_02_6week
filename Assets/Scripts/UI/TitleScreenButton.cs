@@ -16,6 +16,8 @@ public class TitleScreenButton : MonoBehaviour
         SaveController.Instance.SaveGame(0, 0, "00", 1, new List<Recipe>(), null);
 
         SaveController.Instance.LoadGame();
+
+        Time.timeScale = 1;
     }
 
     public void toggleConnectedMenu()

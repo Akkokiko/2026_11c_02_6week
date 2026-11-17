@@ -23,5 +23,6 @@ public class SaveUIObject : MonoBehaviour
     {
         //obiekt powinien przechowywać swoje save data i uzywać do load game ale system trzeba byłoby zmieniać więc /shrug
         SaveController.Instance.LoadGame();
+        Time.timeScale = 1;
     }
 }

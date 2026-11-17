@@ -8,15 +8,22 @@ using System;
 using LitMotion;
 using UnityEngine.Events;
 using Random = System.Random;
+using Unity.VisualScripting;
 
 public class CraftingUI : MonoBehaviour
 {
+    [Header("Player")]
     [SerializeField] private Player m_Player;
+
+    [Header("UI Elements")]
     [SerializeField] private GameObject m_CraftingUI;
     [SerializeField] private GameObject m_InventoryUI;
     private FlowerUICard[] m_flowerList;
     private InputAction m_OpenCraftingUIInput;
-
+    [Header("PauseMenu")]
+    private InputAction m_OpenPauseMenuInput;
+    [SerializeField] private GameObject m_pauseMenu;
+    [Header("Interaction")]
     [SerializeField] private GraphicRaycaster m_Raycaster;
     private InputAction m_menuInteractInput;
     private Flower m_heldFlower;
@@ -39,6 +46,10 @@ public class CraftingUI : MonoBehaviour
         {
             m_Player = LevelManager.instance.Player;
         }
+
+        //głupie ale robie to przez brak czasu.
+        m_OpenPauseMenuInput = m_Player.InputActionAsset.FindAction("OpenPauseMenu");
+
         m_OpenCraftingUIInput = m_Player.InputActionAsset.FindAction("OpenCraftingUI");
         m_flowerList = m_InventoryUI.GetComponentsInChildren<FlowerUICard>();
 
@@ -49,6 +60,19 @@ public class CraftingUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (m_OpenPauseMenuInput.WasPressedThisFrame())
+        {
+            m_pauseMenu.SetActive(!m_pauseMenu.activeSelf);
+            if (m_pauseMenu.activeSelf)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }
+
         if (m_OpenCraftingUIInput.WasPressedThisFrame())
         {
             m_CraftingUI.SetActive(!m_CraftingUI.activeSelf);
