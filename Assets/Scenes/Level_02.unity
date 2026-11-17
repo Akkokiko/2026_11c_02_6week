@@ -2489,6 +2489,10 @@ PrefabInstance:
       value: Whale (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
