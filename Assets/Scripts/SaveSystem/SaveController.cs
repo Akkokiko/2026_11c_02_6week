@@ -8,6 +8,7 @@ public class SaveController : MonoBehaviour
     public static SaveController Instance { get; private set; }
 
     private SaveData m_saveData;
+    public SaveData SaveData => m_saveData;
 
     private void Awake()
     {
@@ -20,14 +21,14 @@ public class SaveController : MonoBehaviour
         {
             Destroy(this);
         }
-        m_saveData = GetSaveData();
+        m_saveData = GetSaveDataFromFile();
         if (m_saveData == null)
         {
             m_saveData = new SaveData();
         }
     }
 
-    public void SaveGame(int coinAmount, int diamondAmount, string checkpointID, int sceneId, List<Recipe> recipeList)
+    public void SaveGame(int coinAmount, int diamondAmount, string checkpointID, int sceneId, List<Recipe> recipeList, List<string> collectedCoins)
     {
         m_saveData.CoinAmount = coinAmount;
         m_saveData.DiamondAmount = diamondAmount;
@@ -42,11 +43,11 @@ public class SaveController : MonoBehaviour
             m_saveData.m_CurrentLevel = sceneId;
         }
 
-        if (m_saveData.CollectedCoins == null)
+        if (m_saveData.CollectedCoins == null || collectedCoins == null)
         {
             m_saveData.CollectedCoins = new List<string>();
         }
-        
+
         m_saveData.m_recipeList = recipeList;
 
         SimpleSaveSystem.SaveXML(m_saveData);
@@ -56,13 +57,13 @@ public class SaveController : MonoBehaviour
 
     public void LoadGame()
     {
-        m_saveData = GetSaveData();
+        m_saveData = GetSaveDataFromFile();
         if (m_saveData == null)
         {
             Debug.Log("Save Data is null");
             return;
         }
-        Debug.Log("loading level: "+m_saveData.m_CurrentLevel);
+        Debug.Log("loading level: " + m_saveData.m_CurrentLevel);
         StartCoroutine(WaitForLoadedScene());
 
     }
@@ -83,7 +84,7 @@ public class SaveController : MonoBehaviour
         Debug.Log("Poziom został pomyślnie załadowany.");
     }
 
-    public SaveData GetSaveData()
+    public SaveData GetSaveDataFromFile()
     {
         return SimpleSaveSystem.LoadXML();
     }

@@ -68,13 +68,30 @@ public class LevelManager : MonoBehaviour
             diamonds,
             m_activeCheckpointFlag.CheckpointID,
             -1,
-            m_player.RecipeList
+            m_player.RecipeList,
+            SaveController.Instance.SaveData.CollectedCoins
         );
+    }
+
+    public void GoToNextLevel()
+    {
+        int coins = m_player.PlayerInventory.m_coinAmount;
+        int diamonds = m_player.PlayerInventory.m_diamondAmount;
+
+        SaveController.Instance.SaveGame(
+            coins,
+            diamonds,
+            m_activeCheckpointFlag.CheckpointID,
+            SceneManager.GetActiveScene().buildIndex + 1,
+            m_player.RecipeList,
+            SaveController.Instance.SaveData.CollectedCoins
+        );
+        SaveController.Instance.LoadGame();
     }
 
     private void LoadGame()
     {
-        SaveData data = SaveController.Instance.GetSaveData();
+        SaveData data = SaveController.Instance.GetSaveDataFromFile();
 
         if (data != null)
         {
