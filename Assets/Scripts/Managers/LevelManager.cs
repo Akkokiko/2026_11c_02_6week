@@ -82,11 +82,11 @@ public class LevelManager : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        int coins = m_player.PlayerInventory.m_coinAmount;
+        //int coins = m_player.PlayerInventory.m_coinAmount;
         int diamonds = m_player.PlayerInventory.m_diamondAmount;
 
         SaveController.Instance.SaveGame(
-            coins,
+            00,
             diamonds,
             m_activeCheckpointFlag.CheckpointID,
             SceneManager.GetActiveScene().buildIndex + 1,

@@ -327,6 +327,10 @@ PrefabInstance:
       value: Whale (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -2388,6 +2392,10 @@ PrefabInstance:
       value: Whale (2)
       objectReference: {fileID: 0}
     - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -3424,6 +3432,10 @@ PrefabInstance:
     - target: {fileID: 1398310162895072597, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Name
       value: Whale (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Constraints
@@ -63929,6 +63941,10 @@ PrefabInstance:
       value: Whale (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Constraints
       value: 7
       objectReference: {fileID: 0}
@@ -64558,6 +64574,10 @@ PrefabInstance:
     - target: {fileID: 1398310162895072597, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Name
       value: Whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6147299778543714622, guid: c99d5cdfb9a28f04d9930eb3a156811b, type: 3}
       propertyPath: m_Constraints
