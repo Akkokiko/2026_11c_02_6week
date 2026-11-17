@@ -20,7 +20,7 @@ public class SettingsUI : MonoBehaviour
         m_resolutions = Screen.resolutions;
 
         m_resDropdown.ClearOptions();
-        m_resDropdown.AddOptions(m_resolutions.Select(res => res.width+" x "+res.height).ToList());
+        m_resDropdown.AddOptions(m_resolutions.Select(res => res.width+" x "+res.height).Distinct().ToList());
         string currRes = Screen.currentResolution.width + " x " + Screen.currentResolution.height;
         int defaultRes = m_resDropdown.options.FindIndex(op => op.text == Screen.currentResolution.width + " x " + Screen.currentResolution.height);
 
@@ -31,6 +31,14 @@ public class SettingsUI : MonoBehaviour
     public void setFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void setResolution()
+    {
+        int optionIndex = m_resDropdown.value;
+        Resolution newRes = m_resolutions.First(res => res.width+" x "+res.height == m_resDropdown.options[optionIndex].text);
+        
+        Screen.SetResolution(newRes.width, newRes.height, Screen.fullScreen);
     }
 
 }

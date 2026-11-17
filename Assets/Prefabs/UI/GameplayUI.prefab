@@ -4441,6 +4441,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 358
       objectReference: {fileID: 0}
+    - target: {fileID: 4284200603481409272, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284200603481409272, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1032025979982975466}
+    - target: {fileID: 4284200603481409272, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setResolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284200603481409272, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284200603481409272, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4319053004561093906, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
       propertyPath: m_LocalPosition.x
       value: -393
@@ -4538,6 +4558,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+--- !u!114 &1032025979982975466 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 792467473401493572, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}
+  m_PrefabInstance: {fileID: 336950693216233902}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79555fefd3427cc4abae91264d2cb6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
 --- !u!4 &4565890318692203708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4319053004561093906, guid: 7f4dc5c30b310794a97dd6b6246a00ce, type: 3}

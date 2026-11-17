@@ -9,7 +9,6 @@ public class DialogueSceneTransport : DialogueExtra
    public override bool DoYourStuff(Player player)
    {
       LevelManager.instance.GoToNextLevel();
-      //player.LoadFromSave();
       return true;
    }
 }
