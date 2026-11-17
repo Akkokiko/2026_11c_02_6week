@@ -18,9 +18,12 @@ namespace Sound {
         public float minDistance = 20f;
         public float maxDistance = 20f;
         public AudioRolloffMode rolloff;
+        [Tooltip("Loop forever (e.g. background music). The source lives until its scene unloads.")]
+        public bool loop = false;
 
         internal override void PlayInternal(Vector3 location, AudioMixerGroup group, float volume = 1) {
-            var source = MakeSource(location, group, clip.length);
+            var source = MakeSource(location, group, loop ? float.PositiveInfinity : clip.length);
+            source.loop = loop;
             source.clip = clip;
             source.volume = Random.Range(volumeRange.x, volumeRange.y) * volume;
             source.pitch = Random.Range(pitchRange.x, pitchRange.y);

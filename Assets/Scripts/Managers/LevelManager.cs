@@ -1,4 +1,5 @@
 using System;
+using Sound;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,9 @@ public class LevelManager : MonoBehaviour
     private CheckpointFlag m_activeCheckpointFlag;
 
     [SerializeField] private CheckpointFlag m_startCheckpointFlag;
+
+    [Header("Audio")]
+    [SerializeField] private Sex m_backgroundMusic;
 
     public void Awake()
     {
@@ -34,6 +38,8 @@ public class LevelManager : MonoBehaviour
     public void Start()
     {
         m_player.m_OnPlayerDeath.AddListener(respawn);
+
+        m_backgroundMusic.Play(transform.position);
 
         LoadGame();
     }

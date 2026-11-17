@@ -3,8 +3,7 @@ using Sound;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private Animator m_animator;
-    [SerializeField] private Sex deathse;
+    
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -23,14 +22,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            m_animator.SetBool("Dead", true);
-            m_animator.SetTrigger("GotDeadlyHit");
-            deathse.Play(transform.position);
-
             Die();
         }
         else{
-            m_animator.SetTrigger("GotHit");
         }
     }
 
