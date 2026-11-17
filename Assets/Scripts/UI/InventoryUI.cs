@@ -25,12 +25,13 @@ public class InventoryUI : MonoBehaviour
     [Header("Flowers")]
     public FlowerUICard[] m_flowerCards;
 
-    public void Awake()
+    public void Start()
     {
         foreach (var potionIcon in m_potionIcons)
         {
             potionIcon.m_outline.enabled = false;
         }
+        chosePotion(0);
 
     }
 
