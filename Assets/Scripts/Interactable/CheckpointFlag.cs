@@ -1,3 +1,4 @@
+using Sound;
 using UnityEngine;
 
 public class CheckpointFlag : Interactable
@@ -14,6 +15,7 @@ public class CheckpointFlag : Interactable
     public bool IsCheckpointActive => m_isCheckpointActive;
 
     [SerializeField] private Animator m_animator;
+    [SerializeField] private Sex m_checkpointSound;
 
     public override void Interact(Player player)
     {
@@ -22,6 +24,7 @@ public class CheckpointFlag : Interactable
 
     public void activateCheckpointFlag(bool instant = false)
     {
+        m_checkpointSound.Play(transform.position);
         m_isCheckpointActive = true;
         m_animator.SetBool(IsActiveHash, true);
         if (instant)

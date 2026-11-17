@@ -13,7 +13,7 @@ namespace Sound {
             src.outputAudioMixerGroup = group;
             src.priority = soundPriority;
             src.transform.position = location;
-            Destroy(src.gameObject, lifespan);
+            if (!float.IsInfinity(lifespan)) Destroy(src.gameObject, lifespan);
             return src;
         }
 
