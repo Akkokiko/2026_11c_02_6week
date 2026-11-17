@@ -99615,7 +99615,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[0].text
-      value: "Przed wyruszeniem w droge nale\u017Cy zebra\u0107 wi\u0119cej z\u0142ota"
+      value: "Przed wyruszeniem w droge nale\u017Cy zebra\u0107 wi\u0119cej z\u0142ota
+        [110]"
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.data[1].text
