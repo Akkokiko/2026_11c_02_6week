@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f6d122fa7af2748b38b4fcf3da85cb, type: 3}
   m_Name: Level_02_Coin_Req
   m_EditorClassIdentifier: Assembly-CSharp::DialogueCheckCoin
-  coinThreshold: 120
+  coinThreshold: 110
+  resetCoinsOnPass: 1

@@ -18332,7 +18332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
   m_player: {fileID: 1446554745}
   m_startCheckpointFlag: {fileID: 1031134105}
-  m_backgroundMusic: {fileID: 0}
+  m_backgroundMusic: {fileID: 11400000, guid: 2c40663842d5b094d982b809a74a29c9, type: 2}
 --- !u!4 &1407297178
 Transform:
   m_ObjectHideFlags: 0
@@ -18745,6 +18745,14 @@ PrefabInstance:
     - target: {fileID: 197834654859803449, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: m_Name
       value: Witus coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500640633508059678, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_Name
+      value: TalkRange2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5903525129822887899, guid: 7f11ab6c75367464d82dec4ef8f13e12, type: 3}
       propertyPath: dialogueLines.Array.size
@@ -19516,7 +19524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1012365170632148258, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: 22.09
       objectReference: {fileID: 0}
     - target: {fileID: 1012365170632148258, guid: 14ec2877a645557419cf6c3e3acd4b69, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19641,7 +19649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7891397588647411703, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: 22.09
       objectReference: {fileID: 0}
     - target: {fileID: 7891397588647411703, guid: 3faad86ba449f36479e1285590c193ee, type: 3}
       propertyPath: m_LocalPosition.y

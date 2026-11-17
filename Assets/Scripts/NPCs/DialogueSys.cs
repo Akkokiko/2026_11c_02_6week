@@ -58,6 +58,13 @@ public class DialogueSys : Interactable
             currentLine = 0;
         }
 
+        while (currentLine < dialogueLines.Length - 1 &&
+               AreConditionsMet(dialogueLines[currentLine], player))
+        {
+            NotifyConditionsPassed(dialogueLines[currentLine], player);
+            currentLine++;
+        }
+
         dialogueCoroutine =
             StartCoroutine(PlayDialogueLine(player));
     }
@@ -92,10 +99,34 @@ public class DialogueSys : Interactable
 
         if (canContinue)
         {
+            NotifyConditionsPassed(line, player);
             currentLine++;
         }
 
         dialogueCoroutine = null;
+    }
+
+    private bool AreConditionsMet(DialogueLine line, Player player)
+    {
+        bool hasCondition = false;
+        foreach (DialogueExtra dialogueExtra in line.DialogueExtras)
+        {
+            if (dialogueExtra == null || !dialogueExtra.IsCondition) continue;
+            hasCondition = true;
+            if (!dialogueExtra.DoYourStuff(player)) return false;
+        }
+        return hasCondition;
+    }
+
+    private void NotifyConditionsPassed(DialogueLine line, Player player)
+    {
+        foreach (DialogueExtra dialogueExtra in line.DialogueExtras)
+        {
+            if (dialogueExtra != null && dialogueExtra.IsCondition)
+            {
+                dialogueExtra.OnConditionPassed(player);
+            }
+        }
     }
 
     public void ResetDialogue()
