@@ -6,8 +6,8 @@ public class EndingScreen : MonoBehaviour
 {
 
 
-    public void BackToTitle(SceneAsset sceneAsset)
+    public void BackToTitle(string scenename)
     {
-        SceneManager.LoadScene(sceneAsset.name);
+        SceneManager.LoadScene(scenename);
     }
 }
