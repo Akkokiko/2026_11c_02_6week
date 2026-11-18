@@ -8,6 +8,6 @@ public class SaveData
     public int DiamondAmount;
     public string CheckpointID;
     public int m_CurrentLevel;
-    public List<Recipe> m_recipeList;
+    public List<string> m_recipeList;
     public List<string> CollectedCoins = new List<string>();
 }

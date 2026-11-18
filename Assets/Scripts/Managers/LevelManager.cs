@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Sound;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -75,7 +76,7 @@ public class LevelManager : MonoBehaviour
             diamonds,
             m_activeCheckpointFlag.CheckpointID,
             -1,
-            m_player.RecipeList,
+            m_player.RecipeList.Select(r=> r.name).ToList(),
             SaveController.Instance.SaveData.CollectedCoins
         );
     }
@@ -90,7 +91,7 @@ public class LevelManager : MonoBehaviour
             diamonds,
             m_activeCheckpointFlag.CheckpointID,
             SceneManager.GetActiveScene().buildIndex + 1,
-            m_player.RecipeList,
+            m_player.RecipeList.Select(r => r.name).ToList(),
             SaveController.Instance.SaveData.CollectedCoins
         );
         SaveController.Instance.LoadGame();
@@ -103,9 +104,9 @@ public class LevelManager : MonoBehaviour
         if (data != null)
         {
             m_player.PlayerInventory.setCoinAmount(data.CoinAmount);
-            foreach (Recipe currRecipe in data.m_recipeList)
+            foreach (string currRecipe in data.m_recipeList)
             {
-                m_player.AddKnownRecipe(SaveController.Instance.GetRecipeForName(currRecipe.name));
+                m_player.AddKnownRecipe(SaveController.Instance.GetRecipeForName(currRecipe));
                 m_player.RecipeBook.showDiscoveredRecipes();
             }
             foreach (var checkpoint in m_checkpointFlags)
@@ -122,6 +123,7 @@ public class LevelManager : MonoBehaviour
             Debug.LogWarning("Nie znaleziono zapisanego checkpointa.");
         }
 
+        m_activeCheckpointFlag = m_checkpointFlags.Last();
         SetActiveCheckpoint(m_startCheckpointFlag, true);
     }
 

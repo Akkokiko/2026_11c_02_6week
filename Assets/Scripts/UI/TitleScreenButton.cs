@@ -13,7 +13,7 @@ public class TitleScreenButton : MonoBehaviour
 
     public void NewGame()
     {
-        SaveController.Instance.SaveGame(0, 0, "00", 1, new List<Recipe>(), null);
+        SaveController.Instance.SaveGame(0, 0, "00", 1, new List<string>(), null);
 
         SaveController.Instance.LoadGame();
 
