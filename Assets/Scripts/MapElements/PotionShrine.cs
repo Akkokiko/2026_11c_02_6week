@@ -33,6 +33,7 @@ public class PotionShrine : Interactable
             Color tempColor = m_potionSpriteRenderer.color;
             tempColor.a = 0;
             m_potionSpriteRenderer.color = tempColor;
+            m_descriptionText.color = tempColor;
         }
         
         

@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AnimationCurve m_jumpCurve;
     private InputAction m_jumpInput;
     private bool m_isGrounded;
+    [SerializeField] private float m_coyoteTime;
+    private float m_baseCoyoteTime;
     private bool m_isMidJump;
 
     private LayerMask m_groundedMask;
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
         m_groundedMask = LayerMask.GetMask("Floor");
         m_currJumpDuration = 0;
+        m_baseCoyoteTime = m_coyoteTime;
     }
 
     void Update()
@@ -47,7 +50,23 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        m_isGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask) && Physics2D.Raycast(this.transform.position, m_PlayerRigidbody.gravityScale >= 0 ? Vector2.down : Vector2.up, 0.65f * transform.localScale.x, m_groundedMask).collider != null;
+        bool m_shouldBeGrounded = m_PlayerCollider.IsTouchingLayers(m_groundedMask) && Physics2D.Raycast(this.transform.position, m_PlayerRigidbody.gravityScale >= 0 ? Vector2.down : Vector2.up, 0.65f * transform.localScale.x, m_groundedMask).collider != null;
+
+        if(m_shouldBeGrounded == false)
+        {
+            m_coyoteTime -= Time.deltaTime;
+            m_isGrounded = true;
+        }
+        else
+        {
+            m_coyoteTime = m_baseCoyoteTime;
+            m_isGrounded = true;
+        }
+
+        if(m_coyoteTime <= 0)
+        {
+            m_isGrounded = false;
+        }
 
         if (m_isGrounded && m_jumpInput.WasPressedThisFrame())
         {
