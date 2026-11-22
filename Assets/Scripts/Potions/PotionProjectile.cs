@@ -8,6 +8,7 @@ public class PotionProjectile : MonoBehaviour
 
 
     [SerializeField] private SpriteRenderer m_renderer;
+    public SpriteRenderer PotionRenderer => m_renderer;
 
     private Potion m_potionCarried;
 

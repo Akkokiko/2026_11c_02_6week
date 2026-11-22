@@ -20,6 +20,8 @@ public class TrajectoryLine : MonoBehaviour
     private Rigidbody2D m_projectileRigidBody;
 
     private const float TIME_CURVE_ADDITION = 0.5f;
+
+    private float m_potionSize;
     
     private void Start()
     {
@@ -30,12 +32,13 @@ public class TrajectoryLine : MonoBehaviour
         m_lineRenderer = GetComponent<LineRenderer>();
         m_lineRenderer.positionCount = m_segmentCount;
         
-        
+        m_potionSize = m_projectile.PotionRenderer.bounds.size.x;
     }
 
     private void FixedUpdate()
     {
         Vector2 startPoint = m_throwingPoint.position;
+        m_lineRenderer.positionCount = m_segmentCount;
         m_segments[0] = startPoint;
         
         m_lineRenderer.SetPosition(0, startPoint);
@@ -49,6 +52,16 @@ public class TrajectoryLine : MonoBehaviour
             Vector2 gravityOffset = TIME_CURVE_ADDITION * Physics2D.gravity * m_projectileRigidBody.mass * Mathf.Pow(timeOffset, 2);
             
             m_segments[i] = m_segments[0] + startVelocity * timeOffset +  gravityOffset;  
+
+            RaycastHit2D hit = Physics2D.CircleCast(m_segments[i], m_potionSize, m_playerPotionController.aimDirection(), m_potionSize);
+            if (hit.collider != null && hit.collider.isTrigger == false)
+            {
+                //m_segments[i] = hit.centroid;
+                m_lineRenderer.SetPosition(i, m_segments[i]);
+                m_lineRenderer.positionCount = i + 1;
+                break;
+            }
+
             m_lineRenderer.SetPosition(i, m_segments[i]);
         }
     }

@@ -61,6 +61,11 @@ public class ExplosionPotion : Potion
         SpawnExplosion(entity.gameObject.transform.position);
     }
 
+    public override void use(Player player)
+    {
+        return;
+    }
+
     void SpawnExplosion(Vector3 position)
     {
         var ex = Instantiate(m_explosionPrefab,position,Quaternion.identity);
