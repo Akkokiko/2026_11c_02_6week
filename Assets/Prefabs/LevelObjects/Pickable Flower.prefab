@@ -219,7 +219,7 @@ MonoBehaviour:
   amount: 1
   m_spriteRenderer: {fileID: 7244949996572572001}
   canRespawn: 1
-  respawnTime: 10
+  respawnTime: 7
   m_cooldownIndicator: {fileID: 2719930393105683169}
 --- !u!58 &7047532056370141161
 CircleCollider2D:
