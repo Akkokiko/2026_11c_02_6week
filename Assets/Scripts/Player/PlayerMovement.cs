@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_coyoteTime;
     private float m_baseCoyoteTime;
     private bool m_isMidJump;
-
     private LayerMask m_groundedMask;
+    [SerializeField] private float m_minJumpDuration;
     [SerializeField] private float m_maxJumpDuration;
     private float m_currJumpDuration;
 
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         {
             m_isMidJump = true;
         }
-        if (m_jumpInput.WasReleasedThisFrame())
+        if (!m_jumpInput.IsPressed() && m_currJumpDuration > m_minJumpDuration)
         {
             m_isMidJump = false;
         }
@@ -98,13 +98,23 @@ public class PlayerMovement : MonoBehaviour
         {
             float currentVelocityX = m_PlayerRigidbody.linearVelocityX;
             float inputVelocityX = m_horizontalInput.ReadValue<float>() * m_moveSpeed;
-            if (inputVelocityX > 0.01f)
+
+            if (inputVelocityX >= 0)
             {
                 m_spriteRenderer.flipX = false;
             }
-            else if (inputVelocityX < -0.01f)
+            else
             {
                 m_spriteRenderer.flipX = true;
+            }
+
+            if (m_PlayerRigidbody.gravityScale >= 0)
+            {
+                m_spriteRenderer.flipY = false;
+            }
+            else
+            {
+                m_spriteRenderer.flipY = true;
             }
 
             if (Mathf.Abs(currentVelocityX) > m_moveSpeed)
@@ -126,10 +136,21 @@ public class PlayerMovement : MonoBehaviour
 
             if (m_isMidJump)
             {
-                if (Mathf.Abs(m_PlayerRigidbody.linearVelocityY) < m_jumpHeight * 1.15f) //1.15 for a slight over
-                {
-                    m_PlayerRigidbody.linearVelocityY = (m_PlayerRigidbody.gravityScale >= 0 ? 1 : -1) * m_jumpHeight * m_jumpCurve.Evaluate(m_currJumpDuration);
-                }
+                //if (Mathf.Abs(m_PlayerRigidbody.linearVelocityY) < m_jumpHeight * 1.15f) //1.15 for a slight over
+                //{
+                    float gravityScale = m_PlayerRigidbody.gravityScale >= 0 ? 1 : -1;
+
+                    float jumpTime = Mathf.Clamp01(m_currJumpDuration/m_maxJumpDuration);
+
+                    if (m_currJumpDuration > m_minJumpDuration)
+                    {
+                        m_PlayerRigidbody.linearVelocityY = gravityScale * m_jumpHeight * m_jumpCurve.Evaluate(jumpTime);
+                    }
+                    else
+                    {
+                       m_PlayerRigidbody.linearVelocityY = gravityScale * m_jumpHeight;
+                    }
+                //}
 
             }
         }

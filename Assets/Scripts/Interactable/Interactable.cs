@@ -30,8 +30,6 @@ public class Interactable : MonoBehaviour
 
             playerNearby = true;
             
-
-            Debug.Log("Press 'E' to pick up");
         }
     }
 

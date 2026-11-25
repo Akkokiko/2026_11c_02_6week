@@ -105,8 +105,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.93725497, g: 0.61960787, b: 0.44705886, a: 1}
+      key1: {r: 0.93725497, g: 0.61960787, b: 0.44705886, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -129,8 +129,8 @@ LineRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 0
-      m_ColorSpace: -1
+      m_Mode: 1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -304,7 +304,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -4956470459609169216, guid: 00d75ca3993956445b9b051de38b002d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -412,9 +412,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
   m_potions:
-  - {fileID: 11400000, guid: 20bbcad543a45d14283ad5dd76c7b86e, type: 2}
-  - {fileID: 11400000, guid: 20bbcad543a45d14283ad5dd76c7b86e, type: 2}
-  - {fileID: 11400000, guid: 20bbcad543a45d14283ad5dd76c7b86e, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_player: {fileID: 1320477900441688907}
   m_coinAmount: 0
   m_diamondAmount: 0
@@ -437,45 +437,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.006472784
-      value: 1.2052917
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      time: 0
+      value: 1
+      inSlope: -0.018190863
+      outSlope: -0.018190863
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33236626
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.2829083
-      value: 1.000124
-      inSlope: -0.043539785
-      outSlope: -0.043539785
+      time: 0.7140357
+      value: 0.9870111
+      inSlope: -0.045341205
+      outSlope: -0.045341205
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 1
+      outWeight: 0.49768576
     - serializedVersion: 3
-      time: 0.38511273
-      value: 0.64635324
-      inSlope: -0.25069457
-      outSlope: -0.25069457
-      tangentMode: 0
+      time: 1
+      value: 0.94999695
+      inSlope: -0.12943618
+      outSlope: -0.12943618
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0.57206887
-      outWeight: 0.1948575
-    - serializedVersion: 3
-      time: 0.776734
-      value: 0.6028548
-      inSlope: 0.010666994
-      outSlope: 0.010666994
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.183376
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_coyoteTime: 0.15
+  m_minJumpDuration: 0.15
   m_maxJumpDuration: 0.5
 --- !u!114 &1665448172178613227
 MonoBehaviour:

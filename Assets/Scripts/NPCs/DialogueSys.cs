@@ -26,8 +26,6 @@ public class DialogueSys : Interactable
     [Header("Ustawienia")]
     public KeyCode interactionKey = KeyCode.E;
     public float extraDisplayTime = 0.5f;
-
-    private bool playerInRange;
     private int currentLine;
 
     private Coroutine dialogueCoroutine;

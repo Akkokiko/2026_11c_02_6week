@@ -84,6 +84,14 @@ public class Player : Entity
     public void swapIsInMenuState()
     {
         m_isInMenu = !m_isInMenu;
+        if (m_isInMenu)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
     public void AddKnownRecipe(Recipe newRecipe)
     {
