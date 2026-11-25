@@ -27,6 +27,7 @@ public class CraftingUI : MonoBehaviour
     [SerializeField] private GraphicRaycaster m_Raycaster;
     private InputAction m_menuInteractInput;
     private Flower m_heldFlower;
+    private InputAction m_quickCraftInput;
 
     [SerializeField] private CraftingSlot[] m_craftingSlots;
 
@@ -54,6 +55,7 @@ public class CraftingUI : MonoBehaviour
         m_flowerList = m_InventoryUI.GetComponentsInChildren<FlowerUICard>();
 
         m_menuInteractInput = m_Player.InputActionAsset.FindAction("Fire");
+        m_quickCraftInput = m_Player.InputActionAsset.FindAction("QuickCraft");
         m_heldFlower = null;
     }
 
@@ -62,65 +64,86 @@ public class CraftingUI : MonoBehaviour
     {
         if (m_OpenPauseMenuInput.WasPressedThisFrame())
         {
-            m_pauseMenu.SetActive(!m_pauseMenu.activeSelf);
-            if (m_pauseMenu.activeSelf)
+            if (m_CraftingUI.activeSelf)
             {
-                Time.timeScale = 0;
+                m_CraftingUI.SetActive(!m_CraftingUI.activeSelf);
+                m_Player.swapIsInMenuState();
             }
             else
             {
-                Time.timeScale = 1;
+                m_pauseMenu.SetActive(!m_pauseMenu.activeSelf);
+                m_Player.swapIsInMenuState();
             }
         }
 
         if (m_OpenCraftingUIInput.WasPressedThisFrame())
         {
-            m_CraftingUI.SetActive(!m_CraftingUI.activeSelf);
-            m_Player.swapIsInMenuState();
-            OnOpenCraftingUI.Invoke();      
+            if (m_Player.IsInMenu)
+            {
+                if (m_CraftingUI.activeSelf)
+                {
+                    m_CraftingUI.SetActive(false);
+                    m_Player.swapIsInMenuState();
+                }
+            }
+            else
+            {
+                m_CraftingUI.SetActive(true);
+                OnOpenCraftingUI.Invoke();
+                m_Player.swapIsInMenuState();
+            }
+                
         }
 
-        if (m_CraftingUI.activeSelf && m_menuInteractInput.WasPressedThisFrame())
+        if (m_CraftingUI.activeSelf)
         {
-            FlowerUICard clickedCard = GetClickedFlowerUICard();
-            CraftingSlot craftingSlot = GetCraftingSlot();
-
-            if (clickedCard != null)
+            if (m_menuInteractInput.WasPressedThisFrame())
             {
-                m_heldFlower = clickedCard.RepresentedFlower;
-
-            }
-            else if (craftingSlot != null)
-            {
-                m_heldFlower = craftingSlot.FlowerInSlot;
-                craftingSlot.putFlowerInSlot(null);
-            }
-            clickedOnRecipe();
-            if (m_heldFlower != null)
-            {
-                Texture2D flowerTexture = m_heldFlower.sprite.texture;
-                Vector2 offset = new Vector2(flowerTexture.width / 2f, flowerTexture.height / 2f);
-
-                Cursor.SetCursor(flowerTexture, offset, CursorMode.Auto);
-            }
-        }
-        if (m_CraftingUI.activeSelf && m_menuInteractInput.WasReleasedThisFrame())
-        {
-            if (m_heldFlower != null)
-            {
+                FlowerUICard clickedCard = GetClickedFlowerUICard();
                 CraftingSlot craftingSlot = GetCraftingSlot();
-                if (craftingSlot != null)
+
+                if (clickedCard != null)
                 {
-                    craftingSlot.putFlowerInSlot(m_heldFlower);
+                    m_heldFlower = clickedCard.RepresentedFlower;
+
                 }
-                else
+                else if (craftingSlot != null)
                 {
-                    m_Player.PlayerInventory.AddFlower(m_heldFlower, 1);
+                    m_heldFlower = craftingSlot.FlowerInSlot;
+                    craftingSlot.putFlowerInSlot(null);
                 }
-                m_heldFlower = null;
-                Cursor.SetCursor(null, new Vector2(0, 0), CursorMode.Auto);
+                clickedOnRecipe();
+                if (m_heldFlower != null)
+                {
+                    Texture2D flowerTexture = m_heldFlower.sprite.texture;
+                    Vector2 offset = new Vector2(flowerTexture.width / 2f, flowerTexture.height / 2f);
+
+                    Cursor.SetCursor(flowerTexture, offset, CursorMode.Auto);
+                }
+            }
+            if (m_menuInteractInput.WasReleasedThisFrame())
+            {
+                if (m_heldFlower != null)
+                {
+                    CraftingSlot craftingSlot = GetCraftingSlot();
+                    if (craftingSlot != null)
+                    {
+                        craftingSlot.putFlowerInSlot(m_heldFlower);
+                    }
+                    else
+                    {
+                        m_Player.PlayerInventory.AddFlower(m_heldFlower, 1);
+                    }
+                    m_heldFlower = null;
+                    Cursor.SetCursor(null, new Vector2(0, 0), CursorMode.Auto);
+                }
+            }
+            if (m_quickCraftInput.WasPressedThisFrame())
+            {
+                CraftPotion();
             }
         }
+        
     }
     void OnDisable()
     {
