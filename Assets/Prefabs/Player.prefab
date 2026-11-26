@@ -377,7 +377,7 @@ MonoBehaviour:
   m_currentWeight: 0
   m_shouldBeMoving: 0
   m_entityRigidbody: {fileID: 0}
-  m_animator: {fileID: 0}
+  m_animator: {fileID: 1929698144045064771}
   deathse: {fileID: 11400000, guid: cdd7e86763056cb4e991de37d4dc2dda, type: 2}
   m_onWeightChanged:
     m_PersistentCalls:
@@ -439,15 +439,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -0.018190863
-      outSlope: -0.018190863
+      inSlope: -0.046581578
+      outSlope: -0.046581578
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.7140357
-      value: 0.9870111
+      time: 0.51403874
+      value: 0.97605526
       inSlope: -0.045341205
       outSlope: -0.045341205
       tangentMode: 0
@@ -457,8 +457,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 0.94999695
-      inSlope: -0.12943618
-      outSlope: -0.12943618
+      inSlope: -0.05362221
+      outSlope: -0.05362221
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -468,7 +468,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_coyoteTime: 0.15
   m_minJumpDuration: 0.15
-  m_maxJumpDuration: 0.5
+  m_maxJumpDuration: 0.4
 --- !u!114 &1665448172178613227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,8 +564,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.19}
+  m_Radius: 0.3
 --- !u!1 &7500805656282727203
 GameObject:
   m_ObjectHideFlags: 0

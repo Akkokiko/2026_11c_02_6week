@@ -24,7 +24,7 @@ public class InteractPickup2D : Interactable
 
     public override void Interact(Player player)
     {
-        Debug.Log("Added " + flower.name + " to " + player.name);
+        //Debug.Log("Added " + flower.name + " to " + player.name);
         player.PlayerInventory.AddFlower(flower, amount);
         if (canRespawn)
         {

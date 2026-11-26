@@ -1,13 +1,15 @@
 using Sound;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class CheckpointFlag : Interactable
+public class CheckpointFlag : AutoPickup2D
 {
     private static readonly int IsActiveHash = Animator.StringToHash("IsActive");
     private static readonly int IdleStateHash = Animator.StringToHash("Idle");
     private static readonly int DownStateHash = Animator.StringToHash("Down");
 
     [SerializeField] private string m_checkpointID;
+    [SerializeField] private Interactable m_saveInteractible;
 
     public string CheckpointID => m_checkpointID;
 
@@ -17,8 +19,13 @@ public class CheckpointFlag : Interactable
     [SerializeField] private Animator m_animator;
     [SerializeField] private Sex m_checkpointSound;
 
-    public override void Interact(Player player)
+    public override void pickup(Player player)
     {
+        if (m_isCheckpointActive)
+        {
+            LevelManager.instance.SaveGame();
+            return;
+        }
         LevelManager.instance.activateCheckpointFlag(this);
         LevelManager.instance.SaveGame();
     }
@@ -43,4 +50,5 @@ public class CheckpointFlag : Interactable
             m_animator.Play(DownStateHash, 0, 0f);
         }
     }
+    
 }

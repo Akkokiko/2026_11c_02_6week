@@ -206,8 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9ef0ee5d082c040bd03a184eb0c8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckpointFlag
-  m_intereactionCollider: {fileID: 0}
-  m_intereactionSpriteRenderer: {fileID: 1501465122157407447}
   m_checkpointID: 00
+  m_saveInteractible: {fileID: 0}
   m_animator: {fileID: 1799528765898598314}
   m_checkpointSound: {fileID: 11400000, guid: 21b8278d0e7da9f45a966a64f1aae597, type: 2}
